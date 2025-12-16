@@ -1,0 +1,162 @@
+================================================================================
+STITCH DISCOVERED ABSTRACTIONS - QUICK REFERENCE
+================================================================================
+
+Total: 100 abstractions | Compression: 3.717x | Code Reduction: 73.1%
+
+================================================================================
+TOP 20 MOST IMPORTANT ABSTRACTIONS
+================================================================================
+
+1. fn_0: Boolean reduction with any
+   Pattern: (lam (lam (app tobool (app any #0))))
+   Python:  lambda mask: bool(np.any(mask))
+   Usage:   ~40% of programs
+
+2. fn_1: Flipped application combinator
+   Pattern: (app (app #1 #0))
+   Python:  lambda x, f: f(x)
+   Usage:   ~38% of programs
+
+3. fn_2: Uniform array check
+   Pattern: (app all (fn_1 #0 eq (fn_1 #0 get 0)))
+   Python:  lambda arr: all(arr == arr[0])
+   Usage:   Detecting uniform rows/columns
+
+4. fn_3: 2D array indexing
+   Pattern: (fn_1 #2 get (fn_1 #1 pair #0))
+   Python:  lambda row, col, board: board[(row, col)]
+   Usage:   ~25% of programs - core board access
+
+5. fn_4: Boolean AND + any check
+   Pattern: (fn_0 (fn_1 #1 and #0))
+   Python:  lambda mask1, mask2: bool(np.any(mask1 & mask2))
+   Usage:   Combining conditions
+
+6. fn_6: Unrevealed tile check
+   Pattern: (fn_1 #0 eq (app neg 1))
+   Python:  lambda tile: tile == -1
+   Usage:   ~25% of programs - core Battleship!
+
+7. fn_10: Partial equality
+   Pattern: (fn_1 #0 eq)
+   Python:  lambda x: lambda y: x == y
+   Usage:   Curried comparisons
+
+8. fn_11: Partial greater-than
+   Pattern: (fn_1 #0 gt)
+   Python:  lambda x: lambda y: x > y
+   Usage:   Ship detection (board > 0)
+
+9. fn_16: Unrevealed ship tiles (THE KEY PATTERN!)
+   Pattern: (fn_4 (fn_6 #1) (fn_11 #0 0))
+   Python:  lambda true, partial: bool(np.any((true > 0) & (partial == -1)))
+   Usage:   ~15% of programs - finds hidden ships!
+
+10. fn_13: Unique ship check
+    Pattern: (fn_10 (app unique #0) 1)
+    Python:  lambda board: len(np.unique(board)) == 1
+    Usage:   Single-ship detection
+
+11. fn_14: Row slice with any
+    Pattern: (fn_0 (fn_3 slice #1 #0))
+    Python:  lambda row, board: bool(np.any(board[row, :]))
+    Usage:   Row-based queries
+
+12. fn_15: Uniform rows
+    Pattern: (fn_2 rows)
+    Python:  all(rows == rows[0])
+    Usage:   Board symmetry
+
+13. fn_19: Row equality check
+    Pattern: (lam (lam (app all (fn_10 (fn_3 #1 slice #0) (fn_3 #1 0 #0)))))
+    Python:  lambda row, board: all(board[row, :] == board[row, 0])
+    Usage:   Uniform row detection
+
+14. fn_20: Unrevealed ships (variant)
+    Pattern: (lam (lam (fn_8 (fn_9 (fn_11 #1 0) (fn_6 #0)))))
+    Python:  lambda partial, true: np.any((true > 0) & (partial == -1))
+    Usage:   Different argument order
+
+15. fn_21: Unrevealed ships check
+    Pattern: (fn_0 unrevealedships)
+    Python:  bool(np.any(unrevealed_ships))
+    Usage:   Victory condition
+
+16-20. [Higher-level compositions of the above]
+    - Ship orientation detection
+    - Multi-ship patterns
+    - Complex board queries
+    - Row/column analysis
+    - Victory conditions
+
+================================================================================
+ABSTRACTION HIERARCHY
+================================================================================
+
+Level 1: Primitives (fn_0 - fn_11)
+  • Basic combinators (flip, partial application)
+  • Simple operations (eq, gt, and, any)
+  • Type conversions (tobool)
+
+Level 2: Basic Operations (fn_12 - fn_40)
+  • Board indexing patterns
+  • Row/column slicing
+  • Mask operations
+  • Unrevealed tile detection
+
+Level 3: Complex Queries (fn_41 - fn_70)
+  • Multi-condition checks
+  • Ship orientation
+  • Ship length analysis
+  • Board symmetry
+
+Level 4: Domain Patterns (fn_71 - fn_100)
+  • Complete game logic
+  • Victory conditions
+  • Multi-ship interactions
+  • Complex strategic queries
+
+================================================================================
+KEY INSIGHT
+================================================================================
+
+The most important abstraction is fn_16 (and its variant fn_20):
+
+    "Find unrevealed ship tiles"
+    
+    Pattern: (fn_4 (fn_6 partial) (fn_11 true_board 0))
+    Python:  (true_board > 0) & (partial_board == -1)
+    
+This single pattern appears in ~15% of all programs and captures the core
+Battleship concept: finding ship tiles that haven't been revealed yet.
+
+Stitch discovered this automatically through compression!
+
+================================================================================
+COMPARISON: STITCH vs PATTERN-BASED
+================================================================================
+
+Pattern-Based Helper (Human designed):
+    def has_unrevealed_ship_in_row(true_board, partial_board, row):
+        unrevealed_mask = (true_board > 0) & (partial_board == -1)
+        return bool(np.any(unrevealed_mask[row, :]))
+
+Stitch Equivalent (Discovered):
+    fn_14(row, fn_4(fn_6(partial), fn_11(true, 0)))
+    
+Same concept, different granularity:
+    • Pattern: High-level, named, readable
+    • Stitch: Low-level, composable, optimal
+
+Both are valuable!
+
+================================================================================
+FILES
+================================================================================
+
+• stitch_output_python_iter_100/stitch_library.py - All 100 abstractions
+• ABSTRACTIONS_EXPLAINED.md - Detailed explanations with examples
+• ITERATION_ANALYSIS.md - How compression improves with iterations
+
+================================================================================

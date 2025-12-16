@@ -1,0 +1,366 @@
+{
+  "4": {
+    "program_name": "program_4",
+    "canonical_program": "(lam (lam (app any (app (app lt v0) 2))))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "np.where(unrevealed)[0]"
+      }
+    }
+  },
+  "7": {
+    "program_name": "program_7",
+    "canonical_program": "(lam (lam (app tobool (app any (app (app gt v0) 4)))))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "np.nonzero(unrevealed)[0]"
+      }
+    }
+  },
+  "13": {
+    "program_name": "program_13",
+    "canonical_program": "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "variables": {
+      "v0": {
+        "original_name": "unrevealed",
+        "computation": "partial_board[row, :] == -1"
+      }
+    }
+  },
+  "25": {
+    "program_name": "program_25",
+    "canonical_program": "(lam (lam (app tobool (app any (app (app get (app (app pair 2) slice)) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "unrevealed",
+        "computation": "(true_board > 0) & (partial_board == -1)"
+      }
+    }
+  },
+  "29": {
+    "program_name": "program_29",
+    "canonical_program": "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "variables": {
+      "v0": {
+        "original_name": "after4",
+        "computation": "cols >= 4"
+      }
+    }
+  },
+  "33": {
+    "program_name": "program_33",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "green_coords[:, 1]"
+      }
+    }
+  },
+  "39": {
+    "program_name": "program_39",
+    "canonical_program": "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "variables": {
+      "v0": {
+        "original_name": "unrevealed",
+        "computation": "(partial_board == -1) & (true_board > 0)"
+      }
+    }
+  },
+  "42": {
+    "program_name": "program_42",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "orange_positions[:, 1]"
+      }
+    }
+  },
+  "54": {
+    "program_name": "program_54",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "coords[:, 1]"
+      }
+    }
+  },
+  "56": {
+    "program_name": "program_56",
+    "canonical_program": "(lam (lam (app tobool (app any (app (app eq (app (app get (app (app pair slice) 1)) v0)) 5)))))",
+    "variables": {
+      "v0": {
+        "original_name": "coords",
+        "computation": "np.argwhere(true_board == target_color)"
+      }
+    }
+  },
+  "57": {
+    "program_name": "program_57",
+    "canonical_program": "(lam (lam (app any (app (app eq (app (app get (app (app pair slice) 1)) v0)) 4))))",
+    "variables": {
+      "v0": {
+        "original_name": "positions",
+        "computation": "np.argwhere(true_board == ship_value)"
+      }
+    }
+  },
+  "73": {
+    "program_name": "program_73",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "coords[:, 0]"
+      }
+    }
+  },
+  "77": {
+    "program_name": "program_77",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "green_coords[:, 0]"
+      }
+    }
+  },
+  "78": {
+    "program_name": "program_78",
+    "canonical_program": "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "red_coords[:, 0]"
+      }
+    }
+  },
+  "79": {
+    "program_name": "program_79",
+    "canonical_program": "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "variables": {
+      "v0": {
+        "original_name": "row",
+        "computation": "ord('E') - ord('A')"
+      },
+      "v1": {
+        "original_name": "col",
+        "computation": "7 - 1"
+      }
+    }
+  },
+  "93": {
+    "program_name": "program_93",
+    "canonical_program": "(lam (lam (app (app eq (app (app sub v0.max) v0.min)) (app (app sub v0) 1))))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "np.where(unrevealed)[0]"
+      }
+    }
+  },
+  "95": {
+    "program_name": "program_95",
+    "canonical_program": "(lam (lam (app all (app (app eq (app (app get (app (app pair slice) 0)) v0)) (app (app get (app (app pair 0) 0)) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "coords",
+        "computation": "np.argwhere(true_board == ship_id)"
+      }
+    }
+  },
+  "98": {
+    "program_name": "program_98",
+    "canonical_program": "(lam (lam (app tobool (app any v0))))",
+    "variables": {
+      "v0": {
+        "original_name": "undiscovered",
+        "computation": "(true_board[row_index] > 0) & (partial_board[row_index] == -1)"
+      }
+    }
+  },
+  "100": {
+    "program_name": "program_100",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "coords[:, 0]"
+      }
+    }
+  },
+  "125": {
+    "program_name": "program_125",
+    "canonical_program": "(lam (lam (app tobool (app any (app (app and (app (app gt (app (app get (app (app pair slice) v0)) 1)) 0)) v1)))))",
+    "variables": {
+      "v0": {
+        "original_name": "undiscovered",
+        "computation": "(true_board[row_index, :] > 0) & (partial_board[row_index, :] == -1)"
+      }
+    }
+  },
+  "133": {
+    "program_name": "program_133",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "coords[:, 1]"
+      }
+    }
+  },
+  "161": {
+    "program_name": "program_161",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "[6, 7]"
+      }
+    }
+  },
+  "227": {
+    "program_name": "program_227",
+    "canonical_program": "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "np.where(true_board == 3)[1]"
+      }
+    }
+  },
+  "228": {
+    "program_name": "program_228",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "positions[:, 1]"
+      }
+    }
+  },
+  "235": {
+    "program_name": "program_235",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "green_positions[:, 0]"
+      }
+    }
+  },
+  "236": {
+    "program_name": "program_236",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "coords[:, 0]"
+      }
+    }
+  },
+  "286": {
+    "program_name": "program_286",
+    "canonical_program": "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "variables": {
+      "v0": {
+        "original_name": "hidden",
+        "computation": "partial_board[:, cols] == -1"
+      }
+    }
+  },
+  "298": {
+    "program_name": "program_298",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "coords[:, 0]"
+      }
+    }
+  },
+  "351": {
+    "program_name": "program_351",
+    "canonical_program": "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "variables": {
+      "v0": {
+        "original_name": "hidden",
+        "computation": "partial_board == -1"
+      }
+    }
+  },
+  "357": {
+    "program_name": "program_357",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "np.where(true_board == target_code)[1]"
+      }
+    }
+  },
+  "365": {
+    "program_name": "program_365",
+    "canonical_program": "(lam (lam (app (app and (app (app eq (app (app get (app (app pair v0) v1)) 0)) (app neg 1))) (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0))))",
+    "variables": {
+      "v0": {
+        "original_name": "col",
+        "computation": "7"
+      }
+    }
+  },
+  "384": {
+    "program_name": "program_384",
+    "canonical_program": "(lam (lam (app (app eq (app (app get (app (app pair v0) v1)) 1)) v2)))",
+    "variables": {
+      "v0": {
+        "original_name": "col",
+        "computation": "5"
+      }
+    }
+  },
+  "385": {
+    "program_name": "program_385",
+    "canonical_program": "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "coords[:, 1]"
+      }
+    }
+  },
+  "550": {
+    "program_name": "program_550",
+    "canonical_program": "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "coords[:, 0]"
+      }
+    }
+  },
+  "825": {
+    "program_name": "program_825",
+    "canonical_program": "(lam (lam (app all (app (app lt v0) 4))))",
+    "variables": {
+      "v0": {
+        "original_name": "rows",
+        "computation": "slice(0, 4)"
+      }
+    }
+  },
+  "942": {
+    "program_name": "program_942",
+    "canonical_program": "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "variables": {
+      "v0": {
+        "original_name": "cols",
+        "computation": "green_positions[:, 1]"
+      }
+    }
+  }
+}

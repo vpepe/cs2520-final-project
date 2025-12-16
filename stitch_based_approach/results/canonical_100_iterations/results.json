@@ -1,0 +1,5154 @@
+{
+  "cmd": "./stitch/target/release/compress battleship_stitch_canonical.json --max-arity=2 --iterations=100 --out=results/canonical_100_iterations/results.json",
+  "args": {
+    "iterations": 100,
+    "abstraction_prefix": "fn_",
+    "previous_abstractions": 0,
+    "shuffle": false,
+    "truncate": null,
+    "no_opt": false,
+    "silent": false,
+    "verbose_rewrite": false,
+    "step": {
+      "max_arity": 2,
+      "threads": 1,
+      "no_stats": false,
+      "batch": 1,
+      "dynamic_batch": false,
+      "eta_long": false,
+      "no_curried_metavars": false,
+      "no_curried_bodies": false,
+      "inv_candidates": 1,
+      "hole_choice": "DepthFirst",
+      "cost": {
+        "cost_lam": 1,
+        "cost_app": 1,
+        "cost_var": 100,
+        "cost_ivar": 100,
+        "cost_prim_default": 100,
+        "cost_prim": "{}"
+      },
+      "no_mismatch_check": false,
+      "follow": null,
+      "follow_types": null,
+      "follow_prune": false,
+      "verbose_worklist": false,
+      "verbose_best": false,
+      "print_stats": 0,
+      "show_rewritten": false,
+      "rewritten_dreamcoder": false,
+      "rewritten_intermediates": false,
+      "inv_arg_cap": false,
+      "allow_single_task": false,
+      "no_opt_single_use": false,
+      "no_opt_upper_bound": false,
+      "no_opt_force_multiuse": false,
+      "no_opt_useless_abstract": false,
+      "no_opt_arity_zero": false,
+      "no_other_util": false,
+      "structure_penalty": 1.0,
+      "rewrite_check": false,
+      "utility_by_rewrite": false,
+      "dreamcoder_comparison": false,
+      "quiet": false,
+      "fused_lambda_tags": {
+        "tags": null
+      },
+      "tdfa": {
+        "tdfa_json_path": null,
+        "tdfa_root": null,
+        "valid_metavars": null,
+        "valid_roots": null,
+        "tdfa_non_eta_long_states": null,
+        "tdfa_split": null
+      },
+      "symvar": {
+        "symvar_prefix": null
+      }
+    }
+  },
+  "original_cost": 649868,
+  "final_cost": 121648,
+  "compression_ratio": 5.342200447191898,
+  "num_abstractions": 100,
+  "original": [
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app gt (app (app get (app (app pair slice) 0)) v0)) v1))))",
+    "(lam (lam (app any (app (app lt v0) 2))))",
+    "(lam (lam (app all (app (app eq (app (app get v0) 0)) 2))))",
+    "(lam (lam (app (app gte v0) 2)))",
+    "(lam (lam (app tobool (app any (app (app gt v0) 4)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or v0) v1))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair 2) slice)) v0)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam true))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and v0) v1)) v2)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and v0) v1)) v2)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app (app or (app any (app (app get 2) v0))) (app any (app (app get 4) v0))))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app (app or (app any (app (app and v0) v1))) (app any (app (app and v2) v3))))))",
+    "(lam (lam (app any (app (app and (app (app gt (app (app get v0) 1)) 0)) (app (app eq (app (app get v0) 0)) (app neg 1))))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and v0) v1)) v2)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app eq (app (app get (app (app pair slice) 1)) v0)) 5)))))",
+    "(lam (lam (app any (app (app eq (app (app get (app (app pair slice) 1)) v0)) 4))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app gt (app len v0)) 1)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app eq (app (app sub v0.max) v0.min)) (app (app sub v0) 1))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app all (app (app eq (app (app get (app (app pair slice) 0)) v0)) (app (app get (app (app pair 0) 0)) v0)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app and (app (app eq v0) 1)) (app (app gt v1) 1))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam true))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam v0))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt (app (app get (app (app pair slice) v0)) 1)) 0)) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app gt (app (app get (app (app pair 0) 0)) 1)) 0))))",
+    "(lam (lam (app any (app (app and (app (app gt (app (app get (app (app pair v0) slice)) 1)) 0)) (app (app eq (app (app get (app (app pair v0) slice)) 0)) (app neg 1))))))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app gt v0) 0)))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app (app ne (app (app get (app (app pair 7) 7)) 1)) 0)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam true))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any (app (app and v0) v1))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1))))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app or (app (app or (app (app or v0) v1)) v2)) v3))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app any (app (app get (app (app pair unit) slice)) v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1))))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and v0) v1)) v2)))))",
+    "(lam (lam false))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app eq v0) 1)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or any) any))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app (app or (app (app or (app (app or (app any v0)) (app any v1))) (app any v2))) (app any v3)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam (app all (app (app lt (app (app get (app (app pair slice) 0)) v0)) v1))))",
+    "(lam (lam (app tobool (app all (app (app lt v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or (app (app or (app (app or v0) v1)) v2)) v3))))",
+    "(lam (lam (app (app eq v0) 3)))",
+    "(lam (lam (app tobool (app any (app (app gt v0) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt (app len v0)) 2)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app and (app (app eq v0) 1)) (app (app gt v1) 1))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam (app any (app (app eq (app (app get (app (app pair 4) slice)) 1)) 3))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and v0) v1)) v2)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gte v0) 2)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any (app (app and (app (app and v0) v1)) v2))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app gt v0) 1)))",
+    "(lam (lam (app (app gt (app len v0)) 1)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app (app gt v0) 1)))",
+    "(lam (lam (app (app gt v0) 1)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app lte (app (app get (app (app pair slice) 0)) v0)) 3))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app eq (app unique (app (app get (app (app pair slice) 1)) v0))) 1)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any (app (app and (app (app gt (app (app get v0) 1)) 0)) (app (app eq (app (app get v0) 0)) (app neg 1))))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app not (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any (app (app and v0) v1))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq (app len v0)) 1)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam true))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and v0) v1)) v2)))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app v0 (app set v1))))",
+    "(lam (lam (app any (app (app get (app (app pair v0) slice)) v1))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair v0) slice)) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any (app (app gte v0) 4))))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam any))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam v0))",
+    "(lam (lam (app (app eq v0) 0)))",
+    "(lam (lam (app (app eq v0) 3)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any (app (app eq (app (app get (app (app pair slice) 1)) v0)) v1))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app get (app (app pair 2) slice)) v0)) (app (app get (app (app pair 2) slice)) v1))))))",
+    "(lam (lam (app (app and (app (app eq (app (app get (app (app pair v0) v1)) 0)) (app neg 1))) (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0))))",
+    "(lam (lam (app (app gt v0) 2)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt v0) v1)))",
+    "(lam (lam (app tobool (app any (app (app gte v0) 4)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app (app gt v0) 2)))",
+    "(lam (lam (app (app gt v0) v1)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app lte v0) 2)))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam (app (app eq (app (app get (app (app pair v0) v1)) 1)) v2)))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app gte (app (app get (app (app pair slice) 0)) v0)) v1))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam (app any (app (app eq v0) 6))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) 4)) v0)))))",
+    "(lam (lam (app tobool (app all (app (app lt v0) v1)))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) v0)) v1)))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam (app (app and v0) v1)))",
+    "(lam (lam false))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app and (app (app eq (app (app get (app (app pair v0) v1)) 0)) (app neg 1))) (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app lt (app (app get (app (app pair slice) 1)) v0)) v1))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app any (app (app and (app (app lt v0) v1)) (app (app lt v2) v3)))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair 0) 0)) 1)) 0)))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1))))))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any (app (app get (app (app pair v0) slice)) v1))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app (app and v0) v1)))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app (app eq (app len v0)) 1)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt v0) v1)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair v0) slice)) v1)))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair unit) slice)) v0)))))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair (app (app sub v0) 1)) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam all))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app all (app (app eq (app (app get (app (app pair slice) 0)) v0)) (app (app get (app (app pair 0) 0)) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app (app and (app set v0)) v1))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam (app all (app (app eq (app (app get (app (app pair slice) 0)) v0)) (app (app get (app (app pair 0) 0)) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)) (app (app eq (app (app get (app (app pair v0) v1)) 0)) (app neg 1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app any (app (app np.v0 v1) unit))))",
+    "(lam (lam (app all (app (app np.v0 v1) unit))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any (app (app or (app (app eq v0) 2)) (app (app eq v0) 6))))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or any) any))))",
+    "(lam (lam (app any (app (app and (app (app gte v0) 3)) (app (app lte v0) 6)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app np.v0 v1) unit))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and (app (app eq v0) 0)) (app (app eq v1) 4))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq (app (app get (app (app pair slice) 1)) v0)) (app (app get (app (app pair 0) 1)) v0)))))",
+    "(lam (lam (app (app gt v0.min) v1.max)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq v0) 2)))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app get v0) v1)) (app (app get v0) v2))))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app eq v0) 2)))",
+    "(lam (lam (app any (app (app eq v0) 7))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and v0) (app (app lt v1) 3))))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app all unit)))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam true))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app eq (app (app get slice) v0)) 0)))))",
+    "(lam (lam (app any (app (app get (app (app pair 7) slice)) v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app all v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app (app gt v0) 1)))",
+    "(lam (lam false))",
+    "(lam (lam (app (app ne (app (app get (app (app pair 7) 0)) 1)) 0)))",
+    "(lam (lam (app (app and (app (app and (app (app eq v0) 1)) (app (app eq (app (app get 0) v0)) 1))) (app (app eq (app (app get 0) v1)) 4))))",
+    "(lam (lam (app tobool (app (app get (app (app pair 0) 3)) v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app all v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam true))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app and (app all (app (app eq v0) (app (app get 0) v0)))) (app (app eq (app (app add (app (app sub v1.max) v1.min)) 1)) (app len v1)))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app ne (app (app get (app (app pair 0) 1)) 1)) 0)))",
+    "(lam (lam (app tobool (app (app and v0) v1))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app (app and v0) v1))))",
+    "(lam (lam (app (app and (app (app eq (app (app get (app (app pair v0) v1)) 0)) (app neg 1))) (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq v0) 1)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app (app gt (app (app get (app (app pair (app neg 1)) (app neg 1))) 1)) 0))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair 0) 0)) 1)) 0)))",
+    "(lam (lam (app (app gte (app len v0)) 3)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1))))))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app lt v0) 4))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt (app (app get (app (app pair 0) 3)) 1)) 0)))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam v0))",
+    "(lam (lam (app all (app (app eq v0) v1))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app (app eq (app (app get (app (app pair v0) (app (app sub v1) 1))) 1)) 3))))",
+    "(lam (lam (app tobool (app all (app (app gte v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app lte v0) 2))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1))))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app lte v0) 1)))))",
+    "(lam (lam (app (app and v0) v1)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and (app (app eq (app len (app set v0))) 1)) (app (app gt (app len (app set v1))) 1))))",
+    "(lam (lam (app (app and (app (app gt (app unique v0)) 1)) (app (app eq (app unique v1)) 1))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app and (app (app eq (app len (app unique v0))) 1)) (app (app gt (app len (app unique v1))) 1))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or (app any v0)) (app any v1)))))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app gt v0) 0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam true))",
+    "(lam (lam (app (app gte v0) v1)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam true))",
+    "(lam (lam (app (app gt v0) v1)))",
+    "(lam (lam (app tobool (app (app gt v0) v1))))",
+    "(lam (lam (app (app gt (app (app mul v0) v1)) (app (app mul v2) v3))))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam (app any (app (app get (app (app pair slice) slice)) v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any (app (app get (app (app pair slice) slice)) v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) v0)) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and (app (app eq (app (app get (app (app pair v0) v1)) 1)) v2)) (app (app eq (app (app get (app (app pair v0) v1)) 0)) (app neg 1)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam (app (app and v0) (app not v1))))",
+    "(lam (lam true))",
+    "(lam (lam (app (app and v0) (app not v1))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app and v0) v1))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app any (app (app and (app (app gt v0) 0)) v1))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app eq (app (app mod v0) 2)) 0)))",
+    "(lam (lam (app tobool (app (app or (app (app or (app (app or (app any (app (app gt v0) 0))) (app any (app (app gt v1) 0)))) (app any (app (app gt v2) 0)))) (app any (app (app gt v3) 0))))))",
+    "(lam (lam (app (app and v0) v1)))",
+    "(lam (lam (app tobool (app (app or v0) v1))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app (app gt v0) v1))))",
+    "(lam (lam (app (app gt v0) v1)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app lte v0) 3))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app (app and v0) (app not v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam any))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app and v0) (app not v1))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and (app (app or v0) v1)) (app not (app (app or v2) v3)))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq (app (app mod v0) 2)) 0)))",
+    "(lam (lam (app (app gt v0) v1)))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app lt v0) 4))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app not v0.any)))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app (app gt v0) v1)))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and v0) (app not v1))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))",
+    "(lam (lam (app any (app (app and (app (app and v0) v1)) v2))))",
+    "(lam (lam (app all (app (app lt v0) 4))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) v1)))))",
+    "(lam (lam (app (app and v0) (app not v1))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app and v0) (app not v1))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) 5)) v0)))))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app not v0)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app (app and (app (app eq (app (app get (app (app pair v0) v1)) 0)) (app neg 1))) (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0))))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app get (app (app pair slice) 0)) v0))))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair v0) slice)) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair v0) slice)) v1)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app any (app (app and v0) v1))))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam true))",
+    "(lam (lam true))",
+    "(lam (lam true))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0))))",
+    "(lam (lam (app tobool (app (app and v0) v1))))",
+    "(lam (lam (app any v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get (app (app pair v0) slice)) v1)))))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool v0)))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app lte (app len v0)) 1)))",
+    "(lam (lam (app all unit)))",
+    "(lam (lam (app any (app (app and v0) v1))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app all (app (app eq v0) 7))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam (app tobool (app any (app (app and v0) v1)))))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam (app (app gt v0) v1)))",
+    "(lam (lam (app tobool v0.any)))",
+    "(lam (lam (app (app or (app (app eq v0) v1)) (app (app eq v0) v2))))",
+    "(lam (lam (app (app gt (app (app get (app (app pair v0) v1)) 1)) 0)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app all (app (app eq v0) (app (app get 0) v0))))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app (app eq v0) 1)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app tobool (app any v0))))",
+    "(lam (lam (app (app eq (app unique v0)) 1)))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))",
+    "(lam (lam (app all (app (app eq v0) (app (app get 0) v0)))))"
+  ],
+  "rewritten": [
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "(lam (lam (fn_10 (fn_41 (fn_12 0) v1))))",
+    "(lam (lam (fn_10 (fn_48 lt))))",
+    "(lam (lam (fn_24 (fn_11 (fn_14 get 0) 2))))",
+    "fn_93",
+    "(fn_89 fn_36)",
+    "fn_62",
+    "fn_62",
+    "fn_66",
+    "fn_7",
+    "fn_5",
+    "fn_7",
+    "fn_5",
+    "fn_7",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "(fn_9 fn_78)",
+    "fn_7",
+    "fn_32",
+    "fn_7",
+    "fn_62",
+    "(fn_0 (fn_42 2))",
+    "fn_37",
+    "fn_5",
+    "fn_33",
+    "fn_7",
+    "fn_7",
+    "fn_62",
+    "fn_5",
+    "fn_92",
+    "(lam (lam true))",
+    "fn_29",
+    "fn_29",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "fn_33",
+    "(fn_43 (fn_1 4 get v0) (fn_10 (fn_1 2 get v0)))",
+    "fn_92",
+    "fn_5",
+    "(fn_43 (fn_16 v2 v3) fn_53)",
+    "fn_31",
+    "fn_29",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_92",
+    "fn_62",
+    "(fn_0 (fn_56 fn_12 5))",
+    "(fn_76 4 fn_12)",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "(fn_79 gt)",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "fn_92",
+    "fn_5",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "fn_92",
+    "fn_38",
+    "(lam (lam fn_18))",
+    "fn_5",
+    "fn_37",
+    "fn_92",
+    "fn_26",
+    "fn_92",
+    "fn_5",
+    "fn_5",
+    "fn_92",
+    "fn_37",
+    "fn_7",
+    "fn_92",
+    "fn_5",
+    "fn_7",
+    "(lam (lam (fn_11 (fn_90 v0.max v0.min) fn_80)))",
+    "fn_7",
+    "fn_81",
+    "fn_7",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "fn_92",
+    "fn_7",
+    "fn_5",
+    "fn_62",
+    "fn_5",
+    "fn_62",
+    "fn_7",
+    "fn_74",
+    "fn_32",
+    "fn_5",
+    "fn_5",
+    "fn_92",
+    "fn_13",
+    "fn_5",
+    "fn_32",
+    "fn_33",
+    "fn_7",
+    "(lam (lam true))",
+    "fn_5",
+    "(lam (lam v0))",
+    "fn_7",
+    "fn_5",
+    "fn_7",
+    "fn_5",
+    "fn_5",
+    "(fn_71 v1 (fn_19 slice v0))",
+    "fn_62",
+    "fn_62",
+    "(fn_9 fn_82)",
+    "(fn_52 (fn_11 (fn_83 v0 0) fn_84) (fn_19 v0 slice))",
+    "(lam (lam fn_34))",
+    "(lam (lam fn_54))",
+    "fn_62",
+    "fn_92",
+    "(fn_40 7 7)",
+    "fn_92",
+    "(lam (lam true))",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_92",
+    "fn_5",
+    "(lam (lam fn_53))",
+    "fn_5",
+    "fn_32",
+    "fn_32",
+    "fn_57",
+    "fn_22",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_37",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "(lam (lam (fn_10 fn_55)))",
+    "fn_5",
+    "fn_92",
+    "(fn_99 unit)",
+    "fn_5",
+    "fn_22",
+    "fn_62",
+    "fn_26",
+    "fn_62",
+    "fn_26",
+    "fn_57",
+    "fn_7",
+    "fn_92",
+    "fn_29",
+    "fn_62",
+    "(lam (lam fn_17))",
+    "fn_5",
+    "fn_5",
+    "fn_72",
+    "fn_62",
+    "fn_67",
+    "fn_7",
+    "fn_5",
+    "fn_62",
+    "fn_5",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "fn_62",
+    "fn_13",
+    "fn_5",
+    "fn_5",
+    "fn_32",
+    "fn_7",
+    "fn_7",
+    "fn_5",
+    "(fn_43 v3 (fn_70 v2 (fn_70 v1 fn_17)))",
+    "fn_62",
+    "fn_13",
+    "fn_92",
+    "fn_38",
+    "(fn_47 lt 0)",
+    "(fn_61 fn_85)",
+    "fn_62",
+    "(fn_9 fn_55)",
+    "fn_94",
+    "(fn_0 fn_54)",
+    "fn_62",
+    "fn_62",
+    "(fn_35 2 gt)",
+    "fn_62",
+    "fn_5",
+    "fn_74",
+    "fn_5",
+    "fn_38",
+    "(fn_76 3 (fn_83 4))",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "fn_5",
+    "fn_29",
+    "fn_62",
+    "fn_62",
+    "fn_93",
+    "fn_5",
+    "fn_62",
+    "fn_92",
+    "fn_13",
+    "fn_92",
+    "fn_5",
+    "fn_86",
+    "fn_5",
+    "fn_63",
+    "(fn_79 gt)",
+    "fn_92",
+    "fn_92",
+    "fn_92",
+    "fn_63",
+    "fn_63",
+    "fn_5",
+    "fn_5",
+    "fn_33",
+    "fn_7",
+    "fn_92",
+    "fn_7",
+    "fn_5",
+    "fn_7",
+    "fn_32",
+    "fn_7",
+    "fn_7",
+    "fn_5",
+    "(fn_77 (fn_1 (fn_12 0)))",
+    "fn_5",
+    "fn_33",
+    "fn_5",
+    "fn_7",
+    "(lam (lam (fn_50 (fn_12 1) unique)))",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "fn_5",
+    "fn_7",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_31",
+    "fn_7",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "(lam (lam fn_18))",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_26",
+    "(lam (lam (fn_68 fn_53)))",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "fn_5",
+    "(lam (lam fn_53))",
+    "fn_7",
+    "(lam (lam fn_17))",
+    "fn_7",
+    "fn_7",
+    "fn_37",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_26",
+    "fn_7",
+    "fn_7",
+    "fn_62",
+    "fn_92",
+    "(lam (lam fn_17))",
+    "fn_5",
+    "fn_7",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "fn_62",
+    "fn_75",
+    "fn_5",
+    "fn_92",
+    "(lam (lam true))",
+    "fn_26",
+    "fn_5",
+    "fn_5",
+    "fn_92",
+    "fn_5",
+    "fn_7",
+    "fn_5",
+    "fn_7",
+    "fn_5",
+    "fn_5",
+    "fn_26",
+    "fn_29",
+    "(lam (lam fn_17))",
+    "(lam (lam (app v0 (app set v1))))",
+    "fn_95",
+    "fn_62",
+    "fn_92",
+    "fn_5",
+    "fn_26",
+    "fn_5",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "fn_58",
+    "fn_7",
+    "fn_37",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_62",
+    "fn_5",
+    "(lam (lam (fn_10 (fn_87 4))))",
+    "fn_38",
+    "(lam (lam any))",
+    "fn_5",
+    "fn_7",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_92",
+    "fn_62",
+    "fn_92",
+    "(lam (lam v0))",
+    "(lam (lam (fn_27 0)))",
+    "fn_94",
+    "fn_5",
+    "(fn_76 v1 fn_12)",
+    "fn_5",
+    "(fn_71 (fn_83 2 v1) (fn_42 2))",
+    "(fn_64 fn_18)",
+    "fn_96",
+    "fn_62",
+    "fn_62",
+    "(lam (lam fn_39))",
+    "(fn_89 fn_87)",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "fn_7",
+    "fn_7",
+    "fn_32",
+    "fn_96",
+    "(lam (lam fn_39))",
+    "fn_7",
+    "fn_7",
+    "(lam (lam (fn_48 lte)))",
+    "fn_13",
+    "(lam (lam fn_59))",
+    "fn_38",
+    "fn_62",
+    "fn_62",
+    "fn_7",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_62",
+    "fn_62",
+    "(fn_47 gte 0)",
+    "fn_62",
+    "fn_62",
+    "fn_22",
+    "(fn_98 6)",
+    "(fn_89 fn_12)",
+    "(fn_61 fn_85)",
+    "(lam (lam fn_17))",
+    "fn_60",
+    "(lam (lam fn_18))",
+    "fn_22",
+    "(lam (lam fn_23))",
+    "fn_62",
+    "(lam (lam fn_34))",
+    "(fn_64 fn_18)",
+    "fn_5",
+    "fn_37",
+    "fn_5",
+    "(fn_47 lt 1)",
+    "(lam (lam fn_17))",
+    "(lam (lam fn_17))",
+    "(lam (lam fn_17))",
+    "fn_7",
+    "fn_5",
+    "fn_7",
+    "(fn_52 (fn_91 lt) fn_85)",
+    "(lam (lam fn_82))",
+    "(lam (lam fn_34))",
+    "(lam (lam fn_18))",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "fn_62",
+    "fn_7",
+    "fn_57",
+    "fn_26",
+    "fn_7",
+    "fn_5",
+    "(lam (lam fn_34))",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_95",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "fn_5",
+    "fn_33",
+    "fn_5",
+    "fn_5",
+    "fn_33",
+    "fn_7",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_26",
+    "(lam (lam fn_17))",
+    "(lam (lam fn_23))",
+    "fn_26",
+    "fn_26",
+    "fn_92",
+    "fn_75",
+    "fn_5",
+    "fn_62",
+    "fn_62",
+    "(lam (lam fn_39))",
+    "fn_5",
+    "fn_5",
+    "fn_92",
+    "(lam (lam fn_17))",
+    "(lam (lam fn_17))",
+    "fn_92",
+    "fn_62",
+    "fn_5",
+    "fn_7",
+    "fn_7",
+    "fn_7",
+    "fn_5",
+    "fn_22",
+    "fn_22",
+    "fn_33",
+    "fn_62",
+    "fn_5",
+    "fn_92",
+    "fn_92",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_22",
+    "fn_5",
+    "fn_5",
+    "fn_66",
+    "fn_58",
+    "(lam (lam fn_18))",
+    "(fn_0 (fn_42 unit))",
+    "fn_13",
+    "(lam (lam (fn_19 fn_80 v1)))",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "fn_5",
+    "fn_62",
+    "(lam (lam all))",
+    "fn_5",
+    "fn_92",
+    "fn_92",
+    "fn_7",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "fn_81",
+    "fn_62",
+    "fn_37",
+    "fn_5",
+    "fn_5",
+    "fn_92",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "(fn_9 (fn_16 (app set v0) v1))",
+    "fn_92",
+    "fn_13",
+    "fn_81",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "fn_62",
+    "(lam (lam (fn_16 fn_34 fn_15)))",
+    "fn_62",
+    "fn_92",
+    "(fn_46 fn_10)",
+    "(fn_46 fn_24)",
+    "fn_62",
+    "fn_38",
+    "fn_92",
+    "(lam (lam fn_17))",
+    "(fn_0 (fn_28 fn_88 (fn_27 6)))",
+    "fn_62",
+    "fn_5",
+    "fn_62",
+    "fn_5",
+    "fn_62",
+    "fn_67",
+    "(fn_52 (fn_14 lte 6) (fn_87 3))",
+    "fn_92",
+    "fn_38",
+    "fn_62",
+    "(fn_46 fn_10)",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_13",
+    "fn_62",
+    "fn_62",
+    "fn_92",
+    "fn_62",
+    "(lam (lam (fn_16 (fn_27 0) (fn_11 v1 4))))",
+    "fn_62",
+    "fn_62",
+    "fn_92",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "(fn_21 1)",
+    "(lam (lam (fn_41 v0.min v1.max)))",
+    "fn_92",
+    "fn_13",
+    "fn_62",
+    "(lam (lam fn_88))",
+    "fn_62",
+    "fn_92",
+    "(fn_71 (fn_14 get v2) (fn_3 get))",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "(lam (lam fn_88))",
+    "(fn_98 7)",
+    "fn_33",
+    "(fn_0 (fn_14 and (fn_1 v1 lt 3)))",
+    "fn_5",
+    "fn_92",
+    "fn_26",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "fn_97",
+    "fn_26",
+    "fn_33",
+    "fn_5",
+    "(lam (lam true))",
+    "(lam (lam fn_17))",
+    "fn_5",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "(fn_0 (fn_44 v0 slice 0))",
+    "(fn_99 7)",
+    "fn_62",
+    "(fn_61 v0)",
+    "fn_62",
+    "fn_62",
+    "fn_33",
+    "fn_63",
+    "fn_62",
+    "(fn_40 7 0)",
+    "(lam (lam (fn_16 (fn_49 (fn_44 v0 0)) (fn_44 v1 0 4))))",
+    "(fn_9 (fn_6 3 0 v0))",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "(fn_61 v0)",
+    "fn_5",
+    "(lam (lam true))",
+    "fn_92",
+    "fn_66",
+    "(lam (lam fn_18))",
+    "(lam (lam (fn_16 fn_2 (fn_56 (fn_1 (fn_90 v1.max v1.min) add) (app len v1)))))",
+    "(lam (lam fn_18))",
+    "(lam (lam fn_18))",
+    "(lam (lam fn_34))",
+    "(lam (lam fn_18))",
+    "(lam (lam fn_18))",
+    "(lam (lam fn_18))",
+    "(fn_40 0 1)",
+    "fn_69",
+    "(lam (lam fn_18))",
+    "(lam (lam fn_18))",
+    "(lam (lam fn_34))",
+    "(lam (lam fn_18))",
+    "fn_92",
+    "fn_69",
+    "(fn_64 fn_34)",
+    "fn_5",
+    "fn_62",
+    "fn_62",
+    "fn_72",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_92",
+    "fn_7",
+    "(fn_9 (fn_51 fn_84))",
+    "(lam (lam fn_82))",
+    "(fn_35 3 gte)",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "fn_5",
+    "(lam (lam fn_34))",
+    "fn_57",
+    "(lam (lam fn_34))",
+    "fn_5",
+    "fn_45",
+    "fn_92",
+    "fn_62",
+    "(lam (lam (fn_19 0 3)))",
+    "(lam (lam fn_34))",
+    "fn_62",
+    "fn_5",
+    "fn_7",
+    "(lam (lam fn_18))",
+    "fn_32",
+    "(lam (lam fn_18))",
+    "fn_7",
+    "(lam (lam fn_34))",
+    "fn_92",
+    "(lam (lam fn_18))",
+    "fn_5",
+    "fn_5",
+    "(lam (lam v0))",
+    "(lam (lam (fn_24 (fn_3 eq))))",
+    "fn_5",
+    "(fn_9 (fn_56 (fn_6 (fn_90 v1 1) v0) 3))",
+    "(fn_61 (fn_3 gte))",
+    "fn_5",
+    "fn_7",
+    "fn_32",
+    "fn_5",
+    "fn_62",
+    "(fn_9 (fn_48 lte))",
+    "fn_62",
+    "fn_7",
+    "fn_57",
+    "fn_5",
+    "(fn_0 (fn_14 lte 1))",
+    "(lam (lam fn_23))",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "(fn_30 set)",
+    "(lam (lam (fn_16 (fn_41 (app unique v0) 1) (fn_50 v1 unique))))",
+    "fn_62",
+    "fn_92",
+    "fn_7",
+    "(fn_30 unique)",
+    "fn_5",
+    "fn_37",
+    "fn_13",
+    "fn_62",
+    "(fn_43 v1 fn_17)",
+    "fn_26",
+    "fn_5",
+    "fn_7",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "(lam (lam (fn_10 fn_54)))",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "(lam (lam true))",
+    "(lam (lam (fn_3 gte)))",
+    "fn_7",
+    "fn_62",
+    "(lam (lam true))",
+    "(lam (lam fn_39))",
+    "(fn_9 fn_39)",
+    "(lam (lam (fn_41 (fn_3 mul) (fn_91 mul))))",
+    "fn_38",
+    "(fn_73 slice)",
+    "fn_62",
+    "fn_92",
+    "fn_62",
+    "fn_92",
+    "fn_62",
+    "fn_5",
+    "(fn_73 slice)",
+    "fn_7",
+    "fn_13",
+    "fn_62",
+    "fn_32",
+    "fn_5",
+    "fn_62",
+    "fn_5",
+    "fn_92",
+    "fn_5",
+    "fn_62",
+    "fn_60",
+    "fn_5",
+    "fn_62",
+    "fn_62",
+    "(lam (lam (fn_16 fn_59 fn_15)))",
+    "fn_37",
+    "fn_33",
+    "fn_22",
+    "(lam (lam fn_20))",
+    "(lam (lam true))",
+    "(lam (lam fn_20))",
+    "fn_62",
+    "fn_69",
+    "fn_7",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "(lam (lam fn_17))",
+    "(fn_52 v1 fn_54)",
+    "fn_7",
+    "fn_22",
+    "fn_62",
+    "fn_62",
+    "fn_26",
+    "(lam (lam fn_17))",
+    "fn_22",
+    "fn_62",
+    "fn_33",
+    "fn_5",
+    "fn_5",
+    "fn_65",
+    "(fn_43 (fn_41 v3 0) (fn_70 (fn_41 v2 0) (fn_70 (fn_41 v1 0) (fn_10 fn_54))))",
+    "(lam (lam fn_23))",
+    "(fn_9 fn_78)",
+    "fn_62",
+    "fn_5",
+    "(fn_9 fn_39)",
+    "(lam (lam fn_39))",
+    "(lam (lam fn_18))",
+    "fn_62",
+    "(fn_77 fn_14)",
+    "fn_5",
+    "(fn_9 fn_20)",
+    "fn_7",
+    "fn_7",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "(lam (lam fn_18))",
+    "(lam (lam any))",
+    "fn_5",
+    "(lam (lam fn_20))",
+    "fn_7",
+    "fn_62",
+    "(lam (lam (fn_16 fn_78 (fn_68 (fn_28 v2 v3)))))",
+    "fn_33",
+    "fn_62",
+    "fn_65",
+    "(lam (lam fn_39))",
+    "fn_26",
+    "fn_62",
+    "fn_62",
+    "fn_45",
+    "fn_62",
+    "fn_5",
+    "fn_7",
+    "(lam (lam (fn_68 v0.any)))",
+    "(lam (lam fn_17))",
+    "fn_62",
+    "fn_7",
+    "(lam (lam fn_39))",
+    "fn_62",
+    "(lam (lam fn_20))",
+    "fn_7",
+    "fn_62",
+    "fn_37",
+    "fn_86",
+    "fn_45",
+    "fn_22",
+    "fn_33",
+    "fn_7",
+    "(fn_71 v1 fn_54)",
+    "(lam (lam fn_20))",
+    "fn_7",
+    "(lam (lam fn_17))",
+    "fn_7",
+    "fn_5",
+    "fn_5",
+    "fn_5",
+    "(lam (lam fn_20))",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_32",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "(lam (lam fn_17))",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_62",
+    "fn_5",
+    "(fn_0 (fn_12 5))",
+    "(lam (lam fn_34))",
+    "(lam (lam fn_18))",
+    "fn_5",
+    "fn_7",
+    "fn_62",
+    "fn_5",
+    "(lam (lam fn_17))",
+    "fn_7",
+    "(lam (lam (fn_68 v0)))",
+    "fn_7",
+    "fn_32",
+    "(fn_64 fn_34)",
+    "fn_62",
+    "(fn_73 0)",
+    "fn_58",
+    "fn_62",
+    "fn_62",
+    "fn_58",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_5",
+    "fn_7",
+    "fn_5",
+    "(lam (lam fn_53))",
+    "fn_7",
+    "(lam (lam true))",
+    "(lam (lam true))",
+    "(lam (lam true))",
+    "fn_5",
+    "fn_62",
+    "fn_7",
+    "fn_66",
+    "fn_69",
+    "(lam (lam fn_17))",
+    "fn_5",
+    "fn_92",
+    "fn_62",
+    "(lam (lam fn_34))",
+    "fn_22",
+    "fn_62",
+    "fn_62",
+    "fn_5",
+    "fn_62",
+    "fn_58",
+    "fn_32",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_62",
+    "fn_32",
+    "fn_5",
+    "fn_5",
+    "(fn_79 lte)",
+    "fn_97",
+    "(lam (lam fn_53))",
+    "fn_5",
+    "fn_62",
+    "(lam (lam fn_18))",
+    "fn_92",
+    "(lam (lam (fn_24 (fn_27 7))))",
+    "fn_62",
+    "fn_5",
+    "fn_62",
+    "(lam (lam fn_18))",
+    "fn_7",
+    "fn_38",
+    "fn_62",
+    "fn_62",
+    "fn_38",
+    "(lam (lam fn_39))",
+    "fn_26",
+    "(lam (lam (fn_28 (fn_3 eq) (fn_27 v2))))",
+    "(lam (lam fn_18))",
+    "fn_62",
+    "fn_62",
+    "fn_38",
+    "fn_92",
+    "fn_72",
+    "fn_92",
+    "fn_5",
+    "fn_13",
+    "fn_92",
+    "fn_92",
+    "fn_92"
+  ],
+  "rewritten_dreamcoder": null,
+  "abstractions": [
+    {
+      "body": "(lam (lam (app tobool (app any #0))))",
+      "dreamcoder": "#(lambda (lambda (lambda (app tobool (app any $2)))))",
+      "arity": 1,
+      "name": "fn_0",
+      "utility": 115799,
+      "final_cost": 533663,
+      "compression_ratio": 1.2177497784182152,
+      "cumulative_compression_ratio": 1.2177497784182152,
+      "num_uses": 381,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_0 (app (app and (app (app and v0) v1)) v2)": "(lam (lam (app tobool (app any (app (app and (app (app and v0) v1)) v2)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app get (app (app pair 2) slice)) v0)) (app (app get (app (app pair 2) slice)) v1))": "(lam (lam (app tobool (app any (app (app and (app (app get (app (app pair 2) slice)) v0)) (app (app get (app (app pair 2) slice)) v1))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app get v0) v1)) (app (app get v0) v2))": "(lam (lam (app tobool (app any (app (app and (app (app get v0) v1)) (app (app get v0) v2))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt (app (app get (app (app pair slice) v0)) 1)) 0)) v1)": "(lam (lam (app tobool (app any (app (app and (app (app gt (app (app get (app (app pair slice) v0)) 1)) 0)) v1)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) (app (app eq v1) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt v0) 0)) v1)": "(lam (lam (app tobool (app any (app (app and (app (app gt v0) 0)) v1)))))"
+        },
+        {
+          "fn_0 (app (app and v0) (app (app lt v1) 3))": "(lam (lam (app tobool (app any (app (app and v0) (app (app lt v1) 3))))))"
+        },
+        {
+          "fn_0 (app (app and v0) v1)": "(lam (lam (app tobool (app any (app (app and v0) v1)))))"
+        },
+        {
+          "fn_0 (app (app eq (app (app get (app (app pair slice) 1)) v0)) 5)": "(lam (lam (app tobool (app any (app (app eq (app (app get (app (app pair slice) 1)) v0)) 5)))))"
+        },
+        {
+          "fn_0 (app (app eq (app (app get slice) v0)) 0)": "(lam (lam (app tobool (app any (app (app eq (app (app get slice) v0)) 0)))))"
+        },
+        {
+          "fn_0 (app (app get (app (app pair 2) slice)) v0)": "(lam (lam (app tobool (app any (app (app get (app (app pair 2) slice)) v0)))))"
+        },
+        {
+          "fn_0 (app (app get (app (app pair slice) 4)) v0)": "(lam (lam (app tobool (app any (app (app get (app (app pair slice) 4)) v0)))))"
+        },
+        {
+          "fn_0 (app (app get (app (app pair slice) 5)) v0)": "(lam (lam (app tobool (app any (app (app get (app (app pair slice) 5)) v0)))))"
+        },
+        {
+          "fn_0 (app (app get (app (app pair slice) slice)) v0)": "(lam (lam (app tobool (app any (app (app get (app (app pair slice) slice)) v0)))))"
+        },
+        {
+          "fn_0 (app (app get (app (app pair slice) v0)) v1)": "(lam (lam (app tobool (app any (app (app get (app (app pair slice) v0)) v1)))))"
+        },
+        {
+          "fn_0 (app (app get (app (app pair unit) slice)) v0)": "(lam (lam (app tobool (app any (app (app get (app (app pair unit) slice)) v0)))))"
+        },
+        {
+          "fn_0 (app (app get (app (app pair v0) slice)) v1)": "(lam (lam (app tobool (app any (app (app get (app (app pair v0) slice)) v1)))))"
+        },
+        {
+          "fn_0 (app (app gt v0) 0)": "(lam (lam (app tobool (app any (app (app gt v0) 0)))))"
+        },
+        {
+          "fn_0 (app (app gt v0) 4)": "(lam (lam (app tobool (app any (app (app gt v0) 4)))))"
+        },
+        {
+          "fn_0 (app (app gte v0) 4)": "(lam (lam (app tobool (app any (app (app gte v0) 4)))))"
+        },
+        {
+          "fn_0 (app (app lte v0) 1)": "(lam (lam (app tobool (app any (app (app lte v0) 1)))))"
+        },
+        {
+          "fn_0 (app (app or (app (app eq v0) 2)) (app (app eq v0) 6))": "(lam (lam (app tobool (app any (app (app or (app (app eq v0) 2)) (app (app eq v0) 6))))))"
+        },
+        {
+          "fn_0 v0": "(lam (lam (app tobool (app any v0))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(app (app #1 #0))",
+      "dreamcoder": "#(lambda (lambda (app (app $0 $1))))",
+      "arity": 2,
+      "name": "fn_1",
+      "utility": 82516,
+      "final_cost": 450944,
+      "compression_ratio": 1.1834351937269372,
+      "cumulative_compression_ratio": 1.4411279449332954,
+      "num_uses": 819,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_1 (app (app sub v1.max) v1.min) add": "(app (app add (app (app sub v1.max) v1.min)))"
+        },
+        {
+          "fn_1 (app (app and (app (app eq v0) 1)) (app (app eq (app (app get 0) v0)) 1)) and": "(app (app and (app (app and (app (app eq v0) 1)) (app (app eq (app (app get 0) v0)) 1))))"
+        },
+        {
+          "fn_1 (app (app and v0) v1) and": "(app (app and (app (app and v0) v1)))"
+        },
+        {
+          "fn_1 (app (app eq (app (app get (app (app pair v0) v1)) 0)) (app neg 1)) and": "(app (app and (app (app eq (app (app get (app (app pair v0) v1)) 0)) (app neg 1))))"
+        },
+        {
+          "fn_1 (app (app eq (app (app get (app (app pair v0) v1)) 1)) v2) and": "(app (app and (app (app eq (app (app get (app (app pair v0) v1)) 1)) v2)))"
+        },
+        {
+          "fn_1 (app (app eq (app len (app set v0))) 1) and": "(app (app and (app (app eq (app len (app set v0))) 1)))"
+        },
+        {
+          "fn_1 (app (app eq (app len (app unique v0))) 1) and": "(app (app and (app (app eq (app len (app unique v0))) 1)))"
+        },
+        {
+          "fn_1 (app (app eq v0) 0) and": "(app (app and (app (app eq v0) 0)))"
+        },
+        {
+          "fn_1 (app (app eq v0) 1) and": "(app (app and (app (app eq v0) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair 2) slice)) v0) and": "(app (app and (app (app get (app (app pair 2) slice)) v0)))"
+        },
+        {
+          "fn_1 (app (app get v0) v1) and": "(app (app and (app (app get v0) v1)))"
+        },
+        {
+          "fn_1 (app (app gt (app (app get (app (app pair slice) v0)) 1)) 0) and": "(app (app and (app (app gt (app (app get (app (app pair slice) v0)) 1)) 0)))"
+        },
+        {
+          "fn_1 (app (app gt (app (app get (app (app pair v0) slice)) 1)) 0) and": "(app (app and (app (app gt (app (app get (app (app pair v0) slice)) 1)) 0)))"
+        },
+        {
+          "fn_1 (app (app gt (app (app get v0) 1)) 0) and": "(app (app and (app (app gt (app (app get v0) 1)) 0)))"
+        },
+        {
+          "fn_1 (app (app gt (app unique v0)) 1) and": "(app (app and (app (app gt (app unique v0)) 1)))"
+        },
+        {
+          "fn_1 (app (app gt v0) 0) and": "(app (app and (app (app gt v0) 0)))"
+        },
+        {
+          "fn_1 (app (app gte v0) 3) and": "(app (app and (app (app gte v0) 3)))"
+        },
+        {
+          "fn_1 (app (app lt v0) v1) and": "(app (app and (app (app lt v0) v1)))"
+        },
+        {
+          "fn_1 (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0) and": "(app (app and (app (app ne (app (app get (app (app pair v0) v1)) 1)) 0)))"
+        },
+        {
+          "fn_1 (app (app or v0) v1) and": "(app (app and (app (app or v0) v1)))"
+        },
+        {
+          "fn_1 (app all (app (app eq v0) (app (app get 0) v0))) and": "(app (app and (app all (app (app eq v0) (app (app get 0) v0)))))"
+        },
+        {
+          "fn_1 (app set v0) and": "(app (app and (app set v0)))"
+        },
+        {
+          "fn_1 v0 and": "(app (app and v0))"
+        },
+        {
+          "fn_1 v2 and": "(app (app and v2))"
+        },
+        {
+          "fn_1 (app (app add (app (app sub v1.max) v1.min)) 1) eq": "(app (app eq (app (app add (app (app sub v1.max) v1.min)) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair 4) slice)) 1) eq": "(app (app eq (app (app get (app (app pair 4) slice)) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair slice) 0)) v0) eq": "(app (app eq (app (app get (app (app pair slice) 0)) v0)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair slice) 1)) v0) eq": "(app (app eq (app (app get (app (app pair slice) 1)) v0)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair v0) (app (app sub v1) 1))) 1) eq": "(app (app eq (app (app get (app (app pair v0) (app (app sub v1) 1))) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair v0) slice)) 0) eq": "(app (app eq (app (app get (app (app pair v0) slice)) 0)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair v0) v1)) 0) eq": "(app (app eq (app (app get (app (app pair v0) v1)) 0)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair v0) v1)) 1) eq": "(app (app eq (app (app get (app (app pair v0) v1)) 1)))"
+        },
+        {
+          "fn_1 (app (app get 0) v0) eq": "(app (app eq (app (app get 0) v0)))"
+        },
+        {
+          "fn_1 (app (app get 0) v1) eq": "(app (app eq (app (app get 0) v1)))"
+        },
+        {
+          "fn_1 (app (app get slice) v0) eq": "(app (app eq (app (app get slice) v0)))"
+        },
+        {
+          "fn_1 (app (app get v0) 0) eq": "(app (app eq (app (app get v0) 0)))"
+        },
+        {
+          "fn_1 (app (app mod v0) 2) eq": "(app (app eq (app (app mod v0) 2)))"
+        },
+        {
+          "fn_1 (app (app sub v0.max) v0.min) eq": "(app (app eq (app (app sub v0.max) v0.min)))"
+        },
+        {
+          "fn_1 (app len (app set v0)) eq": "(app (app eq (app len (app set v0))))"
+        },
+        {
+          "fn_1 (app len (app unique v0)) eq": "(app (app eq (app len (app unique v0))))"
+        },
+        {
+          "fn_1 (app len v0) eq": "(app (app eq (app len v0)))"
+        },
+        {
+          "fn_1 (app unique (app (app get (app (app pair slice) 1)) v0)) eq": "(app (app eq (app unique (app (app get (app (app pair slice) 1)) v0))))"
+        },
+        {
+          "fn_1 (app unique v0) eq": "(app (app eq (app unique v0)))"
+        },
+        {
+          "fn_1 (app unique v1) eq": "(app (app eq (app unique v1)))"
+        },
+        {
+          "fn_1 v0 eq": "(app (app eq v0))"
+        },
+        {
+          "fn_1 v1 eq": "(app (app eq v1))"
+        },
+        {
+          "fn_1 (app (app pair (app (app sub v0) 1)) v1) get": "(app (app get (app (app pair (app (app sub v0) 1)) v1)))"
+        },
+        {
+          "fn_1 (app (app pair (app neg 1)) (app neg 1)) get": "(app (app get (app (app pair (app neg 1)) (app neg 1))))"
+        },
+        {
+          "fn_1 (app (app pair 0) 0) get": "(app (app get (app (app pair 0) 0)))"
+        },
+        {
+          "fn_1 (app (app pair 0) 1) get": "(app (app get (app (app pair 0) 1)))"
+        },
+        {
+          "fn_1 (app (app pair 0) 3) get": "(app (app get (app (app pair 0) 3)))"
+        },
+        {
+          "fn_1 (app (app pair 2) slice) get": "(app (app get (app (app pair 2) slice)))"
+        },
+        {
+          "fn_1 (app (app pair 4) slice) get": "(app (app get (app (app pair 4) slice)))"
+        },
+        {
+          "fn_1 (app (app pair 7) 0) get": "(app (app get (app (app pair 7) 0)))"
+        },
+        {
+          "fn_1 (app (app pair 7) 7) get": "(app (app get (app (app pair 7) 7)))"
+        },
+        {
+          "fn_1 (app (app pair 7) slice) get": "(app (app get (app (app pair 7) slice)))"
+        },
+        {
+          "fn_1 (app (app pair slice) 0) get": "(app (app get (app (app pair slice) 0)))"
+        },
+        {
+          "fn_1 (app (app pair slice) 1) get": "(app (app get (app (app pair slice) 1)))"
+        },
+        {
+          "fn_1 (app (app pair slice) 4) get": "(app (app get (app (app pair slice) 4)))"
+        },
+        {
+          "fn_1 (app (app pair slice) 5) get": "(app (app get (app (app pair slice) 5)))"
+        },
+        {
+          "fn_1 (app (app pair slice) slice) get": "(app (app get (app (app pair slice) slice)))"
+        },
+        {
+          "fn_1 (app (app pair slice) v0) get": "(app (app get (app (app pair slice) v0)))"
+        },
+        {
+          "fn_1 (app (app pair unit) slice) get": "(app (app get (app (app pair unit) slice)))"
+        },
+        {
+          "fn_1 (app (app pair v0) (app (app sub v1) 1)) get": "(app (app get (app (app pair v0) (app (app sub v1) 1))))"
+        },
+        {
+          "fn_1 (app (app pair v0) slice) get": "(app (app get (app (app pair v0) slice)))"
+        },
+        {
+          "fn_1 (app (app pair v0) v1) get": "(app (app get (app (app pair v0) v1)))"
+        },
+        {
+          "fn_1 0 get": "(app (app get 0))"
+        },
+        {
+          "fn_1 2 get": "(app (app get 2))"
+        },
+        {
+          "fn_1 4 get": "(app (app get 4))"
+        },
+        {
+          "fn_1 slice get": "(app (app get slice))"
+        },
+        {
+          "fn_1 v0 get": "(app (app get v0))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair (app (app sub v0) 1)) v1)) 1) gt": "(app (app gt (app (app get (app (app pair (app (app sub v0) 1)) v1)) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair (app neg 1)) (app neg 1))) 1) gt": "(app (app gt (app (app get (app (app pair (app neg 1)) (app neg 1))) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair 0) 0)) 1) gt": "(app (app gt (app (app get (app (app pair 0) 0)) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair 0) 3)) 1) gt": "(app (app gt (app (app get (app (app pair 0) 3)) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair slice) 0)) v0) gt": "(app (app gt (app (app get (app (app pair slice) 0)) v0)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair slice) v0)) 1) gt": "(app (app gt (app (app get (app (app pair slice) v0)) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair v0) slice)) 1) gt": "(app (app gt (app (app get (app (app pair v0) slice)) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair v0) v1)) 1) gt": "(app (app gt (app (app get (app (app pair v0) v1)) 1)))"
+        },
+        {
+          "fn_1 (app (app get v0) 1) gt": "(app (app gt (app (app get v0) 1)))"
+        },
+        {
+          "fn_1 (app (app mul v0) v1) gt": "(app (app gt (app (app mul v0) v1)))"
+        },
+        {
+          "fn_1 (app len (app set v1)) gt": "(app (app gt (app len (app set v1))))"
+        },
+        {
+          "fn_1 (app len (app unique v1)) gt": "(app (app gt (app len (app unique v1))))"
+        },
+        {
+          "fn_1 (app len v0) gt": "(app (app gt (app len v0)))"
+        },
+        {
+          "fn_1 (app unique v0) gt": "(app (app gt (app unique v0)))"
+        },
+        {
+          "fn_1 v0 gt": "(app (app gt v0))"
+        },
+        {
+          "fn_1 v0.min gt": "(app (app gt v0.min))"
+        },
+        {
+          "fn_1 v1 gt": "(app (app gt v1))"
+        },
+        {
+          "fn_1 v2 gt": "(app (app gt v2))"
+        },
+        {
+          "fn_1 v3 gt": "(app (app gt v3))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair slice) 0)) v0) gte": "(app (app gte (app (app get (app (app pair slice) 0)) v0)))"
+        },
+        {
+          "fn_1 (app len v0) gte": "(app (app gte (app len v0)))"
+        },
+        {
+          "fn_1 v0 gte": "(app (app gte v0))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair slice) 0)) v0) lt": "(app (app lt (app (app get (app (app pair slice) 0)) v0)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair slice) 1)) v0) lt": "(app (app lt (app (app get (app (app pair slice) 1)) v0)))"
+        },
+        {
+          "fn_1 v0 lt": "(app (app lt v0))"
+        },
+        {
+          "fn_1 v1 lt": "(app (app lt v1))"
+        },
+        {
+          "fn_1 v2 lt": "(app (app lt v2))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair slice) 0)) v0) lte": "(app (app lte (app (app get (app (app pair slice) 0)) v0)))"
+        },
+        {
+          "fn_1 (app len v0) lte": "(app (app lte (app len v0)))"
+        },
+        {
+          "fn_1 v0 lte": "(app (app lte v0))"
+        },
+        {
+          "fn_1 v0 mod": "(app (app mod v0))"
+        },
+        {
+          "fn_1 v0 mul": "(app (app mul v0))"
+        },
+        {
+          "fn_1 v2 mul": "(app (app mul v2))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair 0) 1)) 1) ne": "(app (app ne (app (app get (app (app pair 0) 1)) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair 7) 0)) 1) ne": "(app (app ne (app (app get (app (app pair 7) 0)) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair 7) 7)) 1) ne": "(app (app ne (app (app get (app (app pair 7) 7)) 1)))"
+        },
+        {
+          "fn_1 (app (app get (app (app pair v0) v1)) 1) ne": "(app (app ne (app (app get (app (app pair v0) v1)) 1)))"
+        },
+        {
+          "fn_1 v1 np.v0": "(app (app np.v0 v1))"
+        },
+        {
+          "fn_1 (app (app eq v0) 2) or": "(app (app or (app (app eq v0) 2)))"
+        },
+        {
+          "fn_1 (app (app eq v0) v1) or": "(app (app or (app (app eq v0) v1)))"
+        },
+        {
+          "fn_1 (app (app or (app (app or (app any (app (app gt v0) 0))) (app any (app (app gt v1) 0)))) (app any (app (app gt v2) 0))) or": "(app (app or (app (app or (app (app or (app any (app (app gt v0) 0))) (app any (app (app gt v1) 0)))) (app any (app (app gt v2) 0)))))"
+        },
+        {
+          "fn_1 (app (app or (app (app or (app any v0)) (app any v1))) (app any v2)) or": "(app (app or (app (app or (app (app or (app any v0)) (app any v1))) (app any v2))))"
+        },
+        {
+          "fn_1 (app (app or (app (app or v0) v1)) v2) or": "(app (app or (app (app or (app (app or v0) v1)) v2)))"
+        },
+        {
+          "fn_1 (app (app or (app any (app (app gt v0) 0))) (app any (app (app gt v1) 0))) or": "(app (app or (app (app or (app any (app (app gt v0) 0))) (app any (app (app gt v1) 0)))))"
+        },
+        {
+          "fn_1 (app (app or (app any v0)) (app any v1)) or": "(app (app or (app (app or (app any v0)) (app any v1))))"
+        },
+        {
+          "fn_1 (app (app or v0) v1) or": "(app (app or (app (app or v0) v1)))"
+        },
+        {
+          "fn_1 (app any (app (app and v0) v1)) or": "(app (app or (app any (app (app and v0) v1))))"
+        },
+        {
+          "fn_1 (app any (app (app get 2) v0)) or": "(app (app or (app any (app (app get 2) v0))))"
+        },
+        {
+          "fn_1 (app any (app (app gt v0) 0)) or": "(app (app or (app any (app (app gt v0) 0))))"
+        },
+        {
+          "fn_1 (app any v0) or": "(app (app or (app any v0)))"
+        },
+        {
+          "fn_1 any or": "(app (app or any))"
+        },
+        {
+          "fn_1 v0 or": "(app (app or v0))"
+        },
+        {
+          "fn_1 v2 or": "(app (app or v2))"
+        },
+        {
+          "fn_1 (app (app sub v0) 1) pair": "(app (app pair (app (app sub v0) 1)))"
+        },
+        {
+          "fn_1 (app neg 1) pair": "(app (app pair (app neg 1)))"
+        },
+        {
+          "fn_1 0 pair": "(app (app pair 0))"
+        },
+        {
+          "fn_1 2 pair": "(app (app pair 2))"
+        },
+        {
+          "fn_1 4 pair": "(app (app pair 4))"
+        },
+        {
+          "fn_1 7 pair": "(app (app pair 7))"
+        },
+        {
+          "fn_1 slice pair": "(app (app pair slice))"
+        },
+        {
+          "fn_1 unit pair": "(app (app pair unit))"
+        },
+        {
+          "fn_1 v0 pair": "(app (app pair v0))"
+        },
+        {
+          "fn_1 v0 sub": "(app (app sub v0))"
+        },
+        {
+          "fn_1 v0.max sub": "(app (app sub v0.max))"
+        },
+        {
+          "fn_1 v1 sub": "(app (app sub v1))"
+        },
+        {
+          "fn_1 v1.max sub": "(app (app sub v1.max))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(app all (fn_1 v0 eq (fn_1 0 get v0)))",
+      "dreamcoder": "#(app all (#(lambda (lambda (app (app $0 $1)))) v0 eq (#(lambda (lambda (app (app $0 $1)))) 0 get v0)))",
+      "arity": 0,
+      "name": "fn_2",
+      "utility": 58884,
+      "final_cost": 391152,
+      "compression_ratio": 1.1528612917740417,
+      "cumulative_compression_ratio": 1.6614206242074692,
+      "num_uses": 74,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_2 ": "(app all (fn_1 v0 eq (fn_1 0 get v0)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_1 v0 #0 v1)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1))",
+      "arity": 1,
+      "name": "fn_3",
+      "utility": 37471,
+      "final_cost": 353378,
+      "compression_ratio": 1.1068940341503999,
+      "cumulative_compression_ratio": 1.8390165771496811,
+      "num_uses": 187,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_3 and": "(fn_1 v0 and v1)"
+        },
+        {
+          "fn_3 eq": "(fn_1 v0 eq v1)"
+        },
+        {
+          "fn_3 get": "(fn_1 v0 get v1)"
+        },
+        {
+          "fn_3 gt": "(fn_1 v0 gt v1)"
+        },
+        {
+          "fn_3 gte": "(fn_1 v0 gte v1)"
+        },
+        {
+          "fn_3 lt": "(fn_1 v0 lt v1)"
+        },
+        {
+          "fn_3 mul": "(fn_1 v0 mul v1)"
+        },
+        {
+          "fn_3 or": "(fn_1 v0 or v1)"
+        },
+        {
+          "fn_3 pair": "(fn_1 v0 pair v1)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_1 (fn_1 (fn_3 pair) get 1) #0 0)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) pair) get 1) $0 0))",
+      "arity": 1,
+      "name": "fn_4",
+      "utility": 25957,
+      "final_cost": 326714,
+      "compression_ratio": 1.0816126642874195,
+      "cumulative_compression_ratio": 1.9891036196795975,
+      "num_uses": 44,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_4 gt": "(fn_1 (fn_1 (fn_3 pair) get 1) gt 0)"
+        },
+        {
+          "fn_4 ne": "(fn_1 (fn_1 (fn_3 pair) get 1) ne 0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_0 v0)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool (app any $2))))) v0)",
+      "arity": 0,
+      "name": "fn_5",
+      "utility": 24039,
+      "final_cost": 302474,
+      "compression_ratio": 1.080139119395386,
+      "cumulative_compression_ratio": 2.1485086321468954,
+      "num_uses": 240,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_5 ": "(fn_0 v0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_1 (fn_1 #1 pair #0) get)",
+      "dreamcoder": "#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get)))",
+      "arity": 2,
+      "name": "fn_6",
+      "utility": 18987,
+      "final_cost": 283082,
+      "compression_ratio": 1.0685031192375354,
+      "cumulative_compression_ratio": 2.295688175157728,
+      "num_uses": 64,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_6 (app neg 1) (app neg 1)": "(fn_1 (fn_1 (app neg 1) pair (app neg 1)) get)"
+        },
+        {
+          "fn_6 v1 (fn_1 v0 sub 1)": "(fn_1 (fn_1 (fn_1 v0 sub 1) pair v1) get)"
+        },
+        {
+          "fn_6 0 0": "(fn_1 (fn_1 0 pair 0) get)"
+        },
+        {
+          "fn_6 1 0": "(fn_1 (fn_1 0 pair 1) get)"
+        },
+        {
+          "fn_6 3 0": "(fn_1 (fn_1 0 pair 3) get)"
+        },
+        {
+          "fn_6 slice 2": "(fn_1 (fn_1 2 pair slice) get)"
+        },
+        {
+          "fn_6 slice 4": "(fn_1 (fn_1 4 pair slice) get)"
+        },
+        {
+          "fn_6 0 7": "(fn_1 (fn_1 7 pair 0) get)"
+        },
+        {
+          "fn_6 7 7": "(fn_1 (fn_1 7 pair 7) get)"
+        },
+        {
+          "fn_6 slice 7": "(fn_1 (fn_1 7 pair slice) get)"
+        },
+        {
+          "fn_6 0 slice": "(fn_1 (fn_1 slice pair 0) get)"
+        },
+        {
+          "fn_6 1 slice": "(fn_1 (fn_1 slice pair 1) get)"
+        },
+        {
+          "fn_6 4 slice": "(fn_1 (fn_1 slice pair 4) get)"
+        },
+        {
+          "fn_6 5 slice": "(fn_1 (fn_1 slice pair 5) get)"
+        },
+        {
+          "fn_6 slice slice": "(fn_1 (fn_1 slice pair slice) get)"
+        },
+        {
+          "fn_6 v0 slice": "(fn_1 (fn_1 slice pair v0) get)"
+        },
+        {
+          "fn_6 slice unit": "(fn_1 (fn_1 unit pair slice) get)"
+        },
+        {
+          "fn_6 (fn_1 v1 sub 1) v0": "(fn_1 (fn_1 v0 pair (fn_1 v1 sub 1)) get)"
+        },
+        {
+          "fn_6 slice v0": "(fn_1 (fn_1 v0 pair slice) get)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_0 (fn_3 and))",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool (app any $2))))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) and))",
+      "arity": 0,
+      "name": "fn_7",
+      "utility": 17676,
+      "final_cost": 265104,
+      "compression_ratio": 1.0678148952863782,
+      "cumulative_compression_ratio": 2.451370028366226,
+      "num_uses": 89,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_7 ": "(fn_0 (fn_3 and))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_1 (fn_1 v0 gt 0) and (fn_1 v1 eq (app neg 1)))",
+      "dreamcoder": "#(#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) v0 gt 0) and (#(lambda (lambda (app (app $0 $1)))) v1 eq (app neg 1)))",
+      "arity": 0,
+      "name": "fn_8",
+      "utility": 16565,
+      "final_cost": 247328,
+      "compression_ratio": 1.071872169750291,
+      "cumulative_compression_ratio": 2.6275553111657395,
+      "num_uses": 16,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_8 ": "(fn_1 (fn_1 v0 gt 0) and (fn_1 v1 eq (app neg 1)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (app tobool #0)))",
+      "dreamcoder": "#(lambda (lambda (lambda (app tobool $2))))",
+      "arity": 1,
+      "name": "fn_9",
+      "utility": 9169,
+      "final_cost": 237955,
+      "compression_ratio": 1.039389800592549,
+      "cumulative_compression_ratio": 2.731054190918451,
+      "num_uses": 91,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_9 (app all (fn_3 gte))": "(lam (lam (app tobool (app all (fn_3 gte)))))"
+        },
+        {
+          "fn_9 (app all (fn_3 lt))": "(lam (lam (app tobool (app all (fn_3 lt)))))"
+        },
+        {
+          "fn_9 (app all v0)": "(lam (lam (app tobool (app all v0))))"
+        },
+        {
+          "fn_9 (fn_1 (app any (fn_1 2 get v0)) or (app any (fn_1 4 get v0)))": "(lam (lam (app tobool (fn_1 (app any (fn_1 2 get v0)) or (app any (fn_1 4 get v0))))))"
+        },
+        {
+          "fn_9 (fn_1 (app any (fn_3 and)) or (app any (fn_1 v2 and v3)))": "(lam (lam (app tobool (fn_1 (app any (fn_3 and)) or (app any (fn_1 v2 and v3))))))"
+        },
+        {
+          "fn_9 (fn_1 (app any v0) or (app any v1))": "(lam (lam (app tobool (fn_1 (app any v0) or (app any v1)))))"
+        },
+        {
+          "fn_9 (fn_1 (app set v0) and v1)": "(lam (lam (app tobool (fn_1 (app set v0) and v1))))"
+        },
+        {
+          "fn_9 (fn_1 (fn_1 (fn_1 (app any (fn_1 v0 gt 0)) or (app any (fn_1 v1 gt 0))) or (app any (fn_1 v2 gt 0))) or (app any (fn_1 v3 gt 0)))": "(lam (lam (app tobool (fn_1 (fn_1 (fn_1 (app any (fn_1 v0 gt 0)) or (app any (fn_1 v1 gt 0))) or (app any (fn_1 v2 gt 0))) or (app any (fn_1 v3 gt 0))))))"
+        },
+        {
+          "fn_9 (fn_1 (fn_1 (fn_1 (app any v0) or (app any v1)) or (app any v2)) or (app any v3))": "(lam (lam (app tobool (fn_1 (fn_1 (fn_1 (app any v0) or (app any v1)) or (app any v2)) or (app any v3)))))"
+        },
+        {
+          "fn_9 (fn_1 (fn_1 (fn_3 or) or v2) or v3)": "(lam (lam (app tobool (fn_1 (fn_1 (fn_3 or) or v2) or v3))))"
+        },
+        {
+          "fn_9 (fn_1 (fn_6 (app neg 1) (app neg 1) 1) gt 0)": "(lam (lam (app tobool (fn_1 (fn_6 (app neg 1) (app neg 1) 1) gt 0))))"
+        },
+        {
+          "fn_9 (fn_1 (fn_6 (fn_1 v1 sub 1) v0 1) eq 3)": "(lam (lam (app tobool (fn_1 (fn_6 (fn_1 v1 sub 1) v0 1) eq 3))))"
+        },
+        {
+          "fn_9 (fn_1 (fn_6 0 0 1) gt 0)": "(lam (lam (app tobool (fn_1 (fn_6 0 0 1) gt 0))))"
+        },
+        {
+          "fn_9 (fn_1 any or any)": "(lam (lam (app tobool (fn_1 any or any))))"
+        },
+        {
+          "fn_9 (fn_1 v0 and (app not v1))": "(lam (lam (app tobool (fn_1 v0 and (app not v1)))))"
+        },
+        {
+          "fn_9 (fn_1 v0 lte 2)": "(lam (lam (app tobool (fn_1 v0 lte 2))))"
+        },
+        {
+          "fn_9 (fn_3 and)": "(lam (lam (app tobool (fn_3 and))))"
+        },
+        {
+          "fn_9 (fn_3 gt)": "(lam (lam (app tobool (fn_3 gt))))"
+        },
+        {
+          "fn_9 (fn_3 or)": "(lam (lam (app tobool (fn_3 or))))"
+        },
+        {
+          "fn_9 (fn_4 gt)": "(lam (lam (app tobool (fn_4 gt))))"
+        },
+        {
+          "fn_9 (fn_6 3 0 v0)": "(lam (lam (app tobool (fn_6 3 0 v0))))"
+        },
+        {
+          "fn_9 any": "(lam (lam (app tobool any)))"
+        },
+        {
+          "fn_9 fn_2": "(lam (lam (app tobool fn_2)))"
+        },
+        {
+          "fn_9 v0": "(lam (lam (app tobool v0)))"
+        },
+        {
+          "fn_9 v0.any": "(lam (lam (app tobool v0.any)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(app any)",
+      "dreamcoder": "#(app any)",
+      "arity": 0,
+      "name": "fn_10",
+      "utility": 7980,
+      "final_cost": 229774,
+      "compression_ratio": 1.0356045505583749,
+      "cumulative_compression_ratio": 2.828292147936668,
+      "num_uses": 81,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_10 ": "(app any)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_1 #0 eq)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq))",
+      "arity": 1,
+      "name": "fn_11",
+      "utility": 6363,
+      "final_cost": 223209,
+      "compression_ratio": 1.0294118964737085,
+      "cumulative_compression_ratio": 2.911477583789184,
+      "num_uses": 65,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_11 (app len (app set v0))": "(fn_1 (app len (app set v0)) eq)"
+        },
+        {
+          "fn_11 (app len (app unique v0))": "(fn_1 (app len (app unique v0)) eq)"
+        },
+        {
+          "fn_11 (app len v0)": "(fn_1 (app len v0) eq)"
+        },
+        {
+          "fn_11 (app unique (fn_6 1 slice v0))": "(fn_1 (app unique (fn_6 1 slice v0)) eq)"
+        },
+        {
+          "fn_11 (app unique v0)": "(fn_1 (app unique v0) eq)"
+        },
+        {
+          "fn_11 (app unique v1)": "(fn_1 (app unique v1) eq)"
+        },
+        {
+          "fn_11 (fn_1 (fn_1 v1.max sub v1.min) add 1)": "(fn_1 (fn_1 (fn_1 v1.max sub v1.min) add 1) eq)"
+        },
+        {
+          "fn_11 (fn_1 (fn_3 pair) get 0)": "(fn_1 (fn_1 (fn_3 pair) get 0) eq)"
+        },
+        {
+          "fn_11 (fn_1 (fn_3 pair) get 1)": "(fn_1 (fn_1 (fn_3 pair) get 1) eq)"
+        },
+        {
+          "fn_11 (fn_1 0 get v0)": "(fn_1 (fn_1 0 get v0) eq)"
+        },
+        {
+          "fn_11 (fn_1 0 get v1)": "(fn_1 (fn_1 0 get v1) eq)"
+        },
+        {
+          "fn_11 (fn_1 slice get v0)": "(fn_1 (fn_1 slice get v0) eq)"
+        },
+        {
+          "fn_11 (fn_1 v0 get 0)": "(fn_1 (fn_1 v0 get 0) eq)"
+        },
+        {
+          "fn_11 (fn_1 v0 mod 2)": "(fn_1 (fn_1 v0 mod 2) eq)"
+        },
+        {
+          "fn_11 (fn_1 v0.max sub v0.min)": "(fn_1 (fn_1 v0.max sub v0.min) eq)"
+        },
+        {
+          "fn_11 (fn_6 (fn_1 v1 sub 1) v0 1)": "(fn_1 (fn_6 (fn_1 v1 sub 1) v0 1) eq)"
+        },
+        {
+          "fn_11 (fn_6 0 slice v0)": "(fn_1 (fn_6 0 slice v0) eq)"
+        },
+        {
+          "fn_11 (fn_6 1 slice v0)": "(fn_1 (fn_6 1 slice v0) eq)"
+        },
+        {
+          "fn_11 (fn_6 slice 4 1)": "(fn_1 (fn_6 slice 4 1) eq)"
+        },
+        {
+          "fn_11 (fn_6 slice v0 0)": "(fn_1 (fn_6 slice v0 0) eq)"
+        },
+        {
+          "fn_11 v0": "(fn_1 v0 eq)"
+        },
+        {
+          "fn_11 v1": "(fn_1 v1 eq)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_6 #0 slice v0)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $0 slice v0))",
+      "arity": 1,
+      "name": "fn_12",
+      "utility": 5757,
+      "final_cost": 217149,
+      "compression_ratio": 1.0279071052595223,
+      "cumulative_compression_ratio": 2.9927284951807285,
+      "num_uses": 30,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_12 0": "(fn_6 0 slice v0)"
+        },
+        {
+          "fn_12 1": "(fn_6 1 slice v0)"
+        },
+        {
+          "fn_12 4": "(fn_6 4 slice v0)"
+        },
+        {
+          "fn_12 5": "(fn_6 5 slice v0)"
+        },
+        {
+          "fn_12 slice": "(fn_6 slice slice v0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_11 (app unique v0) 1)))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (app unique v0) 1)))",
+      "arity": 0,
+      "name": "fn_13",
+      "utility": 4366,
+      "final_cost": 212277,
+      "compression_ratio": 1.0229511440240817,
+      "cumulative_compression_ratio": 3.0614150378985947,
+      "num_uses": 12,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_13 ": "(lam (lam (fn_11 (app unique v0) 1)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_1 v0)",
+      "dreamcoder": "#(#(lambda (lambda (app (app $0 $1)))) v0)",
+      "arity": 0,
+      "name": "fn_14",
+      "utility": 4344,
+      "final_cost": 207732,
+      "compression_ratio": 1.0218791519842874,
+      "cumulative_compression_ratio": 3.1283962027997614,
+      "num_uses": 45,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_14 ": "(fn_1 v0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_11 (fn_1 (fn_3 pair) get 0) (app neg 1))",
+      "dreamcoder": "#(#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (#(lambda (lambda (app (app $0 $1)))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) pair) get 0) (app neg 1))",
+      "arity": 0,
+      "name": "fn_15",
+      "utility": 3940,
+      "final_cost": 202884,
+      "compression_ratio": 1.02389542792926,
+      "cumulative_compression_ratio": 3.2031505687979336,
+      "num_uses": 6,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_15 ": "(fn_11 (fn_1 (fn_3 pair) get 0) (app neg 1))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_1 #0 and)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and))",
+      "arity": 1,
+      "name": "fn_16",
+      "utility": 3434,
+      "final_cost": 199248,
+      "compression_ratio": 1.0182486147916165,
+      "cumulative_compression_ratio": 3.2616036296474746,
+      "num_uses": 36,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_16 (app set v0)": "(fn_1 (app set v0) and)"
+        },
+        {
+          "fn_16 (fn_1 (app unique v0) gt 1)": "(fn_1 (fn_1 (app unique v0) gt 1) and)"
+        },
+        {
+          "fn_16 (fn_1 (fn_11 v0 1) and (fn_11 (fn_1 0 get v0) 1))": "(fn_1 (fn_1 (fn_11 v0 1) and (fn_11 (fn_1 0 get v0) 1)) and)"
+        },
+        {
+          "fn_16 (fn_1 (fn_14 get 1) gt 0)": "(fn_1 (fn_1 (fn_14 get 1) gt 0) and)"
+        },
+        {
+          "fn_16 (fn_1 (fn_6 slice v0 1) gt 0)": "(fn_1 (fn_1 (fn_6 slice v0 1) gt 0) and)"
+        },
+        {
+          "fn_16 (fn_1 (fn_6 v0 slice 1) gt 0)": "(fn_1 (fn_1 (fn_6 v0 slice 1) gt 0) and)"
+        },
+        {
+          "fn_16 (fn_11 (app len (app set v0)) 1)": "(fn_1 (fn_11 (app len (app set v0)) 1) and)"
+        },
+        {
+          "fn_16 (fn_11 (app len (app unique v0)) 1)": "(fn_1 (fn_11 (app len (app unique v0)) 1) and)"
+        },
+        {
+          "fn_16 (fn_11 (fn_1 (fn_3 pair) get 1) v2)": "(fn_1 (fn_11 (fn_1 (fn_3 pair) get 1) v2) and)"
+        },
+        {
+          "fn_16 (fn_11 v0 0)": "(fn_1 (fn_11 v0 0) and)"
+        },
+        {
+          "fn_16 (fn_11 v0 1)": "(fn_1 (fn_11 v0 1) and)"
+        },
+        {
+          "fn_16 (fn_14 gt 0)": "(fn_1 (fn_14 gt 0) and)"
+        },
+        {
+          "fn_16 (fn_14 gte 3)": "(fn_1 (fn_14 gte 3) and)"
+        },
+        {
+          "fn_16 (fn_3 and)": "(fn_1 (fn_3 and) and)"
+        },
+        {
+          "fn_16 (fn_3 get)": "(fn_1 (fn_3 get) and)"
+        },
+        {
+          "fn_16 (fn_3 lt)": "(fn_1 (fn_3 lt) and)"
+        },
+        {
+          "fn_16 (fn_3 or)": "(fn_1 (fn_3 or) and)"
+        },
+        {
+          "fn_16 (fn_4 ne)": "(fn_1 (fn_4 ne) and)"
+        },
+        {
+          "fn_16 (fn_6 slice 2 v0)": "(fn_1 (fn_6 slice 2 v0) and)"
+        },
+        {
+          "fn_16 fn_15": "(fn_1 fn_15 and)"
+        },
+        {
+          "fn_16 fn_2": "(fn_1 fn_2 and)"
+        },
+        {
+          "fn_16 v2": "(fn_1 v2 and)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_10 v0)",
+      "dreamcoder": "#(#(app any) v0)",
+      "arity": 0,
+      "name": "fn_17",
+      "utility": 3031,
+      "final_cost": 196016,
+      "compression_ratio": 1.0164884499224554,
+      "cumulative_compression_ratio": 3.3153824177618154,
+      "num_uses": 32,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_17 ": "(fn_10 v0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_4 gt)",
+      "dreamcoder": "#(#(lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) pair) get 1) $0 0)) gt)",
+      "arity": 0,
+      "name": "fn_18",
+      "utility": 2728,
+      "final_cost": 193087,
+      "compression_ratio": 1.0151693278159586,
+      "cumulative_compression_ratio": 3.3656745404921096,
+      "num_uses": 29,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_18 ": "(fn_4 gt)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_1 (fn_6 #1 #0 1) gt 0)",
+      "dreamcoder": "#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $0 $1 1) gt 0)))",
+      "arity": 2,
+      "name": "fn_19",
+      "utility": 2726,
+      "final_cost": 189855,
+      "compression_ratio": 1.0170235179479077,
+      "cumulative_compression_ratio": 3.422970161438993,
+      "num_uses": 8,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_19 (app neg 1) (app neg 1)": "(fn_1 (fn_6 (app neg 1) (app neg 1) 1) gt 0)"
+        },
+        {
+          "fn_19 0 0": "(fn_1 (fn_6 0 0 1) gt 0)"
+        },
+        {
+          "fn_19 0 3": "(fn_1 (fn_6 3 0 1) gt 0)"
+        },
+        {
+          "fn_19 v0 slice": "(fn_1 (fn_6 slice v0 1) gt 0)"
+        },
+        {
+          "fn_19 slice v0": "(fn_1 (fn_6 v0 slice 1) gt 0)"
+        },
+        {
+          "fn_19 (fn_14 sub 1) v1": "(fn_1 (fn_6 v1 (fn_14 sub 1) 1) gt 0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_14 and (app not v1))",
+      "dreamcoder": "#(#(#(lambda (lambda (app (app $0 $1)))) v0) and (app not v1))",
+      "arity": 0,
+      "name": "fn_20",
+      "utility": 2324,
+      "final_cost": 187027,
+      "compression_ratio": 1.0151208114336432,
+      "cumulative_compression_ratio": 3.474728247793099,
+      "num_uses": 7,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_20 ": "(fn_14 and (app not v1))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (app all (fn_11 (fn_12 #0) (fn_6 #0 0 v0)))))",
+      "dreamcoder": "#(lambda (lambda (lambda (app all (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (#(lambda (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $0 slice v0)) $2) (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $2 0 v0))))))",
+      "arity": 1,
+      "name": "fn_21",
+      "utility": 2126,
+      "final_cost": 184191,
+      "compression_ratio": 1.0153970606598586,
+      "cumulative_compression_ratio": 3.5282288494008935,
+      "num_uses": 4,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_21 0": "(lam (lam (app all (fn_11 (fn_12 0) (fn_6 0 0 v0)))))"
+        },
+        {
+          "fn_21 1": "(lam (lam (app all (fn_11 (fn_12 1) (fn_6 1 0 v0)))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_0 (fn_12 slice))",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool (app any $2))))) (#(lambda (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $0 slice v0)) slice))",
+      "arity": 0,
+      "name": "fn_22",
+      "utility": 2122,
+      "final_cost": 181767,
+      "compression_ratio": 1.0133357540147552,
+      "cumulative_compression_ratio": 3.5752804414442667,
+      "num_uses": 12,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_22 ": "(fn_0 (fn_12 slice))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_3 and)",
+      "dreamcoder": "#(#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) and)",
+      "arity": 0,
+      "name": "fn_23",
+      "utility": 2021,
+      "final_cost": 179545,
+      "compression_ratio": 1.0123757275334875,
+      "cumulative_compression_ratio": 3.6195271380433875,
+      "num_uses": 22,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_23 ": "(fn_3 and)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(app all)",
+      "dreamcoder": "#(app all)",
+      "arity": 0,
+      "name": "fn_24",
+      "utility": 1718,
+      "final_cost": 177626,
+      "compression_ratio": 1.0108035985722812,
+      "cumulative_compression_ratio": 3.6586310562642854,
+      "num_uses": 19,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_24 ": "(app all)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_6 slice v0 v1)",
+      "dreamcoder": "#(#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) slice v0 v1)",
+      "arity": 0,
+      "name": "fn_25",
+      "utility": 1718,
+      "final_cost": 175505,
+      "compression_ratio": 1.0120851257798924,
+      "cumulative_compression_ratio": 3.7028460727614596,
+      "num_uses": 7,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_25 ": "(fn_6 slice v0 v1)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_9 v0.any)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool $2)))) v0.any)",
+      "arity": 0,
+      "name": "fn_26",
+      "utility": 1617,
+      "final_cost": 173687,
+      "compression_ratio": 1.0104671046192288,
+      "cumulative_compression_ratio": 3.7416041499939547,
+      "num_uses": 18,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_26 ": "(fn_9 v0.any)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_11 v0)",
+      "dreamcoder": "#(#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) v0)",
+      "arity": 0,
+      "name": "fn_27",
+      "utility": 1617,
+      "final_cost": 171869,
+      "compression_ratio": 1.0105778238076675,
+      "cumulative_compression_ratio": 3.781182179450628,
+      "num_uses": 18,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_27 ": "(fn_11 v0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_1 #0 or)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 or))",
+      "arity": 1,
+      "name": "fn_28",
+      "utility": 1616,
+      "final_cost": 170051,
+      "compression_ratio": 1.0106909103739465,
+      "cumulative_compression_ratio": 3.821606459238699,
+      "num_uses": 18,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_28 (fn_1 (fn_1 (fn_10 (fn_14 gt 0)) or (fn_10 (fn_1 v1 gt 0))) or (fn_10 (fn_1 v2 gt 0)))": "(fn_1 (fn_1 (fn_1 (fn_10 (fn_14 gt 0)) or (fn_10 (fn_1 v1 gt 0))) or (fn_10 (fn_1 v2 gt 0))) or)"
+        },
+        {
+          "fn_28 (fn_1 (fn_1 fn_17 or (fn_10 v1)) or (fn_10 v2))": "(fn_1 (fn_1 (fn_1 fn_17 or (fn_10 v1)) or (fn_10 v2)) or)"
+        },
+        {
+          "fn_28 (fn_1 (fn_10 (fn_14 gt 0)) or (fn_10 (fn_1 v1 gt 0)))": "(fn_1 (fn_1 (fn_10 (fn_14 gt 0)) or (fn_10 (fn_1 v1 gt 0))) or)"
+        },
+        {
+          "fn_28 (fn_1 (fn_3 or) or v2)": "(fn_1 (fn_1 (fn_3 or) or v2) or)"
+        },
+        {
+          "fn_28 (fn_1 fn_17 or (fn_10 v1))": "(fn_1 (fn_1 fn_17 or (fn_10 v1)) or)"
+        },
+        {
+          "fn_28 (fn_10 (fn_1 2 get v0))": "(fn_1 (fn_10 (fn_1 2 get v0)) or)"
+        },
+        {
+          "fn_28 (fn_10 (fn_14 gt 0))": "(fn_1 (fn_10 (fn_14 gt 0)) or)"
+        },
+        {
+          "fn_28 (fn_10 fn_23)": "(fn_1 (fn_10 fn_23) or)"
+        },
+        {
+          "fn_28 (fn_27 2)": "(fn_1 (fn_27 2) or)"
+        },
+        {
+          "fn_28 (fn_3 eq)": "(fn_1 (fn_3 eq) or)"
+        },
+        {
+          "fn_28 (fn_3 or)": "(fn_1 (fn_3 or) or)"
+        },
+        {
+          "fn_28 any": "(fn_1 any or)"
+        },
+        {
+          "fn_28 fn_17": "(fn_1 fn_17 or)"
+        },
+        {
+          "fn_28 v2": "(fn_1 v2 or)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_0 (fn_16 fn_23 v2))",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool (app any $2))))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and)) #(#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) and) v2))",
+      "arity": 0,
+      "name": "fn_29",
+      "utility": 1415,
+      "final_cost": 168233,
+      "compression_ratio": 1.0108064410668538,
+      "cumulative_compression_ratio": 3.8629044242211696,
+      "num_uses": 6,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_29 ": "(fn_0 (fn_16 fn_23 v2))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_16 (fn_11 (app len (app #0 v0)) 1) (fn_1 (app len (app #0 v1)) gt 1))))",
+      "dreamcoder": "#(lambda (lambda (lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and)) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (app len (app $2 v0)) 1) (#(lambda (lambda (app (app $0 $1)))) (app len (app $2 v1)) gt 1)))))",
+      "arity": 1,
+      "name": "fn_30",
+      "utility": 1415,
+      "final_cost": 165401,
+      "compression_ratio": 1.017122024655232,
+      "cumulative_compression_ratio": 3.9290451690134884,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_30 set": "(lam (lam (fn_16 (fn_11 (app len (app set v0)) 1) (fn_1 (app len (app set v1)) gt 1))))"
+        },
+        {
+          "fn_30 unique": "(lam (lam (fn_16 (fn_11 (app len (app unique v0)) 1) (fn_1 (app len (app unique v1)) gt 1))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_10 (fn_16 (fn_1 (fn_14 get 1) gt 0) (fn_11 (fn_14 get 0) (app neg 1))))))",
+      "dreamcoder": "#(lambda (lambda (#(app any) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and)) (#(lambda (lambda (app (app $0 $1)))) (#(#(lambda (lambda (app (app $0 $1)))) v0) get 1) gt 0) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (#(#(lambda (lambda (app (app $0 $1)))) v0) get 0) (app neg 1))))))",
+      "arity": 0,
+      "name": "fn_31",
+      "utility": 1316,
+      "final_cost": 162569,
+      "compression_ratio": 1.0174202953822684,
+      "cumulative_compression_ratio": 3.997490296427978,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_31 ": "(lam (lam (fn_10 (fn_16 (fn_1 (fn_14 get 1) gt 0) (fn_11 (fn_14 get 0) (app neg 1))))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_9 v0)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool $2)))) v0)",
+      "arity": 0,
+      "name": "fn_32",
+      "utility": 1314,
+      "final_cost": 161054,
+      "compression_ratio": 1.0094067828181852,
+      "cumulative_compression_ratio": 4.035093819464279,
+      "num_uses": 15,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_32 ": "(fn_9 v0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_9 any)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool $2)))) any)",
+      "arity": 0,
+      "name": "fn_33",
+      "utility": 1314,
+      "final_cost": 159539,
+      "compression_ratio": 1.0094961106688647,
+      "cumulative_compression_ratio": 4.073411516933164,
+      "num_uses": 15,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_33 ": "(fn_9 any)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_4 ne)",
+      "dreamcoder": "#(#(lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) pair) get 1) $0 0)) ne)",
+      "arity": 0,
+      "name": "fn_34",
+      "utility": 1314,
+      "final_cost": 158024,
+      "compression_ratio": 1.009587151318787,
+      "cumulative_compression_ratio": 4.112463929529691,
+      "num_uses": 15,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_34 ": "(fn_4 ne)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_1 (app len v0) #1 #0)))",
+      "dreamcoder": "#(lambda (lambda (lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (app len v0) $2 $3)))))",
+      "arity": 2,
+      "name": "fn_35",
+      "utility": 1118,
+      "final_cost": 156499,
+      "compression_ratio": 1.0097444712106787,
+      "cumulative_compression_ratio": 4.1525377158959484,
+      "num_uses": 5,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_35 1 gt": "(lam (lam (fn_1 (app len v0) gt 1)))"
+        },
+        {
+          "fn_35 2 gt": "(lam (lam (fn_1 (app len v0) gt 2)))"
+        },
+        {
+          "fn_35 3 gte": "(lam (lam (fn_1 (app len v0) gte 3)))"
+        },
+        {
+          "fn_35 1 lte": "(lam (lam (fn_1 (app len v0) lte 1)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_14 gt)",
+      "dreamcoder": "#(#(#(lambda (lambda (app (app $0 $1)))) v0) gt)",
+      "arity": 0,
+      "name": "fn_36",
+      "utility": 1112,
+      "final_cost": 155186,
+      "compression_ratio": 1.0084608147642184,
+      "cumulative_compression_ratio": 4.187671568311575,
+      "num_uses": 13,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_36 ": "(fn_14 gt)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_0 fn_8)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool (app any $2))))) #(#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) v0 gt 0) and (#(lambda (lambda (app (app $0 $1)))) v1 eq (app neg 1))))",
+      "arity": 0,
+      "name": "fn_37",
+      "utility": 910,
+      "final_cost": 154075,
+      "compression_ratio": 1.0072107739737142,
+      "cumulative_compression_ratio": 4.217867921466818,
+      "num_uses": 11,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_37 ": "(fn_0 fn_8)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_9 fn_2)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool $2)))) #(app all (#(lambda (lambda (app (app $0 $1)))) v0 eq (#(lambda (lambda (app (app $0 $1)))) 0 get v0))))",
+      "arity": 0,
+      "name": "fn_38",
+      "utility": 910,
+      "final_cost": 152964,
+      "compression_ratio": 1.0072631468842341,
+      "cumulative_compression_ratio": 4.248502915718731,
+      "num_uses": 11,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_38 ": "(fn_9 fn_2)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_3 gt)",
+      "dreamcoder": "#(#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) gt)",
+      "arity": 0,
+      "name": "fn_39",
+      "utility": 809,
+      "final_cost": 151954,
+      "compression_ratio": 1.0066467483580557,
+      "cumulative_compression_ratio": 4.27674164549798,
+      "num_uses": 10,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_39 ": "(fn_3 gt)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_1 (fn_6 #1 #0 1) ne 0)))",
+      "dreamcoder": "#(lambda (lambda (lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $2 $3 1) ne 0)))))",
+      "arity": 2,
+      "name": "fn_40",
+      "utility": 710,
+      "final_cost": 150736,
+      "compression_ratio": 1.0080803524042035,
+      "cumulative_compression_ratio": 4.311299225135336,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_40 7 0": "(lam (lam (fn_1 (fn_6 0 7 1) ne 0)))"
+        },
+        {
+          "fn_40 0 1": "(lam (lam (fn_1 (fn_6 1 0 1) ne 0)))"
+        },
+        {
+          "fn_40 7 7": "(lam (lam (fn_1 (fn_6 7 7 1) ne 0)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_1 #0 gt)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 gt))",
+      "arity": 1,
+      "name": "fn_41",
+      "utility": 707,
+      "final_cost": 149827,
+      "compression_ratio": 1.006066997270185,
+      "cumulative_compression_ratio": 4.3374558657651825,
+      "num_uses": 9,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_41 (app unique v0)": "(fn_1 (app unique v0) gt)"
+        },
+        {
+          "fn_41 (fn_12 0)": "(fn_1 (fn_12 0) gt)"
+        },
+        {
+          "fn_41 (fn_3 mul)": "(fn_1 (fn_3 mul) gt)"
+        },
+        {
+          "fn_41 v0.min": "(fn_1 v0.min gt)"
+        },
+        {
+          "fn_41 v1": "(fn_1 v1 gt)"
+        },
+        {
+          "fn_41 v2": "(fn_1 v2 gt)"
+        },
+        {
+          "fn_41 v3": "(fn_1 v3 gt)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_6 slice #0 v0)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) slice $0 v0))",
+      "arity": 1,
+      "name": "fn_42",
+      "utility": 707,
+      "final_cost": 148817,
+      "compression_ratio": 1.0067868590282025,
+      "cumulative_compression_ratio": 4.366893567267181,
+      "num_uses": 5,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_42 2": "(fn_6 slice 2 v0)"
+        },
+        {
+          "fn_42 7": "(fn_6 slice 7 v0)"
+        },
+        {
+          "fn_42 unit": "(fn_6 slice unit v0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_9 (fn_28 #1 (fn_10 #0)))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (lambda (lambda (app tobool $2)))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 or)) $0 (#(app any) $1)))))",
+      "arity": 2,
+      "name": "fn_43",
+      "utility": 706,
+      "final_cost": 147807,
+      "compression_ratio": 1.0068332352324314,
+      "cumulative_compression_ratio": 4.396733578247309,
+      "num_uses": 5,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_43 (fn_1 4 get v0) (fn_10 (fn_1 2 get v0))": "(fn_9 (fn_28 (fn_10 (fn_1 2 get v0)) (fn_10 (fn_1 4 get v0))))"
+        },
+        {
+          "fn_43 (fn_16 v2 v3) (fn_10 fn_23)": "(fn_9 (fn_28 (fn_10 fn_23) (fn_10 (fn_16 v2 v3))))"
+        },
+        {
+          "fn_43 (fn_41 v3 0) (fn_28 (fn_28 (fn_10 (fn_36 0)) (fn_10 (fn_41 v1 0))) (fn_10 (fn_41 v2 0)))": "(fn_9 (fn_28 (fn_28 (fn_28 (fn_10 (fn_36 0)) (fn_10 (fn_41 v1 0))) (fn_10 (fn_41 v2 0))) (fn_10 (fn_41 v3 0))))"
+        },
+        {
+          "fn_43 v3 (fn_28 (fn_28 fn_17 (fn_10 v1)) (fn_10 v2))": "(fn_9 (fn_28 (fn_28 (fn_28 fn_17 (fn_10 v1)) (fn_10 v2)) (fn_10 v3)))"
+        },
+        {
+          "fn_43 v1 fn_17": "(fn_9 (fn_28 fn_17 (fn_10 v1)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_11 (fn_1 #1 get #0))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (#(lambda (lambda (app (app $0 $1)))) $0 get $1))))",
+      "arity": 2,
+      "name": "fn_44",
+      "utility": 706,
+      "final_cost": 146797,
+      "compression_ratio": 1.0068802495963813,
+      "cumulative_compression_ratio": 4.426984202674442,
+      "num_uses": 5,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_44 1 (fn_3 pair)": "(fn_11 (fn_1 (fn_3 pair) get 1))"
+        },
+        {
+          "fn_44 v0 0": "(fn_11 (fn_1 0 get v0))"
+        },
+        {
+          "fn_44 v1 0": "(fn_11 (fn_1 0 get v1))"
+        },
+        {
+          "fn_44 v0 slice": "(fn_11 (fn_1 slice get v0))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_24 (fn_14 lt 4))))",
+      "dreamcoder": "#(lambda (lambda (#(app all) (#(#(lambda (lambda (app (app $0 $1)))) v0) lt 4))))",
+      "arity": 0,
+      "name": "fn_45",
+      "utility": 510,
+      "final_cost": 145882,
+      "compression_ratio": 1.0062721925940143,
+      "cumulative_compression_ratio": 4.454751100204275,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_45 ": "(lam (lam (fn_24 (fn_14 lt 4))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (#0 (fn_1 v1 np.v0 unit))))",
+      "dreamcoder": "#(lambda (lambda (lambda ($2 (#(lambda (lambda (app (app $0 $1)))) v1 np.v0 unit)))))",
+      "arity": 1,
+      "name": "fn_46",
+      "utility": 509,
+      "final_cost": 144967,
+      "compression_ratio": 1.0063117813019515,
+      "cumulative_compression_ratio": 4.482868514903392,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_46 fn_10": "(lam (lam (fn_10 (fn_1 v1 np.v0 unit))))"
+        },
+        {
+          "fn_46 fn_24": "(lam (lam (fn_24 (fn_1 v1 np.v0 unit))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_24 (fn_1 (fn_12 #1) #0 v1))))",
+      "dreamcoder": "#(lambda (lambda (lambda (lambda (#(app all) (#(lambda (lambda (app (app $0 $1)))) (#(lambda (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $0 slice v0)) $2) $3 v1))))))",
+      "arity": 2,
+      "name": "fn_47",
+      "utility": 508,
+      "final_cost": 144052,
+      "compression_ratio": 1.0063518729347736,
+      "cumulative_compression_ratio": 4.511343126093355,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_47 gte 0": "(lam (lam (fn_24 (fn_1 (fn_12 0) gte v1))))"
+        },
+        {
+          "fn_47 lt 0": "(lam (lam (fn_24 (fn_1 (fn_12 0) lt v1))))"
+        },
+        {
+          "fn_47 lt 1": "(lam (lam (fn_24 (fn_1 (fn_12 1) lt v1))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_14 #0 2)",
+      "dreamcoder": "#(lambda (#(#(lambda (lambda (app (app $0 $1)))) v0) $0 2))",
+      "arity": 1,
+      "name": "fn_48",
+      "utility": 505,
+      "final_cost": 143345,
+      "compression_ratio": 1.004932156684921,
+      "cumulative_compression_ratio": 4.5335937772506885,
+      "num_uses": 7,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_48 gte": "(fn_14 gte 2)"
+        },
+        {
+          "fn_48 lt": "(fn_14 lt 2)"
+        },
+        {
+          "fn_48 lte": "(fn_14 lte 2)"
+        },
+        {
+          "fn_48 mod": "(fn_14 mod 2)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_16 (fn_27 1) (#0 1))",
+      "dreamcoder": "#(lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and)) (#(#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) v0) 1) ($0 1)))",
+      "arity": 1,
+      "name": "fn_49",
+      "utility": 505,
+      "final_cost": 142436,
+      "compression_ratio": 1.0063818135864528,
+      "cumulative_compression_ratio": 4.5625263276138055,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_49 (fn_41 v1)": "(fn_16 (fn_27 1) (fn_41 v1 1))"
+        },
+        {
+          "fn_49 (fn_44 v0 0)": "(fn_16 (fn_27 1) (fn_44 v0 0 1))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_11 (app #1 #0) 1)",
+      "dreamcoder": "#(lambda (lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (app $0 $1) 1)))",
+      "arity": 2,
+      "name": "fn_50",
+      "utility": 504,
+      "final_cost": 141628,
+      "compression_ratio": 1.0057050865648036,
+      "cumulative_compression_ratio": 4.5885559352670375,
+      "num_uses": 4,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_50 v0 len": "(fn_11 (app len v0) 1)"
+        },
+        {
+          "fn_50 (fn_12 1) unique": "(fn_11 (app unique (fn_12 1)) 1)"
+        },
+        {
+          "fn_50 v1 unique": "(fn_11 (app unique v1) 1)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_19 #0 #0)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $0 $1 1) gt 0))) $0 $0))",
+      "arity": 1,
+      "name": "fn_51",
+      "utility": 504,
+      "final_cost": 141022,
+      "compression_ratio": 1.0042972018550298,
+      "cumulative_compression_ratio": 4.608273886343975,
+      "num_uses": 4,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_51 (app neg 1)": "(fn_19 (app neg 1) (app neg 1))"
+        },
+        {
+          "fn_51 0": "(fn_19 0 0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_10 (fn_16 #1 #0))))",
+      "dreamcoder": "#(lambda (lambda (lambda (lambda (#(app any) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and)) $2 $3))))))",
+      "arity": 2,
+      "name": "fn_52",
+      "utility": 413,
+      "final_cost": 140404,
+      "compression_ratio": 1.0044015840004559,
+      "cumulative_compression_ratio": 4.628557590951825,
+      "num_uses": 6,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_52 (fn_14 lte 6) (fn_14 gte 3)": "(lam (lam (fn_10 (fn_16 (fn_14 gte 3) (fn_14 lte 6)))))"
+        },
+        {
+          "fn_52 (fn_11 (fn_6 slice v0 0) (app neg 1)) (fn_19 v0 slice)": "(lam (lam (fn_10 (fn_16 (fn_19 v0 slice) (fn_11 (fn_6 slice v0 0) (app neg 1))))))"
+        },
+        {
+          "fn_52 (fn_1 v2 lt v3) (fn_3 lt)": "(lam (lam (fn_10 (fn_16 (fn_3 lt) (fn_1 v2 lt v3)))))"
+        },
+        {
+          "fn_52 v1 (fn_36 0)": "(lam (lam (fn_10 (fn_16 (fn_36 0) v1))))"
+        },
+        {
+          "fn_52 v2 fn_23": "(lam (lam (fn_10 (fn_16 fn_23 v2))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_10 fn_23)",
+      "dreamcoder": "#(#(app any) #(#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) and))",
+      "arity": 0,
+      "name": "fn_53",
+      "utility": 405,
+      "final_cost": 139798,
+      "compression_ratio": 1.0043348259631755,
+      "cumulative_compression_ratio": 4.6486215825691355,
+      "num_uses": 6,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_53 ": "(fn_10 fn_23)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_36 0)",
+      "dreamcoder": "#(#(#(#(lambda (lambda (app (app $0 $1)))) v0) gt) 0)",
+      "arity": 0,
+      "name": "fn_54",
+      "utility": 405,
+      "final_cost": 139192,
+      "compression_ratio": 1.004353698488419,
+      "cumulative_compression_ratio": 4.668860279326398,
+      "num_uses": 6,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_54 ": "(fn_36 0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_28 (fn_28 (fn_3 or) v2) v3)",
+      "dreamcoder": "#(#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 or)) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 or)) (#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) or) v2) v3)",
+      "arity": 0,
+      "name": "fn_55",
+      "utility": 405,
+      "final_cost": 138182,
+      "compression_ratio": 1.0073092009089462,
+      "cumulative_compression_ratio": 4.702985917123793,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_55 ": "(fn_28 (fn_28 (fn_3 or) v2) v3)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_11 (#0 1))",
+      "dreamcoder": "#(lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) ($0 1)))",
+      "arity": 1,
+      "name": "fn_56",
+      "utility": 404,
+      "final_cost": 137576,
+      "compression_ratio": 1.0044048380531487,
+      "cumulative_compression_ratio": 4.723701808454963,
+      "num_uses": 6,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_56 (fn_1 (fn_1 v1.max sub v1.min) add)": "(fn_11 (fn_1 (fn_1 v1.max sub v1.min) add 1))"
+        },
+        {
+          "fn_56 fn_12": "(fn_11 (fn_12 1))"
+        },
+        {
+          "fn_56 (fn_6 (fn_1 v1 sub 1) v0)": "(fn_11 (fn_6 (fn_1 v1 sub 1) v0 1))"
+        },
+        {
+          "fn_56 (fn_6 slice 4)": "(fn_11 (fn_6 slice 4 1))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_10 fn_8)))",
+      "dreamcoder": "#(lambda (lambda (#(app any) #(#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) v0 gt 0) and (#(lambda (lambda (app (app $0 $1)))) v1 eq (app neg 1))))))",
+      "arity": 0,
+      "name": "fn_57",
+      "utility": 312,
+      "final_cost": 137061,
+      "compression_ratio": 1.003757451061936,
+      "cumulative_compression_ratio": 4.7414508868314105,
+      "num_uses": 5,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_57 ": "(lam (lam (fn_10 fn_8)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_0 fn_25)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool (app any $2))))) #(#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) slice v0 v1))",
+      "arity": 0,
+      "name": "fn_58",
+      "utility": 304,
+      "final_cost": 136556,
+      "compression_ratio": 1.003698116523624,
+      "cumulative_compression_ratio": 4.758985324701953,
+      "num_uses": 5,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_58 ": "(fn_0 fn_25)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_44 1 (fn_3 pair) v2)",
+      "dreamcoder": "#(#(lambda (lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (#(lambda (lambda (app (app $0 $1)))) $0 get $1)))) 1 (#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) pair) v2)",
+      "arity": 0,
+      "name": "fn_59",
+      "utility": 304,
+      "final_cost": 135748,
+      "compression_ratio": 1.0059522055573562,
+      "cumulative_compression_ratio": 4.787311783599022,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_59 ": "(fn_44 1 (fn_3 pair) v2)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_0 (fn_6 v0 slice v1))",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool (app any $2))))) (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) v0 slice v1))",
+      "arity": 0,
+      "name": "fn_60",
+      "utility": 304,
+      "final_cost": 134940,
+      "compression_ratio": 1.0059878464502743,
+      "cumulative_compression_ratio": 4.815977471468801,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_60 ": "(fn_0 (fn_6 v0 slice v1))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_9 (fn_24 #0))",
+      "dreamcoder": "#(lambda (#(lambda (lambda (lambda (app tobool $2)))) (#(app all) $0)))",
+      "arity": 1,
+      "name": "fn_61",
+      "utility": 303,
+      "final_cost": 134435,
+      "compression_ratio": 1.003756462230818,
+      "cumulative_compression_ratio": 4.834068508944843,
+      "num_uses": 5,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_61 (fn_3 gte)": "(fn_9 (fn_24 (fn_3 gte)))"
+        },
+        {
+          "fn_61 (fn_3 lt)": "(fn_9 (fn_24 (fn_3 lt)))"
+        },
+        {
+          "fn_61 v0": "(fn_9 (fn_24 v0))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam false))",
+      "dreamcoder": "#(lambda (lambda false))",
+      "arity": 0,
+      "name": "fn_62",
+      "utility": 262,
+      "final_cost": 134071,
+      "compression_ratio": 1.002714979376599,
+      "cumulative_compression_ratio": 4.847192905251695,
+      "num_uses": 182,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_62 ": "(lam (lam false))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_36 1)))",
+      "dreamcoder": "#(lambda (lambda (#(#(#(lambda (lambda (app (app $0 $1)))) v0) gt) 1)))",
+      "arity": 0,
+      "name": "fn_63",
+      "utility": 209,
+      "final_cost": 133659,
+      "compression_ratio": 1.003082471064425,
+      "cumulative_compression_ratio": 4.8621342371258205,
+      "num_uses": 4,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_63 ": "(lam (lam (fn_36 1)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_16 fn_15 #0)))",
+      "dreamcoder": "#(lambda (lambda (lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and)) #(#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (#(lambda (lambda (app (app $0 $1)))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) pair) get 0) (app neg 1)) $2))))",
+      "arity": 1,
+      "name": "fn_64",
+      "utility": 208,
+      "final_cost": 133247,
+      "compression_ratio": 1.0030920020713412,
+      "cumulative_compression_ratio": 4.877167966258152,
+      "num_uses": 4,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_64 fn_18": "(lam (lam (fn_16 fn_15 fn_18)))"
+        },
+        {
+          "fn_64 fn_34": "(lam (lam (fn_16 fn_15 fn_34)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_11 (fn_48 mod) 0)))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (#(lambda (#(#(lambda (lambda (app (app $0 $1)))) v0) $0 2)) mod) 0)))",
+      "arity": 0,
+      "name": "fn_65",
+      "utility": 205,
+      "final_cost": 132637,
+      "compression_ratio": 1.0045990183734554,
+      "cumulative_compression_ratio": 4.899598151345401,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_65 ": "(lam (lam (fn_11 (fn_48 mod) 0)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_9 fn_18)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool $2)))) #(#(lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) pair) get 1) $0 0)) gt))",
+      "arity": 0,
+      "name": "fn_66",
+      "utility": 203,
+      "final_cost": 132233,
+      "compression_ratio": 1.0030552131464914,
+      "cumulative_compression_ratio": 4.914567468029917,
+      "num_uses": 4,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_66 ": "(fn_9 fn_18)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_9 (fn_28 any any))",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool $2)))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 or)) any any))",
+      "arity": 0,
+      "name": "fn_67",
+      "utility": 203,
+      "final_cost": 131627,
+      "compression_ratio": 1.0046039186489095,
+      "cumulative_compression_ratio": 4.937193736847304,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_67 ": "(fn_9 (fn_28 any any))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(app not)",
+      "dreamcoder": "#(app not)",
+      "arity": 0,
+      "name": "fn_68",
+      "utility": 203,
+      "final_cost": 131223,
+      "compression_ratio": 1.0030787285765452,
+      "cumulative_compression_ratio": 4.9523940162928755,
+      "num_uses": 4,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_68 ": "(app not)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_9 fn_23)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app tobool $2)))) #(#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) and))",
+      "arity": 0,
+      "name": "fn_69",
+      "utility": 203,
+      "final_cost": 130819,
+      "compression_ratio": 1.0030882364182574,
+      "cumulative_compression_ratio": 4.96768817985155,
+      "num_uses": 4,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_69 ": "(fn_9 fn_23)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_28 #1 (fn_10 #0))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 or)) $0 (#(app any) $1))))",
+      "arity": 2,
+      "name": "fn_70",
+      "utility": 201,
+      "final_cost": 130415,
+      "compression_ratio": 1.0030978031668136,
+      "cumulative_compression_ratio": 4.983077100026837,
+      "num_uses": 4,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_70 (fn_41 v1 0) (fn_10 fn_54)": "(fn_28 (fn_10 fn_54) (fn_10 (fn_41 v1 0)))"
+        },
+        {
+          "fn_70 (fn_41 v2 0) (fn_28 (fn_10 fn_54) (fn_10 (fn_41 v1 0)))": "(fn_28 (fn_28 (fn_10 fn_54) (fn_10 (fn_41 v1 0))) (fn_10 (fn_41 v2 0)))"
+        },
+        {
+          "fn_70 v2 (fn_28 fn_17 (fn_10 v1))": "(fn_28 (fn_28 fn_17 (fn_10 v1)) (fn_10 v2))"
+        },
+        {
+          "fn_70 v1 fn_17": "(fn_28 fn_17 (fn_10 v1))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_0 (fn_16 #1 #0))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (lambda (lambda (app tobool (app any $2))))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and)) $0 $1))))",
+      "arity": 2,
+      "name": "fn_71",
+      "utility": 201,
+      "final_cost": 130011,
+      "compression_ratio": 1.0031074293713609,
+      "cumulative_compression_ratio": 4.9985616601672165,
+      "num_uses": 4,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_71 v1 (fn_19 slice v0)": "(fn_0 (fn_16 (fn_19 slice v0) v1))"
+        },
+        {
+          "fn_71 (fn_14 get v2) (fn_3 get)": "(fn_0 (fn_16 (fn_3 get) (fn_14 get v2)))"
+        },
+        {
+          "fn_71 (fn_6 slice 2 v1) (fn_42 2)": "(fn_0 (fn_16 (fn_42 2) (fn_6 slice 2 v1)))"
+        },
+        {
+          "fn_71 v1 fn_54": "(fn_0 (fn_16 fn_54 v1))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_27 1)))",
+      "dreamcoder": "#(lambda (lambda (#(#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) v0) 1)))",
+      "arity": 0,
+      "name": "fn_72",
+      "utility": 106,
+      "final_cost": 129702,
+      "compression_ratio": 1.0023823842346302,
+      "cumulative_compression_ratio": 5.010470154662226,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_72 ": "(lam (lam (fn_27 1)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_10 (fn_12 #0))))",
+      "dreamcoder": "#(lambda (lambda (lambda (#(app any) (#(lambda (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $0 slice v0)) $2)))))",
+      "arity": 1,
+      "name": "fn_73",
+      "utility": 105,
+      "final_cost": 129393,
+      "compression_ratio": 1.002388073543391,
+      "cumulative_compression_ratio": 5.022435525878525,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_73 0": "(lam (lam (fn_10 (fn_12 0))))"
+        },
+        {
+          "fn_73 slice": "(lam (lam (fn_10 (fn_12 slice))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_49 (fn_41 v1))))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and)) (#(#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) v0) 1) ($0 1))) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 gt)) v1))))",
+      "arity": 0,
+      "name": "fn_74",
+      "utility": 104,
+      "final_cost": 128985,
+      "compression_ratio": 1.003163158506803,
+      "cumulative_compression_ratio": 5.038322285537078,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_74 ": "(lam (lam (fn_49 (fn_41 v1))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_50 v0 len)))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (app $0 $1) 1))) v0 len)))",
+      "arity": 0,
+      "name": "fn_75",
+      "utility": 104,
+      "final_cost": 128577,
+      "compression_ratio": 1.0031731958281809,
+      "cumulative_compression_ratio": 5.054309868794575,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_75 ": "(lam (lam (fn_50 v0 len)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_10 (fn_56 #1 #0))))",
+      "dreamcoder": "#(lambda (lambda (lambda (lambda (#(app any) (#(lambda (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) ($0 1))) $2 $3))))))",
+      "arity": 2,
+      "name": "fn_76",
+      "utility": 104,
+      "final_cost": 128268,
+      "compression_ratio": 1.00240901861727,
+      "cumulative_compression_ratio": 5.066485795365953,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_76 3 (fn_6 slice 4)": "(lam (lam (fn_10 (fn_56 (fn_6 slice 4) 3))))"
+        },
+        {
+          "fn_76 4 fn_12": "(lam (lam (fn_10 (fn_56 fn_12 4))))"
+        },
+        {
+          "fn_76 v1 fn_12": "(lam (lam (fn_10 (fn_56 fn_12 v1))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_24 (#0 lte 3))))",
+      "dreamcoder": "#(lambda (lambda (lambda (#(app all) ($2 lte 3)))))",
+      "arity": 1,
+      "name": "fn_77",
+      "utility": 103,
+      "final_cost": 127860,
+      "compression_ratio": 1.0031909901454716,
+      "cumulative_compression_ratio": 5.082652901611137,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_77 (fn_1 (fn_12 0))": "(lam (lam (fn_24 (fn_1 (fn_12 0) lte 3))))"
+        },
+        {
+          "fn_77 fn_14": "(lam (lam (fn_24 (fn_14 lte 3))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_3 or)",
+      "dreamcoder": "#(#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) or)",
+      "arity": 0,
+      "name": "fn_78",
+      "utility": 102,
+      "final_cost": 127557,
+      "compression_ratio": 1.002375408640843,
+      "cumulative_compression_ratio": 5.09472627923203,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_78 ": "(fn_3 or)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_35 1)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (app len v0) $2 $3))))) 1)",
+      "arity": 0,
+      "name": "fn_79",
+      "utility": 102,
+      "final_cost": 127254,
+      "compression_ratio": 1.0023810646423688,
+      "cumulative_compression_ratio": 5.1068571518380566,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_79 ": "(fn_35 1)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_14 sub 1)",
+      "dreamcoder": "#(#(#(lambda (lambda (app (app $0 $1)))) v0) sub 1)",
+      "arity": 0,
+      "name": "fn_80",
+      "utility": 102,
+      "final_cost": 126850,
+      "compression_ratio": 1.0031848640126133,
+      "cumulative_compression_ratio": 5.123121797398502,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_80 ": "(fn_14 sub 1)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_21 0)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (app all (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) (#(lambda (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $0 slice v0)) $2) (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $2 0 v0)))))) 0)",
+      "arity": 0,
+      "name": "fn_81",
+      "utility": 102,
+      "final_cost": 126547,
+      "compression_ratio": 1.0023943673101694,
+      "cumulative_compression_ratio": 5.135388432756209,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_81 ": "(fn_21 0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_51 0)",
+      "dreamcoder": "#(#(lambda (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) $0 $1 1) gt 0))) $0 $0)) 0)",
+      "arity": 0,
+      "name": "fn_82",
+      "utility": 102,
+      "final_cost": 126244,
+      "compression_ratio": 1.0024001140648269,
+      "cumulative_compression_ratio": 5.147713950762016,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_82 ": "(fn_51 0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_6 slice)",
+      "dreamcoder": "#(#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) slice)",
+      "arity": 0,
+      "name": "fn_83",
+      "utility": 102,
+      "final_cost": 125941,
+      "compression_ratio": 1.0024058884715858,
+      "cumulative_compression_ratio": 5.160098776411177,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_83 ": "(fn_6 slice)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(app neg 1)",
+      "dreamcoder": "#(app neg 1)",
+      "arity": 0,
+      "name": "fn_84",
+      "utility": 102,
+      "final_cost": 125537,
+      "compression_ratio": 1.0032181747213968,
+      "cumulative_compression_ratio": 5.176704875853334,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_84 ": "(app neg 1)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_3 lt)",
+      "dreamcoder": "#(#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) lt)",
+      "arity": 0,
+      "name": "fn_85",
+      "utility": 102,
+      "final_cost": 125234,
+      "compression_ratio": 1.0024194707507545,
+      "cumulative_compression_ratio": 5.18922976188575,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_85 ": "(fn_3 lt)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_52 v2 fn_23)",
+      "dreamcoder": "#(#(lambda (lambda (lambda (lambda (#(app any) (#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and)) $2 $3)))))) v2 #(#(lambda (#(lambda (lambda (app (app $0 $1)))) v0 $0 v1)) and))",
+      "arity": 0,
+      "name": "fn_86",
+      "utility": 102,
+      "final_cost": 124830,
+      "compression_ratio": 1.0032364015060482,
+      "cumulative_compression_ratio": 5.206024192902348,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_86 ": "(fn_52 v2 fn_23)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_14 gte)",
+      "dreamcoder": "#(#(#(lambda (lambda (app (app $0 $1)))) v0) gte)",
+      "arity": 0,
+      "name": "fn_87",
+      "utility": 102,
+      "final_cost": 124527,
+      "compression_ratio": 1.0024332072562576,
+      "cumulative_compression_ratio": 5.21869152874477,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_87 ": "(fn_14 gte)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_27 2)",
+      "dreamcoder": "#(#(#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) v0) 2)",
+      "arity": 0,
+      "name": "fn_88",
+      "utility": 102,
+      "final_cost": 124224,
+      "compression_ratio": 1.002439142194745,
+      "cumulative_compression_ratio": 5.23142065945389,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_88 ": "(fn_27 2)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_0 (#0 4))",
+      "dreamcoder": "#(lambda (#(lambda (lambda (lambda (app tobool (app any $2))))) ($0 4)))",
+      "arity": 1,
+      "name": "fn_89",
+      "utility": 101,
+      "final_cost": 123921,
+      "compression_ratio": 1.0024451061563415,
+      "cumulative_compression_ratio": 5.244212038314733,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_89 fn_12": "(fn_0 (fn_12 4))"
+        },
+        {
+          "fn_89 fn_36": "(fn_0 (fn_36 4))"
+        },
+        {
+          "fn_89 fn_87": "(fn_0 (fn_87 4))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_1 #0 sub)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 sub))",
+      "arity": 1,
+      "name": "fn_90",
+      "utility": 101,
+      "final_cost": 123618,
+      "compression_ratio": 1.0024510993544629,
+      "cumulative_compression_ratio": 5.2570661230565126,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_90 v0.max": "(fn_1 v0.max sub)"
+        },
+        {
+          "fn_90 v1": "(fn_1 v1 sub)"
+        },
+        {
+          "fn_90 v1.max": "(fn_1 v1.max sub)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_1 v2 #0 v3)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (app (app $0 $1)))) v2 $0 v3))",
+      "arity": 1,
+      "name": "fn_91",
+      "utility": 101,
+      "final_cost": 123214,
+      "compression_ratio": 1.0032788481828363,
+      "cumulative_compression_ratio": 5.274303244761147,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_91 lt": "(fn_1 v2 lt v3)"
+        },
+        {
+          "fn_91 mul": "(fn_1 v2 mul v3)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam fn_2))",
+      "dreamcoder": "#(lambda (lambda #(app all (#(lambda (lambda (app (app $0 $1)))) v0 eq (#(lambda (lambda (app (app $0 $1)))) 0 get v0)))))",
+      "arity": 0,
+      "name": "fn_92",
+      "utility": 22,
+      "final_cost": 123090,
+      "compression_ratio": 1.0010073929644976,
+      "cumulative_compression_ratio": 5.279616540742546,
+      "num_uses": 62,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_92 ": "(lam (lam fn_2))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_48 gte)))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (#(#(lambda (lambda (app (app $0 $1)))) v0) $0 2)) gte)))",
+      "arity": 0,
+      "name": "fn_93",
+      "utility": 3,
+      "final_cost": 122884,
+      "compression_ratio": 1.0016763777220794,
+      "cumulative_compression_ratio": 5.2884671722925685,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_93 ": "(lam (lam (fn_48 gte)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_27 3)))",
+      "dreamcoder": "#(lambda (lambda (#(#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) v0) 3)))",
+      "arity": 0,
+      "name": "fn_94",
+      "utility": 3,
+      "final_cost": 122678,
+      "compression_ratio": 1.0016791926832846,
+      "cumulative_compression_ratio": 5.297347527674074,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_94 ": "(lam (lam (fn_27 3)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_10 fn_25)))",
+      "dreamcoder": "#(lambda (lambda (#(app any) #(#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) slice v0 v1))))",
+      "arity": 0,
+      "name": "fn_95",
+      "utility": 3,
+      "final_cost": 122472,
+      "compression_ratio": 1.0016820171141159,
+      "cumulative_compression_ratio": 5.30625775687504,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_95 ": "(lam (lam (fn_10 fn_25)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_36 2)))",
+      "dreamcoder": "#(lambda (lambda (#(#(#(lambda (lambda (app (app $0 $1)))) v0) gt) 2)))",
+      "arity": 0,
+      "name": "fn_96",
+      "utility": 3,
+      "final_cost": 122266,
+      "compression_ratio": 1.0016848510624377,
+      "cumulative_compression_ratio": 5.31519801089428,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_96 ": "(lam (lam (fn_36 2)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_24 unit)))",
+      "dreamcoder": "#(lambda (lambda (#(app all) unit)))",
+      "arity": 0,
+      "name": "fn_97",
+      "utility": 3,
+      "final_cost": 122060,
+      "compression_ratio": 1.001687694576438,
+      "cumulative_compression_ratio": 5.324168441749959,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_97 ": "(lam (lam (fn_24 unit)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(lam (lam (fn_10 (fn_27 #0))))",
+      "dreamcoder": "#(lambda (lambda (lambda (#(app any) (#(#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq)) v0) $2)))))",
+      "arity": 1,
+      "name": "fn_98",
+      "utility": 2,
+      "final_cost": 121854,
+      "compression_ratio": 1.00169054770463,
+      "cumulative_compression_ratio": 5.333169202488223,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_98 6": "(lam (lam (fn_10 (fn_27 6))))"
+        },
+        {
+          "fn_98 7": "(lam (lam (fn_10 (fn_27 7))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (fn_10 (fn_42 #0))))",
+      "dreamcoder": "#(lambda (lambda (lambda (#(app any) (#(lambda (#(lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (app (app $0 $1)))) $0 pair $1) get))) slice $0 v0)) $2)))))",
+      "arity": 1,
+      "name": "fn_99",
+      "utility": 2,
+      "final_cost": 121648,
+      "compression_ratio": 1.0016934104958568,
+      "cumulative_compression_ratio": 5.342200447191898,
+      "num_uses": 2,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_99 7": "(lam (lam (fn_10 (fn_42 7))))"
+        },
+        {
+          "fn_99 unit": "(lam (lam (fn_10 (fn_42 unit))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    }
+  ]
+}

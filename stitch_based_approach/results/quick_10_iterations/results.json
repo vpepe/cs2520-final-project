@@ -1,0 +1,4553 @@
+{
+  "cmd": "python3 run_stitch_python.py battleship_stitch.json 3 10",
+  "args": {
+    "iterations": 10,
+    "abstraction_prefix": "fn_",
+    "previous_abstractions": 0,
+    "shuffle": false,
+    "truncate": null,
+    "no_opt": false,
+    "silent": true,
+    "verbose_rewrite": false,
+    "step": {
+      "max_arity": 3,
+      "threads": 4,
+      "no_stats": false,
+      "batch": 1,
+      "dynamic_batch": false,
+      "eta_long": false,
+      "no_curried_metavars": false,
+      "no_curried_bodies": false,
+      "inv_candidates": 1,
+      "hole_choice": "DepthFirst",
+      "cost": {
+        "cost_lam": 1,
+        "cost_app": 1,
+        "cost_var": 100,
+        "cost_ivar": 100,
+        "cost_prim_default": 100,
+        "cost_prim": "{}"
+      },
+      "no_mismatch_check": false,
+      "follow": null,
+      "follow_types": null,
+      "follow_prune": false,
+      "verbose_worklist": false,
+      "verbose_best": false,
+      "print_stats": 0,
+      "show_rewritten": false,
+      "rewritten_dreamcoder": false,
+      "rewritten_intermediates": false,
+      "inv_arg_cap": false,
+      "allow_single_task": false,
+      "no_opt_single_use": false,
+      "no_opt_upper_bound": false,
+      "no_opt_force_multiuse": false,
+      "no_opt_useless_abstract": false,
+      "no_opt_arity_zero": false,
+      "no_other_util": false,
+      "structure_penalty": 1.0,
+      "rewrite_check": false,
+      "utility_by_rewrite": false,
+      "dreamcoder_comparison": false,
+      "quiet": true,
+      "fused_lambda_tags": {
+        "tags": null
+      },
+      "tdfa": {
+        "tdfa_json_path": null,
+        "tdfa_root": null,
+        "valid_metavars": null,
+        "valid_roots": null,
+        "tdfa_non_eta_long_states": null,
+        "tdfa_split": null
+      },
+      "symvar": {
+        "symvar_prefix": null
+      }
+    }
+  },
+  "original_cost": 649868,
+  "final_cost": 290677,
+  "compression_ratio": 2.2357049233341475,
+  "num_abstractions": 10,
+  "original": [
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app gt (app (app get remainingship) (app (app pair slice) 0))) rowGindex))))",
+    "(lam (lam (app any (app (app lt rows) 2))))",
+    "(lam (lam (app all (app (app eq (app (app get 1) greenmask)) 2))))",
+    "(lam (lam (app (app gte sunkcount) 2)))",
+    "(lam (lam (app tobool (app any (app (app gt rows) 4)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app gt (app (app get 0) (app (app pair belowrow) colidx))) 0))))",
+    "(lam (lam (app tobool (app any (app (app and regionmask) unrevealedshipmask)))))",
+    "(lam (lam (app tobool (app any concealedshiptiles))))",
+    "(lam (lam (app tobool (app any (app (app and unrevealed) shiptiles)))))",
+    "(lam (lam (app tobool (app any hiddenshipinrow))))",
+    "(lam (lam (app tobool (app any (app (app and regionmask) unrevealedship)))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any targetmask))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or q1hashiddenship) q2hashiddenship))))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam (app tobool unrevealedshipinq1)))",
+    "(lam (lam (app tobool (app any (app (app and maskunrevealed) maskship)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get unrevealed) (app (app pair 2) slice))))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt subtrue) 0)) (app (app eq subpartial) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and hiddenship) after4)))))",
+    "(lam (lam (app tobool (app any (app (app and maskship) maskhidden)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipsinregion))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam true))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and regionmask) shipmask)) hiddenmask)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and rowmask) shipmask)) unrevealedmask)))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any hiddenshiptilesinregion))))",
+    "(lam (lam (app tobool (app any (app (app and unrevealed) regionmask)))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app (app or (app any (app (app get unrevealedship) 2))) (app any (app (app get unrevealedship) 4))))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app (app or (app any (app (app and fslice) funrevealed))) (app any (app (app and gslice) gunrevealed))))))",
+    "(lam (lam (app any (app (app and (app (app gt (app (app get 0) rowidx)) 0)) (app (app eq (app (app get 1) rowidx)) (app neg 1))))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and rowsmask) shipmask)) hiddenmask)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipsinE))))",
+    "(lam (lam (app tobool (app any unrevealedshipsinevens))))",
+    "(lam (lam (app tobool (app any hiddenshipsinG))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app eq (app (app get coords) (app (app pair slice) 1))) 5)))))",
+    "(lam (lam (app any (app (app eq (app (app get positions) (app (app pair slice) 1))) 4))))",
+    "(lam (lam (app tobool (app any unrevealedshipinH))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam (app tobool (app any unrevealedorange))))",
+    "(lam (lam (app tobool (app any (app (app and ispurple) isunrevealed)))))",
+    "(lam (lam (app (app gt (app len shipids)) 1)))",
+    "(lam (lam (app tobool (app any unrevealedinrow))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app any hiddenshipparts)))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app all (app (app eq rows) (app (app get rows) 0))))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair row) col))) 0)))",
+    "(lam (lam (app tobool (app any hiddenshipparts))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt regiontrue) 0)) (app (app eq regionpartial) (app neg 1)))))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool unrevealedships.any)))",
+    "(lam (lam (app all (app (app eq allrows) (app (app get allrows) 0)))))",
+    "(lam (lam (app tobool (app any unrevealedinrow))))",
+    "(lam (lam (app tobool (app any hiddenshipcells))))",
+    "(lam (lam (app all (app (app eq shiprows) (app (app get shiprows) 0)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt truecol) 0)) (app (app eq partialcol) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any (app (app and hiddenmask) shipmask)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any unrevealedinrow))))",
+    "(lam (lam (app tobool (app any (app (app and shippartsintrue) hiddeninpartial)))))",
+    "(lam (lam (app (app eq (app (app sub cols.max) cols.min)) (app (app sub cols) 1))))",
+    "(lam (lam (app tobool (app any (app (app and hiddencells) shipcells)))))",
+    "(lam (lam (app all (app (app eq (app (app get coords) (app (app pair slice) 0))) (app (app get coords) (app (app pair 0) 0))))))",
+    "(lam (lam (app tobool (app any (app (app and shipcells) hiddencells)))))",
+    "(lam (lam (app tobool (app any unrevealedshipparts))))",
+    "(lam (lam (app tobool (app any undiscovered))))",
+    "(lam (lam (app tobool (app any (app (app and shipsincol) hiddenincol)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any (app (app and shipparts) stillhidden)))))",
+    "(lam (lam (app tobool (app any undiscoveredincol))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipparts))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and hiddenmask) shipmask)))))",
+    "(lam (lam (app (app and (app (app eq cols) 1)) (app (app gt rows) 1))))",
+    "(lam (lam (app tobool regionhashiddenship)))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool (app any mask))))",
+    "(lam (lam (app all (app (app eq rowindices) (app (app get rowindices) 0)))))",
+    "(lam (lam (app (app eq (app unique rows)) 1)))",
+    "(lam (lam (app tobool (app any hiddenshipsincol))))",
+    "(lam (lam (app tobool isvertical)))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and maskship) maskhidden)))))",
+    "(lam (lam true))",
+    "(lam (lam (app tobool (app any undiscoveredinH))))",
+    "(lam (lam isvertical))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam (app tobool (app any undiscoveredmask))))",
+    "(lam (lam (app tobool (app any (app (app and shipsintrue) hiddeninpartial)))))",
+    "(lam (lam (app tobool (app any undiscoveredparts))))",
+    "(lam (lam (app tobool (app any undiscovered))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt (app (app get 0) (app (app pair slice) colidx))) 0)) undiscovered)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app gt (app (app get 0) (app (app pair 0) 0))) 0))))",
+    "(lam (lam (app any (app (app and (app (app gt (app (app get 0) (app (app pair rowidx) slice))) 0)) (app (app eq (app (app get 1) (app (app pair rowidx) slice))) (app neg 1))))))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair rowindex) colindex))) 0)))",
+    "(lam (lam (app (app gt orangeclosest) 0)))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair 7) 7))) 0)))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam true))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any maskships))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app any shipshidden))))",
+    "(lam (lam (app any (app (app and isship) ishidden))))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app tobool allcolsequal)))",
+    "(lam (lam (app tobool isvertical)))",
+    "(lam (lam (app any (app (app and (app (app gt truesub) 0)) (app (app eq partialsub) (app neg 1))))))",
+    "(lam (lam (app tobool (app any (app (app get hiddenintargetrows) (app (app pair slice) slice))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unseenship))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt truecols) 0)) (app (app eq partcols) (app neg 1)))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenship))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app or (app (app or (app (app or ontopedge) onbottomedge)) onleftedge)) onrightedge))))",
+    "(lam (lam (app tobool (app any shipunrevealed))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app any (app (app get unrevealedship) (app (app pair unit) slice)))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any (app (app get unrevealed) (app (app pair slice) slice))))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool hiddenshipmask.any)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool unrevealedshiptiles.any)))",
+    "(lam (lam (app any (app (app and (app (app gt subtrue) 0)) (app (app eq subpartial) (app neg 1))))))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and bordermask) shipmask)) hiddenmask)))))",
+    "(lam (lam false))",
+    "(lam (lam (app any unrevealedshipmask)))",
+    "(lam (lam (app tobool (app any hiddenshiponedge))))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam (app (app eq uniquecols) 1)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or any) any))))",
+    "(lam (lam (app tobool (app any (app (app and hidden) ship)))))",
+    "(lam (lam (app tobool (app any onedge))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenships))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any (app (app and hiddencells) shipcells)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq (app unique cols)) 1)))",
+    "(lam (lam (app tobool (app any unrevealedinB))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool isvertical)))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app tobool (app any (app (app and hidden) ships)))))",
+    "(lam (lam (app tobool (app any hiddenshipincol))))",
+    "(lam (lam (app tobool (app (app or (app (app or (app (app or (app any topborder)) (app any bottomborder))) (app any leftborder))) (app any rightborder)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq (app unique cols)) 1)))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app all (app (app eq rowindices) (app (app get rowindices) 0))))))",
+    "(lam (lam (app all (app (app lt (app (app get greenpositions) (app (app pair slice) 0))) half))))",
+    "(lam (lam (app tobool (app all (app (app lt greencols) mid)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or (app (app or (app (app or ontopedge) onbottomedge)) onleftedge)) onrightedge))))",
+    "(lam (lam (app (app eq greenlength) 3)))",
+    "(lam (lam (app tobool (app any (app (app gt centerblock) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt (app len touchingships)) 2)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedintop))))",
+    "(lam (lam (app (app and (app (app eq uniquecols) 1)) (app (app gt uniquerows) 1))))",
+    "(lam (lam (app tobool (app any redonGunrevealed))))",
+    "(lam (lam (app tobool (app all (app (app eq cols) (app (app get cols) 0))))))",
+    "(lam (lam (app any (app (app eq (app (app get 0) (app (app pair 4) slice))) 3))))",
+    "(lam (lam (app tobool (app any mask))))",
+    "(lam (lam (app any hiddenshiptiles)))",
+    "(lam (lam (app tobool (app any unrevealededgeships))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and edgeexcepttop) hidden)) ship)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gte shipsintophalf) 2)))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app (app eq (app unique cols)) 1)))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app any mask))))",
+    "(lam (lam (app any (app (app and (app (app and edgesmask) hiddenmask)) shipmask))))",
+    "(lam (lam (app tobool (app any hiddenshipcells))))",
+    "(lam (lam (app (app gt shipids) 1)))",
+    "(lam (lam (app (app gt (app len touching)) 1)))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app (app gt shipsintop) 1)))",
+    "(lam (lam (app (app gt shipids) 1)))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any (app (app and shippositions) hiddenpositions)))))",
+    "(lam (lam (app tobool hasunrevealedship)))",
+    "(lam (lam (app tobool (app any (app (app and hidden) ship)))))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app all (app (app lte (app (app get shippositions) (app (app pair slice) 0))) 3))))",
+    "(lam (lam (app tobool (app any shipsremaininginF))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any (app (app and hidden) ship)))))",
+    "(lam (lam (app (app eq (app unique (app (app get coords) (app (app pair slice) 1)))) 1)))",
+    "(lam (lam (app tobool (app any unrevealedshipsinA))))",
+    "(lam (lam (app tobool (app any hiddenships))))",
+    "(lam (lam (app tobool (app any mask))))",
+    "(lam (lam (app tobool (app any unrevealedshipsinrow))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app any hiddenships)))",
+    "(lam (lam (app tobool (app any shipshiddeninrange))))",
+    "(lam (lam (app tobool (app any (app (app and hiddenmask) shipmask)))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any unrevealedshipsinC))))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app any (app (app and (app (app gt (app (app get 0) rowidx)) 0)) (app (app eq (app (app get 1) rowidx)) (app neg 1))))))",
+    "(lam (lam (app tobool (app any (app (app and shipcells) hiddencells)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any hiddenship))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app tobool (app any hiddenships))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool unrevealedshiptiles.any)))",
+    "(lam (lam (app not (app any (app (app and hiddenmask) shipmask)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedshipsinE))))",
+    "(lam (lam (app tobool (app any unrevealedshipsinA))))",
+    "(lam (lam (app tobool (app any (app (app and hidden) ships)))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app any (app (app and hidden) ships))))",
+    "(lam (lam (app tobool (app any (app (app and hidden) ship)))))",
+    "(lam (lam (app any unrevealedinrow)))",
+    "(lam (lam (app tobool (app any (app (app and shipsinregion) unrevealedinregion)))))",
+    "(lam (lam (app tobool (app any (app (app and isship) ishidden)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt truerow) 0)) (app (app eq partialrow) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool hiddenshipmask.any)))",
+    "(lam (lam (app tobool (app any (app (app and hiddenmask) shipmask)))))",
+    "(lam (lam (app tobool (app any (app (app and hiddenmask) shipmask)))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app any hiddenships)))",
+    "(lam (lam (app tobool (app any hiddenships))))",
+    "(lam (lam (app tobool (app any (app (app and shipsinrowb) hiddeninrowb)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipcells))))",
+    "(lam (lam (app tobool (app any hiddenshipincol8))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq (app len uniquerows)) 1)))",
+    "(lam (lam (app tobool (app any mask))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam true))",
+    "(lam (lam (app tobool hiddenshipsabove.any)))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam (app tobool (app any unrevealedshipinH))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app any candidate))))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool (app any (app (app and maskship) maskhidden)))))",
+    "(lam (lam (app tobool (app any hiddenshipsinF))))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app tobool unrevealedshiptiles.any)))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and outermask) unrevealed)) ships)))))",
+    "(lam (lam (app any unrevealedshiptiles)))",
+    "(lam (lam (app issubset (app set greenrows))))",
+    "(lam (lam (app any (app (app get purpleunrevealed) (app (app pair rowstocheck) slice)))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool unrevealedshiptiles.any)))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool (app any unseenships))))",
+    "(lam (lam (app any unrevealedships)))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any (app (app and regionhasship) regionishidden)))))",
+    "(lam (lam (app tobool (app any hiddenshipsinrow))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get unrevealed) (app (app pair rowscd) slice))))))",
+    "(lam (lam (app tobool (app any (app (app and hidden) shiptiles)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt tr) 0)) (app (app eq pr) (app neg 1)))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app any (app (app gte colidx) 4))))",
+    "(lam (lam (app tobool (app all (app (app eq cols) (app (app get cols) 0))))))",
+    "(lam (lam any))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any (app (app and hidden) ships)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any shipsbelow))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam isvertical))",
+    "(lam (lam (app (app eq toprow) 0)))",
+    "(lam (lam (app (app eq bottomrowindex) 3)))",
+    "(lam (lam (app tobool (app any unrevealedshipinrow))))",
+    "(lam (lam (app any (app (app eq (app (app get orangecells) (app (app pair slice) 1))) targetcol))))",
+    "(lam (lam (app tobool (app any hiddenshipincol8))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app get unrevealed) (app (app pair 2) slice))) (app (app get ships) (app (app pair 2) slice)))))))",
+    "(lam (lam (app (app and (app (app eq (app (app get 1) (app (app pair row) col))) (app neg 1))) (app (app gt (app (app get 0) (app (app pair row) col))) 0))))",
+    "(lam (lam (app (app gt greenlength) 2)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt leftcount) rightcount)))",
+    "(lam (lam (app tobool (app any (app (app gte orangecols) 4)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app tobool (app any (app (app and shipcells) hiddencells)))))",
+    "(lam (lam (app tobool (app any (app (app and hiddeninrow) shipinrow)))))",
+    "(lam (lam (app tobool (app any (app (app and hiddenmask) shipmask)))))",
+    "(lam (lam (app tobool unrevealedshipinrowe)))",
+    "(lam (lam (app (app gt purplecount) 2)))",
+    "(lam (lam (app (app gt topcount) bottomcount)))",
+    "(lam (lam (app tobool (app any (app (app and isship) isunrevealed)))))",
+    "(lam (lam (app tobool (app any (app (app and maskship) maskhidden)))))",
+    "(lam (lam (app (app lte toprow) 2)))",
+    "(lam (lam (app (app eq (app unique cols)) 1)))",
+    "(lam (lam (app (app eq (app (app get 0) (app (app pair row) col))) targetid)))",
+    "(lam (lam (app tobool (app all (app (app eq cols) (app (app get cols) 0))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam (app tobool (app any unrevealedshipsinrow))))",
+    "(lam (lam (app any unrevealedshiptiles)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipinA))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app gte (app (app get othercoords) (app (app pair slice) 0))) bottomstart))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get hiddenship) (app (app pair slice) slice))))))",
+    "(lam (lam (app any (app (app eq rtarget) 6))))",
+    "(lam (lam (app tobool (app any (app (app get hiddenshiptiles) (app (app pair slice) 4))))))",
+    "(lam (lam (app tobool (app all (app (app lt shiprows) halfway)))))",
+    "(lam (lam (app any shipshidden)))",
+    "(lam (lam (app tobool (app any (app (app get shipandhidden) (app (app pair slice) oddcolmask))))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair row) col))) 0)))",
+    "(lam (lam (app tobool (app any (app (app get unrevealedships) (app (app pair slice) slice))))))",
+    "(lam (lam (app (app and ishidden) isshiptile)))",
+    "(lam (lam false))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app and (app (app eq (app (app get 1) (app (app pair rowidx) colidx))) (app neg 1))) (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt tr) 0)) (app (app eq pr) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any unrevealedshipincol0))))",
+    "(lam (lam (app all (app (app lt (app (app get coords) (app (app pair slice) 1))) leftthreshold))))",
+    "(lam (lam (app any unrevealedinB)))",
+    "(lam (lam (app any unrevealedship)))",
+    "(lam (lam (app any unrevealedshipinC)))",
+    "(lam (lam (app tobool (app any (app (app and shipincol) hiddenincol)))))",
+    "(lam (lam (app tobool (app any leftofC))))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app any (app (app and (app (app lt rows) midrow)) (app (app lt cols) midcol)))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair 0) 0))) 0)))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app tobool (app any hiddenships))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and shipsonrow) hiddenonrow)))))",
+    "(lam (lam (app any (app (app and (app (app gt trtrue) 0)) (app (app eq trpartial) (app neg 1))))))",
+    "(lam (lam (app tobool hiddenshipmask.any)))",
+    "(lam (lam (app tobool (app any (app (app and hiddentiles) shiptiles)))))",
+    "(lam (lam (app tobool (app any hiddenshipincol))))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair r) c))) 0)))",
+    "(lam (lam (app tobool (app any hiddenships))))",
+    "(lam (lam (app tobool (app any stillhiddenship))))",
+    "(lam (lam (app tobool (app any unrevealed))))",
+    "(lam (lam (app any (app (app get unrevealedship) (app (app pair targetrows) slice)))))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any rightunrevealed))))",
+    "(lam (lam (app tobool (app any unrevealedshipintop))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and hiddenships) bottomright)))))",
+    "(lam (lam (app tobool (app any tophalfshipshidden))))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app tobool (app any hiddenshipsinrow))))",
+    "(lam (lam (app tobool unrevealedships.any)))",
+    "(lam (lam (app any unrevealedshipmask)))",
+    "(lam (lam (app (app and ishidden) isship)))",
+    "(lam (lam (app tobool unrevealed.any)))",
+    "(lam (lam (app tobool unrevealedinF.any)))",
+    "(lam (lam (app all (app (app eq shiprows) (app (app get shiprows) 0)))))",
+    "(lam (lam (app (app eq (app len uniquecols)) 1)))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt lastcenter) greencenter)))",
+    "(lam (lam (app tobool (app any hiddenshipcells))))",
+    "(lam (lam (app tobool (app any shipsunrevealed))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app any unrevealedship)))",
+    "(lam (lam (app any hiddenshiptiles)))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any (app (app and hiddentiles) shiptiles)))))",
+    "(lam (lam (app tobool (app any (app (app and hiddenincol) shipincol)))))",
+    "(lam (lam (app tobool (app any (app (app and belowtrue) belowhidden)))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any (app (app get hiddenship) (app (app pair slice) slice))))))",
+    "(lam (lam (app tobool (app any (app (app get hiddenship) (app (app pair slice) slice))))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any region))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any unseenship))))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app tobool (app any unrevealedshipsinrow))))",
+    "(lam (lam (app tobool (app any (app (app get unrevealedship) (app (app pair slice) slice))))))",
+    "(lam (lam (app tobool (app any unrevealedshippositions))))",
+    "(lam (lam (app tobool (app any hiddenships))))",
+    "(lam (lam (app tobool (app (app gt (app (app get 0) (app (app pair row) col))) 0))))",
+    "(lam (lam (app tobool (app any (app (app get hiddenshipmask) (app (app pair targetrows) slice))))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app tobool (app any (app (app get hiddenships) (app (app pair unit) slice))))))",
+    "(lam (lam (app (app eq (app unique rows)) 1)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair (app (app sub r) 1)) c))) 0)))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app any hiddenships)))",
+    "(lam (lam (app tobool (app any lowerright))))",
+    "(lam (lam false))",
+    "(lam (lam all))",
+    "(lam (lam (app tobool (app any maskunrevealedship))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app any (app (app and unrevealed) ships)))))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app any rowsEF)))",
+    "(lam (lam (app all (app (app eq (app (app get shippositions) (app (app pair slice) 0))) (app (app get shippositions) (app (app pair 0) 0))))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt tr) 0)) (app (app eq pr) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app all (app (app eq shiprows) (app (app get shiprows) 0)))))",
+    "(lam (lam (app tobool (app any hiddenshipcells))))",
+    "(lam (lam (app tobool (app any maskunrevealedin58))))",
+    "(lam (lam (app tobool (app any hiddenshipsinrow))))",
+    "(lam (lam (app tobool (app (app and (app set purplerows)) targetrows))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app (app eq (app unique cols)) 1)))",
+    "(lam (lam (app all (app (app eq (app (app get coords) (app (app pair slice) 0))) (app (app get coords) (app (app pair 0) 0))))))",
+    "(lam (lam (app tobool (app any unrevealedpurpleonH))))",
+    "(lam (lam (app tobool (app any hiddenships))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)) (app (app eq (app (app get 1) (app (app pair rowidx) colidx))) (app neg 1)))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app any (app (app np.isin greenrows) unit))))",
+    "(lam (lam (app all (app (app np.isin greenrows) unit))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app all (app (app eq rows) (app (app get rows) 0))))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app any hiddenorangeinA)))",
+    "(lam (lam (app tobool (app any (app (app or (app (app eq purplerows) 2)) (app (app eq purplerows) 6))))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any rowsEandF))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any mask))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or any) any))))",
+    "(lam (lam (app any (app (app and (app (app gte cols) 3)) (app (app lte cols) 6)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app all (app (app eq rows) (app (app get rows) 0))))))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app np.isin orangerows) unit))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq (app unique rows)) 1)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and (app (app eq startrow) 0)) (app (app eq startcol) 4))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq (app (app get redcoords) (app (app pair slice) 1))) (app (app get redcoords) (app (app pair 0) 1))))))",
+    "(lam (lam (app (app gt redcols.min) purplecols.max)))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app (app eq (app unique rows)) 1)))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq purpletilecount) 2)))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app get hiddenmask) rowindex)) (app (app get shipmask) rowindex))))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any hiddenshipsinB))))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app tobool (app any (app (app and shipsinrow) hiddentiles)))))",
+    "(lam (lam (app (app eq orangetilecount) 2)))",
+    "(lam (lam (app any (app (app eq rows) 7))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and hiddenships) (app (app lt colindices) 3))))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool unrevealedshipmask.any)))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any unrevealed))))",
+    "(lam (lam false))",
+    "(lam (lam (app all unit)))",
+    "(lam (lam (app tobool unrevealed.any)))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any rowsexceptH))))",
+    "(lam (lam true))",
+    "(lam (lam (app any stillhiddenship)))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool (app any (app (app eq (app (app get shipcellsperrow) slice)) 0)))))",
+    "(lam (lam (app any (app (app get remainingships) (app (app pair 7) slice)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app all colshaveship))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app (app gt hiddenships) 1)))",
+    "(lam (lam false))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair 7) 0))) 0)))",
+    "(lam (lam (app (app and (app (app and (app (app eq rows) 1)) (app (app eq (app (app get rows) 0)) 1))) (app (app eq (app (app get cols) 0)) 4))))",
+    "(lam (lam (app tobool (app (app get hiddengreen) (app (app pair 0) 3)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedinA))))",
+    "(lam (lam (app tobool (app all rowswithhiddenships))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam true))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app and (app all (app (app eq cols) (app (app get cols) 0)))) (app (app eq (app (app add (app (app sub rows.max) rows.min)) 1)) (app len rows)))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair 0) 1))) 0)))",
+    "(lam (lam (app tobool (app (app and isship) ishidden))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair row) col))) 0)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair row) col))) 0)))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app (app and ishorizontal) isonright))))",
+    "(lam (lam (app (app and (app (app eq (app (app get 1) (app (app pair row) col))) (app neg 1))) (app (app ne (app (app get 0) (app (app pair row) col))) 0))))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq uniquecols) 1)))",
+    "(lam (lam (app tobool (app any orangeunrevealed))))",
+    "(lam (lam (app tobool (app any hiddenshipsbelow))))",
+    "(lam (lam (app tobool (app any shipsstillhidden))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any (app (app and unrevealed) shipsthere)))))",
+    "(lam (lam (app tobool (app (app gt (app (app get 0) (app (app pair (app neg 1)) (app neg 1)))) 0))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair 0) 0))) 0)))",
+    "(lam (lam (app (app gte (app len shipsinbl)) 3)))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any unseenshipmask))))",
+    "(lam (lam (app any hiddenshiptiles)))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app any (app (app and (app (app gt tb) 0)) (app (app eq pb) (app neg 1))))))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair row) col))) 0)))",
+    "(lam (lam (app tobool (app any hiddenshipsmask))))",
+    "(lam (lam (app all (app (app lt shipcols) 4))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair 0) 3))) 0)))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app tobool hasship)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair row) col))) 0)))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam ishorizontal))",
+    "(lam (lam (app all (app (app eq rowindices) targetrow))))",
+    "(lam (lam (app tobool (app any hiddenshiponedge))))",
+    "(lam (lam (app tobool (app (app eq (app (app get 0) (app (app pair row) (app (app sub col) 1)))) 3))))",
+    "(lam (lam (app tobool (app all (app (app gte rows) half)))))",
+    "(lam (lam (app tobool (app any hits))))",
+    "(lam (lam (app tobool (app any (app (app and unrevealedships) edgemask)))))",
+    "(lam (lam (app tobool hasunseenship)))",
+    "(lam (lam (app tobool (app any hiddengreenincol8))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app lte mindist) 2))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and hiddentilesincol) shiptilesincol)))))",
+    "(lam (lam (app any (app (app and (app (app gt truecenter) 0)) (app (app eq partialcenter) (app neg 1))))))",
+    "(lam (lam (app tobool (app any unseenshiptiles))))",
+    "(lam (lam (app tobool (app any (app (app lte chebdist) 1)))))",
+    "(lam (lam (app (app and closetoorange) closetopurple)))",
+    "(lam (lam (app tobool (app any hiddenships))))",
+    "(lam (lam (app tobool (app any topunrevealedships))))",
+    "(lam (lam (app tobool (app any hiddenshipcells))))",
+    "(lam (lam (app tobool (app any shipsinBstillhidden))))",
+    "(lam (lam (app tobool (app any hiddenshiptilesinH))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and (app (app eq (app len (app set cols))) 1)) (app (app gt (app len (app set rows))) 1))))",
+    "(lam (lam (app (app and (app (app gt (app unique redrows)) 1)) (app (app eq (app unique redcols)) 1))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any (app (app and hiddenshipmask) rightmask)))))",
+    "(lam (lam (app (app and (app (app eq (app len (app unique cols))) 1)) (app (app gt (app len (app unique rows))) 1))))",
+    "(lam (lam (app tobool (app any maskunrevealedship))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt ultrue) 0)) (app (app eq ulpartial) (app neg 1)))))))",
+    "(lam (lam (app (app eq (app unique cols)) 1)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or (app any bottomrowhiddenship)) (app any rightcolhiddenship)))))",
+    "(lam (lam (app tobool hiddenshipincol.any)))",
+    "(lam (lam (app tobool (app any relevanttiles))))",
+    "(lam (lam (app tobool (app any (app (app and isship) ishidden)))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any hiddenshiponleft))))",
+    "(lam (lam (app tobool (app any maskunrevealedships))))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app gt topright) 0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam true))",
+    "(lam (lam (app (app gte countrow6) countrow8)))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam false))",
+    "(lam (lam true))",
+    "(lam (lam (app (app gt countAD) countEH)))",
+    "(lam (lam (app tobool (app (app gt leftcount) rightcount))))",
+    "(lam (lam (app (app gt (app (app mul shipsleft) hiddenright)) (app (app mul shipsright) hiddenleft))))",
+    "(lam (lam (app tobool (app all (app (app eq cols) (app (app get cols) 0))))))",
+    "(lam (lam (app any (app (app get unrevealedships) (app (app pair slice) slice)))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq rowindices) (app (app get rowindices) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any maskunrevealedship))))",
+    "(lam (lam (app any (app (app get unrevealedships) (app (app pair slice) slice)))))",
+    "(lam (lam (app tobool (app any (app (app and hiddenshiptiles) bottomleftmask)))))",
+    "(lam (lam (app (app eq (app unique rows)) 1)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool hasship)))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get hiddenshipmask) (app (app pair slice) cols))))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and (app (app eq (app (app get 0) (app (app pair downr) c))) shipid)) (app (app eq (app (app get 1) (app (app pair downr) c))) (app neg 1)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt tr) 0)) (app (app eq pr) (app neg 1)))))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app get hiddenships) (app (app pair slice) slice))))))",
+    "(lam (lam (app (app and hasin56) (app not hasin78))))",
+    "(lam (lam true))",
+    "(lam (lam (app (app and upperhas) (app not lowerhas))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app and hasshipe4) hasshipb4))))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app tobool (app any unrevealedshipintop))))",
+    "(lam (lam (app any hiddenshipsintl)))",
+    "(lam (lam (app any hiddenshipmask)))",
+    "(lam (lam (app any (app (app and (app (app gt shipsincols) 0)) hiddenmask))))",
+    "(lam (lam (app tobool (app any (app (app and shippositions) stillhidden)))))",
+    "(lam (lam (app tobool (app any (app (app get hiddenships) (app (app pair slice) slice))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool unrevealedship.any)))",
+    "(lam (lam (app any unrevealedships)))",
+    "(lam (lam (app tobool (app any (app (app get unrevealedships) (app (app pair slice) slice))))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool (app any unseenships))))",
+    "(lam (lam (app (app eq (app (app mod counthidden) 2)) 0)))",
+    "(lam (lam (app tobool (app (app or (app (app or (app (app or (app any (app (app gt toprow) 0))) (app any (app (app gt bottomrow) 0)))) (app any (app (app gt leftcol) 0)))) (app any (app (app gt rightcol) 0))))))",
+    "(lam (lam (app (app and condyes) condno)))",
+    "(lam (lam (app tobool (app (app or topborderhasship) leftborderhasship))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipsonright))))",
+    "(lam (lam (app tobool (app (app gt shipsEH) shipsAD))))",
+    "(lam (lam (app (app gt evencount) oddcount)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowindex) colindex))) 0)))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app lte rows) 3))))",
+    "(lam (lam (app tobool (app any cols1to4))))",
+    "(lam (lam (app tobool (app (app and anyinAD) (app not anyinEH)))))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam (app tobool (app any (app (app and ships) hidden)))))",
+    "(lam (lam (app tobool (app any unrevealedintop))))",
+    "(lam (lam (app tobool (app any regionmask))))",
+    "(lam (lam (app tobool (app any unrevealedab))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam any))",
+    "(lam (lam (app tobool (app any mask))))",
+    "(lam (lam (app (app and foundvertical) (app not foundhorizontal))))",
+    "(lam (lam (app tobool (app any (app (app and unrevealedships) oddcolumns)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and (app (app or topedge) bottomedge)) (app not (app (app or leftedge) rightedge)))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam false))",
+    "(lam (lam (app (app eq (app (app mod shiplength) 2)) 0)))",
+    "(lam (lam (app (app gt topunrevealed) bottomunrevealed)))",
+    "(lam (lam (app tobool mask.any)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app lt cols) 4))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedshipintop))))",
+    "(lam (lam (app tobool (app any (app (app and bordermask) hiddenshipmask)))))",
+    "(lam (lam (app not offborder.any)))",
+    "(lam (lam (app any regionhiddenships)))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and hiddenshipcells) border)))))",
+    "(lam (lam (app (app gt tophidden) bottomhidden)))",
+    "(lam (lam false))",
+    "(lam (lam (app (app and lefthasship) (app not righthasship))))",
+    "(lam (lam (app tobool (app any (app (app and hiddenmask) shipmask)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt regiontrue) 0)) (app (app eq regionpartial) (app neg 1)))))))",
+    "(lam (lam (app any (app (app and (app (app and bordermask) hiddenmask)) shipmask))))",
+    "(lam (lam (app all (app (app lt rows) 4))))",
+    "(lam (lam (app tobool (app any (app (app get unrevealedships) (app (app pair slice) slice))))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt centertop) 0)) hiddenmask)))))",
+    "(lam (lam (app (app and hasship34) (app not hasship56))))",
+    "(lam (lam (app tobool (app any (app (app and hiddenship) bordermask)))))",
+    "(lam (lam (app any unrevealedshipintop)))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) stillhidden)))))",
+    "(lam (lam (app tobool (app any unrevealedshipsinG))))",
+    "(lam (lam (app tobool (app any unrevealedshipupper))))",
+    "(lam (lam (app tobool (app any unrevealedmiddle))))",
+    "(lam (lam (app (app and blany) (app not brany))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any unrevealedshipintop))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any mask))))",
+    "(lam (lam (app tobool (app any topunrevealed))))",
+    "(lam (lam (app tobool isvertical)))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app any touchingborder)))",
+    "(lam (lam (app any hiddenshiptiles)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipstop))))",
+    "(lam (lam (app tobool (app any topunrevealed))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any evenrowmask))))",
+    "(lam (lam (app tobool (app any (app (app get col6mask) (app (app pair slice) 5))))))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app tobool (app any hiddenshipsinF))))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) unrevealed)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipineven))))",
+    "(lam (lam (app any hiddenshipincol)))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam (app not unrevealedshiphere)))",
+    "(lam (lam (app tobool (app any (app (app and shipsincol) hiddenincol)))))",
+    "(lam (lam (app tobool isvertical)))",
+    "(lam (lam (app (app and (app (app eq (app (app get 1) (app (app pair row) col))) (app neg 1))) (app (app ne (app (app get 0) (app (app pair row) col))) 0))))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app get mask) (app (app pair slice) 0)))))",
+    "(lam (lam (app tobool (app any (app (app get mask) (app (app pair rowstocheck) slice))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get unrevealedships) (app (app pair rowstocheck) slice))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any (app (app and hiddentiles) shiptiles)))))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam (app any (app (app and unrevealed) shiptiles))))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam true))",
+    "(lam (lam true))",
+    "(lam (lam true))",
+    "(lam (lam (app tobool (app any candidatetiles))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam (app tobool (app (app gt (app (app get 0) (app (app pair rowidx) colidx))) 0))))",
+    "(lam (lam (app tobool (app (app and hasodd) haseven))))",
+    "(lam (lam (app any hiddenshipsinAorB)))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)))",
+    "(lam (lam (app tobool (app any (app (app get hiddenships) (app (app pair slice) slice))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenships))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get unrevealedship) (app (app pair rows) slice))))))",
+    "(lam (lam (app tobool ishorizontal)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool touches)))",
+    "(lam (lam (app tobool (app any lowerright))))",
+    "(lam (lam (app tobool (app any unrevealedshipsincol1))))",
+    "(lam (lam (app (app lte (app len uniqueorients)) 1)))",
+    "(lam (lam (app all unit)))",
+    "(lam (lam (app any (app (app and hiddeninF) shipinF))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair row) col))) 0)))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app all (app (app eq shiprows) 7))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam false))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair row) col))) 0)))",
+    "(lam (lam (app tobool (app any (app (app and shipsinE) hiddeninE)))))",
+    "(lam (lam (app tobool (app all (app (app eq cols) (app (app get cols) 0))))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app all (app (app eq rows) (app (app get rows) 0))))))",
+    "(lam (lam (app (app gt rowspan) colspan)))",
+    "(lam (lam (app tobool unrevealedshiptiles.any)))",
+    "(lam (lam (app (app or (app (app eq start) g1)) (app (app eq start) g8))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair row) col))) 0)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app all (app (app eq cols) (app (app get cols) 0))))))",
+    "(lam (lam (app all (app (app eq greencols) (app (app get greencols) 0)))))",
+    "(lam (lam (app (app eq uniquerows) 1)))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any hiddenredinC))))",
+    "(lam (lam (app (app eq (app unique redcols)) 1)))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))"
+  ],
+  "rewritten": [
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_8 (fn_1 (fn_3 0 slice remainingship) gt rowGindex))))",
+    "(lam (lam (fn_8 (fn_1 rows lt 2))))",
+    "(lam (lam (app all (fn_1 (fn_1 1 get greenmask) eq 2))))",
+    "(lam (lam (fn_1 sunkcount gte 2)))",
+    "(fn_0 (fn_1 rows gt 4))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_7 (fn_5 gt belowrow colidx))",
+    "(fn_4 unrevealedshipmask regionmask)",
+    "(fn_0 concealedshiptiles)",
+    "(fn_4 shiptiles unrevealed)",
+    "(fn_0 hiddenshipinrow)",
+    "(fn_4 unrevealedship regionmask)",
+    "(fn_0 hiddenshipmask)",
+    "(fn_0 hiddenshipmask)",
+    "(fn_0 targetmask)",
+    "(lam (lam false))",
+    "(fn_7 (fn_1 q1hashiddenship or q2hashiddenship))",
+    "(fn_4 hiddenmask shipmask)",
+    "(fn_7 unrevealedshipinq1)",
+    "(fn_4 maskship maskunrevealed)",
+    "(lam (lam false))",
+    "(fn_0 (fn_3 slice 2 unrevealed))",
+    "(fn_4 (fn_6 subpartial) (fn_1 subtrue gt 0))",
+    "(fn_0 hiddenshipmask)",
+    "(fn_7 any)",
+    "(fn_4 after4 hiddenship)",
+    "(fn_4 maskhidden maskship)",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipsinregion)",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam true))",
+    "(fn_4 hiddenmask (fn_9 regionmask shipmask))",
+    "(fn_4 unrevealedmask (fn_9 rowmask shipmask))",
+    "(fn_0 hiddenshipmask)",
+    "(fn_0 hiddenshiptilesinregion)",
+    "(fn_4 regionmask unrevealed)",
+    "(fn_7 any)",
+    "(fn_7 (fn_1 (fn_8 (fn_1 unrevealedship get 2)) or (fn_8 (fn_1 unrevealedship get 4))))",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_7 (fn_1 (fn_8 (fn_9 fslice funrevealed)) or (fn_8 (fn_9 gslice gunrevealed))))",
+    "(lam (lam (fn_8 (fn_9 (fn_1 (fn_1 0 get rowidx) gt 0) (fn_6 (fn_1 1 get rowidx))))))",
+    "(fn_4 hiddenmask (fn_9 rowsmask shipmask))",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipsinE)",
+    "(fn_0 unrevealedshipsinevens)",
+    "(fn_0 hiddenshipsinG)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam false))",
+    "(fn_0 (fn_1 (fn_3 1 slice coords) eq 5))",
+    "(lam (lam (fn_8 (fn_1 (fn_3 1 slice positions) eq 4))))",
+    "(fn_0 unrevealedshipinH)",
+    "(fn_0 unrevealedshiptiles)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 unrevealedships)",
+    "(fn_0 unrevealedshipmask)",
+    "(fn_0 unrevealedorange)",
+    "(fn_4 isunrevealed ispurple)",
+    "(lam (lam (fn_1 (app len shipids) gt 1)))",
+    "(fn_0 unrevealedinrow)",
+    "(fn_0 unrevealedships)",
+    "(fn_4 hiddentiles shiptiles)",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_0 unrevealedship)",
+    "(lam (lam (fn_8 hiddenshipparts)))",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_7 (fn_2 rows))",
+    "(lam (lam (fn_5 gt row col)))",
+    "(fn_0 hiddenshipparts)",
+    "(fn_4 (fn_6 regionpartial) (fn_1 regiontrue gt 0))",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_7 unrevealedships.any)",
+    "(lam (lam (fn_2 allrows)))",
+    "(fn_0 unrevealedinrow)",
+    "(fn_0 hiddenshipcells)",
+    "(lam (lam (fn_2 shiprows)))",
+    "(fn_4 (fn_6 partialcol) (fn_1 truecol gt 0))",
+    "(fn_4 shipmask hiddenmask)",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_0 unrevealedinrow)",
+    "(fn_4 hiddeninpartial shippartsintrue)",
+    "(lam (lam (fn_1 (fn_1 cols.max sub cols.min) eq (fn_1 cols sub 1))))",
+    "(fn_4 shipcells hiddencells)",
+    "(lam (lam (app all (fn_1 (fn_3 0 slice coords) eq (fn_3 0 0 coords)))))",
+    "(fn_4 hiddencells shipcells)",
+    "(fn_0 unrevealedshipparts)",
+    "(fn_0 undiscovered)",
+    "(fn_4 hiddenincol shipsincol)",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_4 stillhidden shipparts)",
+    "(fn_0 undiscoveredincol)",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipparts)",
+    "(lam (lam false))",
+    "(fn_4 shipmask hiddenmask)",
+    "(lam (lam (fn_9 (fn_1 cols eq 1) (fn_1 rows gt 1))))",
+    "(fn_7 regionhashiddenship)",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_0 mask)",
+    "(lam (lam (fn_2 rowindices)))",
+    "(lam (lam (fn_1 (app unique rows) eq 1)))",
+    "(fn_0 hiddenshipsincol)",
+    "(fn_7 isvertical)",
+    "(fn_7 any)",
+    "(fn_4 maskhidden maskship)",
+    "(lam (lam true))",
+    "(fn_0 undiscoveredinH)",
+    "(lam (lam isvertical))",
+    "(fn_4 hiddenmask shipmask)",
+    "(fn_0 undiscoveredmask)",
+    "(fn_4 hiddeninpartial shipsintrue)",
+    "(fn_0 undiscoveredparts)",
+    "(fn_0 undiscovered)",
+    "(fn_4 undiscovered (fn_5 gt slice colidx))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_7 (fn_5 gt 0 0))",
+    "(lam (lam (fn_8 (fn_9 (fn_5 gt rowidx slice) (fn_6 (fn_3 slice rowidx 1))))))",
+    "(lam (lam (fn_5 ne rowindex colindex)))",
+    "(lam (lam (fn_1 orangeclosest gt 0)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam (fn_5 ne 7 7)))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam true))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 maskships)",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_0 shipshidden)",
+    "(lam (lam (fn_8 (fn_9 isship ishidden))))",
+    "(fn_0 unrevealedship)",
+    "(fn_7 allcolsequal)",
+    "(fn_7 isvertical)",
+    "(lam (lam (fn_8 (fn_9 (fn_1 truesub gt 0) (fn_6 partialsub)))))",
+    "(fn_0 (fn_3 slice slice hiddenintargetrows))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 unseenship)",
+    "(fn_0 unrevealedships)",
+    "(fn_4 (fn_6 partcols) (fn_1 truecols gt 0))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 hiddenship)",
+    "(fn_0 hiddenshipmask)",
+    "(lam (lam false))",
+    "(lam (lam (fn_8 (fn_1 (fn_1 (fn_1 ontopedge or onbottomedge) or onleftedge) or onrightedge))))",
+    "(fn_0 shipunrevealed)",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam (fn_8 (fn_3 slice unit unrevealedship))))",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 (fn_3 slice slice unrevealed))",
+    "(lam (lam false))",
+    "(fn_7 hiddenshipmask.any)",
+    "(lam (lam false))",
+    "(fn_7 unrevealedshiptiles.any)",
+    "(lam (lam (fn_8 (fn_9 (fn_1 subtrue gt 0) (fn_6 subpartial)))))",
+    "(fn_4 hiddenmask shipmask)",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_4 hiddenmask (fn_9 bordermask shipmask))",
+    "(lam (lam false))",
+    "(lam (lam (fn_8 unrevealedshipmask)))",
+    "(fn_0 hiddenshiponedge)",
+    "(fn_0 unrevealedshipmask)",
+    "(lam (lam (fn_1 uniquecols eq 1)))",
+    "(lam (lam false))",
+    "(fn_7 (fn_1 any or any))",
+    "(fn_4 ship hidden)",
+    "(fn_0 onedge)",
+    "(lam (lam false))",
+    "(fn_0 hiddenships)",
+    "(lam (lam false))",
+    "(fn_0 unrevealedship)",
+    "(fn_0 unrevealedships)",
+    "(fn_0 unrevealedships)",
+    "(fn_4 shipcells hiddencells)",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 (app unique cols) eq 1)))",
+    "(fn_0 unrevealedinB)",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_7 isvertical)",
+    "(fn_4 hiddentiles shiptiles)",
+    "(fn_4 ships hidden)",
+    "(fn_0 hiddenshipincol)",
+    "(fn_7 (fn_1 (fn_1 (fn_1 (fn_8 topborder) or (fn_8 bottomborder)) or (fn_8 leftborder)) or (fn_8 rightborder)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 (app unique cols) eq 1)))",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_7 (fn_2 rowindices))",
+    "(lam (lam (app all (fn_1 (fn_3 0 slice greenpositions) lt half))))",
+    "(fn_7 (app all (fn_1 greencols lt mid)))",
+    "(lam (lam false))",
+    "(fn_7 (fn_1 (fn_1 (fn_1 ontopedge or onbottomedge) or onleftedge) or onrightedge))",
+    "(lam (lam (fn_1 greenlength eq 3)))",
+    "(fn_0 (fn_1 centerblock gt 0))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 (app len touchingships) gt 2)))",
+    "(lam (lam false))",
+    "(fn_0 unrevealedintop)",
+    "(lam (lam (fn_9 (fn_1 uniquecols eq 1) (fn_1 uniquerows gt 1))))",
+    "(fn_0 redonGunrevealed)",
+    "(fn_7 (fn_2 cols))",
+    "(lam (lam (fn_8 (fn_1 (fn_3 slice 4 0) eq 3))))",
+    "(fn_0 mask)",
+    "(lam (lam (fn_8 hiddenshiptiles)))",
+    "(fn_0 unrevealededgeships)",
+    "(fn_4 ship (fn_9 edgeexcepttop hidden))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 shipsintophalf gte 2)))",
+    "(fn_0 unrevealedships)",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam (fn_1 (app unique cols) eq 1)))",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_0 mask)",
+    "(lam (lam (fn_8 (fn_9 (fn_9 edgesmask hiddenmask) shipmask))))",
+    "(fn_0 hiddenshipcells)",
+    "(lam (lam (fn_1 shipids gt 1)))",
+    "(lam (lam (fn_1 (app len touching) gt 1)))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_1 shipsintop gt 1)))",
+    "(lam (lam (fn_1 shipids gt 1)))",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_0 unrevealedships)",
+    "(fn_7 any)",
+    "(fn_4 hiddentiles shiptiles)",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_4 hiddentiles shiptiles)",
+    "(fn_0 hiddenshipmask)",
+    "(fn_4 hiddenpositions shippositions)",
+    "(fn_7 hasunrevealedship)",
+    "(fn_4 ship hidden)",
+    "(fn_4 hiddentiles shiptiles)",
+    "(fn_0 unrevealedshiptiles)",
+    "(lam (lam (app all (fn_1 (fn_3 0 slice shippositions) lte 3))))",
+    "(fn_0 shipsremaininginF)",
+    "(fn_7 any)",
+    "(fn_0 hiddenshipmask)",
+    "(fn_4 ship hidden)",
+    "(lam (lam (fn_1 (app unique (fn_3 1 slice coords)) eq 1)))",
+    "(fn_0 unrevealedshipsinA)",
+    "(fn_0 hiddenships)",
+    "(fn_0 mask)",
+    "(fn_0 unrevealedshipsinrow)",
+    "(fn_0 hiddenshiptiles)",
+    "(lam (lam (fn_8 hiddenships)))",
+    "(fn_0 shipshiddeninrange)",
+    "(fn_4 shipmask hiddenmask)",
+    "(fn_0 unrevealedships)",
+    "(fn_0 unrevealedshipsinC)",
+    "(fn_0 unrevealedshipmask)",
+    "(fn_0 unrevealedshiptiles)",
+    "(lam (lam (fn_8 (fn_9 (fn_1 (fn_1 0 get rowidx) gt 0) (fn_6 (fn_1 1 get rowidx))))))",
+    "(fn_4 hiddencells shipcells)",
+    "(lam (lam false))",
+    "(fn_0 unrevealedships)",
+    "(fn_0 hiddenship)",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(fn_0 hiddenships)",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 unrevealedships)",
+    "(fn_7 unrevealedshiptiles.any)",
+    "(lam (lam (app not (fn_8 (fn_9 hiddenmask shipmask)))))",
+    "(lam (lam false))",
+    "(fn_0 unrevealedshipsinE)",
+    "(fn_0 unrevealedshipsinA)",
+    "(fn_4 ships hidden)",
+    "(fn_0 hiddenshiptiles)",
+    "(lam (lam (fn_8 (fn_9 hidden ships))))",
+    "(fn_4 ship hidden)",
+    "(lam (lam (fn_8 unrevealedinrow)))",
+    "(fn_4 unrevealedinregion shipsinregion)",
+    "(fn_4 ishidden isship)",
+    "(fn_4 (fn_6 partialrow) (fn_1 truerow gt 0))",
+    "(fn_0 hiddenshipmask)",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_7 hiddenshipmask.any)",
+    "(fn_4 shipmask hiddenmask)",
+    "(fn_4 shipmask hiddenmask)",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_8 hiddenships)))",
+    "(fn_0 hiddenships)",
+    "(fn_4 hiddeninrowb shipsinrowb)",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipcells)",
+    "(fn_0 hiddenshipincol8)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 (app len uniquerows) eq 1)))",
+    "(fn_0 mask)",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam true))",
+    "(fn_7 hiddenshipsabove.any)",
+    "(fn_0 unrevealedshipmask)",
+    "(fn_0 unrevealedshipinH)",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_0 candidate)",
+    "(fn_4 hiddentiles shiptiles)",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_4 maskhidden maskship)",
+    "(fn_0 hiddenshipsinF)",
+    "(fn_0 unrevealedship)",
+    "(fn_7 unrevealedshiptiles.any)",
+    "(fn_4 ships (fn_9 outermask unrevealed))",
+    "(lam (lam (fn_8 unrevealedshiptiles)))",
+    "(lam (lam (app issubset (app set greenrows))))",
+    "(lam (lam (fn_8 (fn_3 slice rowstocheck purpleunrevealed))))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_0 hiddenshipmask)",
+    "(fn_7 unrevealedshiptiles.any)",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_0 unseenships)",
+    "(lam (lam (fn_8 unrevealedships)))",
+    "(fn_0 hiddenshipmask)",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_4 regionishidden regionhasship)",
+    "(fn_0 hiddenshipsinrow)",
+    "(fn_0 unrevealedships)",
+    "(lam (lam false))",
+    "(fn_0 (fn_3 slice rowscd unrevealed))",
+    "(fn_4 shiptiles hidden)",
+    "(fn_4 (fn_6 pr) (fn_1 tr gt 0))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 hiddenshiptiles)",
+    "(lam (lam false))",
+    "(fn_0 unrevealedshiptiles)",
+    "(lam (lam (fn_8 (fn_1 colidx gte 4))))",
+    "(fn_7 (fn_2 cols))",
+    "(lam (lam any))",
+    "(fn_0 unrevealedships)",
+    "(fn_4 ships hidden)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 shipsbelow)",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam isvertical))",
+    "(lam (lam (fn_1 toprow eq 0)))",
+    "(lam (lam (fn_1 bottomrowindex eq 3)))",
+    "(fn_0 unrevealedshipinrow)",
+    "(lam (lam (fn_8 (fn_1 (fn_3 1 slice orangecells) eq targetcol))))",
+    "(fn_0 hiddenshipincol8)",
+    "(fn_4 (fn_3 slice 2 ships) (fn_3 slice 2 unrevealed))",
+    "(lam (lam (fn_9 (fn_6 (fn_3 col row 1)) (fn_5 gt row col))))",
+    "(lam (lam (fn_1 greenlength gt 2)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 leftcount gt rightcount)))",
+    "(fn_0 (fn_1 orangecols gte 4))",
+    "(lam (lam false))",
+    "(fn_0 unrevealedships)",
+    "(fn_0 unrevealedship)",
+    "(fn_4 hiddencells shipcells)",
+    "(fn_4 shipinrow hiddeninrow)",
+    "(fn_4 shipmask hiddenmask)",
+    "(fn_7 unrevealedshipinrowe)",
+    "(lam (lam (fn_1 purplecount gt 2)))",
+    "(lam (lam (fn_1 topcount gt bottomcount)))",
+    "(fn_4 isunrevealed isship)",
+    "(fn_4 maskhidden maskship)",
+    "(lam (lam (fn_1 toprow lte 2)))",
+    "(lam (lam (fn_1 (app unique cols) eq 1)))",
+    "(lam (lam (fn_1 (fn_3 col row 0) eq targetid)))",
+    "(fn_7 (fn_2 cols))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_4 hiddenmask shipmask)",
+    "(fn_0 unrevealedshipsinrow)",
+    "(lam (lam (fn_8 unrevealedshiptiles)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipinA)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (fn_1 (fn_3 0 slice othercoords) gte bottomstart))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 (fn_3 slice slice hiddenship))",
+    "(lam (lam (fn_8 (fn_1 rtarget eq 6))))",
+    "(fn_0 (fn_3 4 slice hiddenshiptiles))",
+    "(fn_7 (app all (fn_1 shiprows lt halfway)))",
+    "(lam (lam (fn_8 shipshidden)))",
+    "(fn_0 (fn_3 oddcolmask slice shipandhidden))",
+    "(lam (lam (fn_5 gt row col)))",
+    "(fn_0 (fn_3 slice slice unrevealedships))",
+    "(lam (lam (fn_9 ishidden isshiptile)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_5 ne rowidx colidx)))",
+    "(lam (lam (fn_9 (fn_6 (fn_3 colidx rowidx 1)) (fn_5 gt rowidx colidx))))",
+    "(fn_0 hiddenshipmask)",
+    "(fn_4 (fn_6 pr) (fn_1 tr gt 0))",
+    "(fn_0 unrevealedshipincol0)",
+    "(lam (lam (app all (fn_1 (fn_3 1 slice coords) lt leftthreshold))))",
+    "(lam (lam (fn_8 unrevealedinB)))",
+    "(lam (lam (fn_8 unrevealedship)))",
+    "(lam (lam (fn_8 unrevealedshipinC)))",
+    "(fn_4 hiddenincol shipincol)",
+    "(fn_0 leftofC)",
+    "(fn_4 hiddentiles shiptiles)",
+    "(lam (lam (fn_8 (fn_9 (fn_1 rows lt midrow) (fn_1 cols lt midcol)))))",
+    "(lam (lam (fn_5 gt 0 0)))",
+    "(lam (lam (fn_5 ne rowidx colidx)))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(fn_0 hiddenships)",
+    "(fn_0 hiddenshipmask)",
+    "(fn_4 hiddentiles shiptiles)",
+    "(lam (lam false))",
+    "(fn_4 hiddenonrow shipsonrow)",
+    "(lam (lam (fn_8 (fn_9 (fn_1 trtrue gt 0) (fn_6 trpartial)))))",
+    "(fn_7 hiddenshipmask.any)",
+    "(fn_4 shiptiles hiddentiles)",
+    "(fn_0 hiddenshipincol)",
+    "(lam (lam (fn_5 ne r c)))",
+    "(fn_0 hiddenships)",
+    "(fn_0 stillhiddenship)",
+    "(fn_0 unrevealed)",
+    "(lam (lam (fn_8 (fn_3 slice targetrows unrevealedship))))",
+    "(fn_0 unrevealedshipmask)",
+    "(fn_0 unrevealedshiptiles)",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipmask)",
+    "(fn_7 any)",
+    "(fn_0 rightunrevealed)",
+    "(fn_0 unrevealedshipintop)",
+    "(fn_7 any)",
+    "(fn_4 bottomright hiddenships)",
+    "(fn_0 tophalfshipshidden)",
+    "(fn_0 unrevealedship)",
+    "(fn_0 hiddenshipsinrow)",
+    "(fn_7 unrevealedships.any)",
+    "(lam (lam (fn_8 unrevealedshipmask)))",
+    "(lam (lam (fn_9 ishidden isship)))",
+    "(fn_7 unrevealed.any)",
+    "(fn_7 unrevealedinF.any)",
+    "(lam (lam (fn_2 shiprows)))",
+    "(lam (lam (fn_1 (app len uniquecols) eq 1)))",
+    "(fn_0 unrevealedshiptiles)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 lastcenter gt greencenter)))",
+    "(fn_0 hiddenshipcells)",
+    "(fn_0 shipsunrevealed)",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_8 unrevealedship)))",
+    "(lam (lam (fn_8 hiddenshiptiles)))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipmask)",
+    "(fn_4 shiptiles hiddentiles)",
+    "(fn_4 shipincol hiddenincol)",
+    "(fn_4 belowhidden belowtrue)",
+    "(fn_0 unrevealedships)",
+    "(fn_0 (fn_3 slice slice hiddenship))",
+    "(fn_0 (fn_3 slice slice hiddenship))",
+    "(fn_7 any)",
+    "(lam (lam false))",
+    "(fn_0 region)",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_0 unseenship)",
+    "(fn_0 unrevealedship)",
+    "(fn_0 unrevealedshipsinrow)",
+    "(fn_0 (fn_3 slice slice unrevealedship))",
+    "(fn_0 unrevealedshippositions)",
+    "(fn_0 hiddenships)",
+    "(fn_7 (fn_5 gt row col))",
+    "(fn_0 (fn_3 slice targetrows hiddenshipmask))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(fn_0 (fn_3 slice unit hiddenships))",
+    "(lam (lam (fn_1 (app unique rows) eq 1)))",
+    "(lam (lam (fn_5 gt (fn_1 r sub 1) c)))",
+    "(fn_0 unrevealedship)",
+    "(lam (lam (fn_8 hiddenships)))",
+    "(fn_0 lowerright)",
+    "(lam (lam false))",
+    "(lam (lam all))",
+    "(fn_0 maskunrevealedship)",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_4 ships unrevealed)",
+    "(fn_0 unrevealedship)",
+    "(lam (lam (fn_8 rowsEF)))",
+    "(lam (lam (app all (fn_1 (fn_3 0 slice shippositions) eq (fn_3 0 0 shippositions)))))",
+    "(lam (lam false))",
+    "(fn_4 (fn_6 pr) (fn_1 tr gt 0))",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_0 unrevealedships)",
+    "(lam (lam (fn_2 shiprows)))",
+    "(fn_0 hiddenshipcells)",
+    "(fn_0 maskunrevealedin58)",
+    "(fn_0 hiddenshipsinrow)",
+    "(fn_7 (fn_9 (app set purplerows) targetrows))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_1 (app unique cols) eq 1)))",
+    "(lam (lam (app all (fn_1 (fn_3 0 slice coords) eq (fn_3 0 0 coords)))))",
+    "(fn_0 unrevealedpurpleonH)",
+    "(fn_0 hiddenships)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_9 (fn_5 ne rowidx colidx) (fn_6 (fn_3 colidx rowidx 1)))))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam (fn_8 (fn_1 greenrows np.isin unit))))",
+    "(lam (lam (app all (fn_1 greenrows np.isin unit))))",
+    "(lam (lam false))",
+    "(fn_7 (fn_2 rows))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_8 hiddenorangeinA)))",
+    "(fn_0 (fn_1 (fn_1 purplerows eq 2) or (fn_1 purplerows eq 6)))",
+    "(lam (lam false))",
+    "(fn_0 rowsEandF)",
+    "(lam (lam false))",
+    "(fn_0 mask)",
+    "(lam (lam false))",
+    "(fn_7 (fn_1 any or any))",
+    "(lam (lam (fn_8 (fn_9 (fn_1 cols gte 3) (fn_1 cols lte 6)))))",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_7 (fn_2 rows))",
+    "(lam (lam false))",
+    "(lam (lam (fn_8 (fn_1 orangerows np.isin unit))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 (app unique rows) eq 1)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_9 (fn_1 startrow eq 0) (fn_1 startcol eq 4))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (fn_1 (fn_3 1 slice redcoords) eq (fn_3 1 0 redcoords)))))",
+    "(lam (lam (fn_1 redcols.min gt purplecols.max)))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_1 (app unique rows) eq 1)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 purpletilecount eq 2)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_4 (fn_1 shipmask get rowindex) (fn_1 hiddenmask get rowindex))",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 hiddenshipsinB)",
+    "(fn_0 unrevealedship)",
+    "(fn_4 hiddentiles shipsinrow)",
+    "(lam (lam (fn_1 orangetilecount eq 2)))",
+    "(lam (lam (fn_8 (fn_1 rows eq 7))))",
+    "(fn_7 any)",
+    "(fn_4 (fn_1 colindices lt 3) hiddenships)",
+    "(fn_0 unrevealedships)",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_7 unrevealedshipmask.any)",
+    "(fn_0 unrevealedships)",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 unrevealed)",
+    "(lam (lam false))",
+    "(lam (lam (app all unit)))",
+    "(fn_7 unrevealed.any)",
+    "(fn_7 any)",
+    "(fn_0 rowsexceptH)",
+    "(lam (lam true))",
+    "(lam (lam (fn_8 stillhiddenship)))",
+    "(fn_0 hiddenshipmask)",
+    "(lam (lam false))",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_0 (fn_1 (fn_1 shipcellsperrow get slice) eq 0))",
+    "(lam (lam (fn_8 (fn_3 slice 7 remainingships))))",
+    "(lam (lam false))",
+    "(fn_7 (app all colshaveship))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_7 any)",
+    "(lam (lam (fn_1 hiddenships gt 1)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_5 ne 7 0)))",
+    "(lam (lam (fn_9 (fn_9 (fn_1 rows eq 1) (fn_1 (fn_1 rows get 0) eq 1)) (fn_1 (fn_1 cols get 0) eq 4))))",
+    "(fn_7 (fn_3 3 0 hiddengreen))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 unrevealedinA)",
+    "(fn_7 (app all rowswithhiddenships))",
+    "(fn_0 unrevealedshiptiles)",
+    "(lam (lam true))",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_7 (fn_5 gt rowidx colidx))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(lam (lam (fn_9 (fn_2 cols) (fn_1 (fn_1 (fn_1 rows.max sub rows.min) add 1) eq (app len rows)))))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(lam (lam (fn_5 ne rowidx colidx)))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(lam (lam (fn_5 ne 0 1)))",
+    "(fn_7 (fn_9 isship ishidden))",
+    "(lam (lam (fn_5 gt row col)))",
+    "(lam (lam (fn_5 gt row col)))",
+    "(lam (lam (fn_5 ne rowidx colidx)))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_7 (fn_9 ishorizontal isonright))",
+    "(lam (lam (fn_9 (fn_6 (fn_3 col row 1)) (fn_5 ne row col))))",
+    "(fn_0 unrevealedshipmask)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 uniquecols eq 1)))",
+    "(fn_0 orangeunrevealed)",
+    "(fn_0 hiddenshipsbelow)",
+    "(fn_0 shipsstillhidden)",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_4 shipsthere unrevealed)",
+    "(fn_7 (fn_5 gt (app neg 1) (app neg 1)))",
+    "(lam (lam (fn_5 gt 0 0)))",
+    "(lam (lam (fn_1 (app len shipsinbl) gte 3)))",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 unseenshipmask)",
+    "(lam (lam (fn_8 hiddenshiptiles)))",
+    "(fn_0 unrevealedship)",
+    "(lam (lam (fn_5 ne rowidx colidx)))",
+    "(lam (lam (fn_8 (fn_9 (fn_1 tb gt 0) (fn_6 pb)))))",
+    "(lam (lam (fn_5 ne row col)))",
+    "(fn_0 hiddenshipsmask)",
+    "(lam (lam (app all (fn_1 shipcols lt 4))))",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_5 gt 0 3)))",
+    "(lam (lam (fn_5 ne rowidx colidx)))",
+    "(lam (lam false))",
+    "(fn_0 unrevealedships)",
+    "(fn_4 hiddentiles shiptiles)",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(fn_7 hasship)",
+    "(lam (lam (fn_5 gt row col)))",
+    "(fn_4 hiddentiles shiptiles)",
+    "(lam (lam (fn_5 ne rowidx colidx)))",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(fn_0 unrevealedships)",
+    "(fn_0 unrevealedshiptiles)",
+    "(lam (lam ishorizontal))",
+    "(lam (lam (app all (fn_1 rowindices eq targetrow))))",
+    "(fn_0 hiddenshiponedge)",
+    "(fn_7 (fn_1 (fn_3 (fn_1 col sub 1) row 0) eq 3))",
+    "(fn_7 (app all (fn_1 rows gte half)))",
+    "(fn_0 hits)",
+    "(fn_4 edgemask unrevealedships)",
+    "(fn_7 hasunseenship)",
+    "(fn_0 hiddengreenincol8)",
+    "(lam (lam false))",
+    "(fn_7 (fn_1 mindist lte 2))",
+    "(lam (lam false))",
+    "(fn_4 shiptilesincol hiddentilesincol)",
+    "(lam (lam (fn_8 (fn_9 (fn_1 truecenter gt 0) (fn_6 partialcenter)))))",
+    "(fn_0 unseenshiptiles)",
+    "(fn_0 (fn_1 chebdist lte 1))",
+    "(lam (lam (fn_9 closetoorange closetopurple)))",
+    "(fn_0 hiddenships)",
+    "(fn_0 topunrevealedships)",
+    "(fn_0 hiddenshipcells)",
+    "(fn_0 shipsinBstillhidden)",
+    "(fn_0 hiddenshiptilesinH)",
+    "(lam (lam false))",
+    "(lam (lam (fn_9 (fn_1 (app len (app set cols)) eq 1) (fn_1 (app len (app set rows)) gt 1))))",
+    "(lam (lam (fn_9 (fn_1 (app unique redrows) gt 1) (fn_1 (app unique redcols) eq 1))))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_4 rightmask hiddenshipmask)",
+    "(lam (lam (fn_9 (fn_1 (app len (app unique cols)) eq 1) (fn_1 (app len (app unique rows)) gt 1))))",
+    "(fn_0 maskunrevealedship)",
+    "(fn_4 (fn_6 ulpartial) (fn_1 ultrue gt 0))",
+    "(lam (lam (fn_1 (app unique cols) eq 1)))",
+    "(lam (lam false))",
+    "(fn_7 (fn_1 (fn_8 bottomrowhiddenship) or (fn_8 rightcolhiddenship)))",
+    "(fn_7 hiddenshipincol.any)",
+    "(fn_0 relevanttiles)",
+    "(fn_4 ishidden isship)",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_0 hiddenshipmask)",
+    "(fn_0 hiddenshiponleft)",
+    "(fn_0 maskunrevealedships)",
+    "(lam (lam false))",
+    "(lam (lam (fn_8 (fn_1 topright gt 0))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam true))",
+    "(lam (lam (fn_1 countrow6 gte countrow8)))",
+    "(fn_4 hiddenmask shipmask)",
+    "(lam (lam false))",
+    "(lam (lam true))",
+    "(lam (lam (fn_1 countAD gt countEH)))",
+    "(fn_7 (fn_1 leftcount gt rightcount))",
+    "(lam (lam (fn_1 (fn_1 shipsleft mul hiddenright) gt (fn_1 shipsright mul hiddenleft))))",
+    "(fn_7 (fn_2 cols))",
+    "(lam (lam (fn_8 (fn_3 slice slice unrevealedships))))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 rowindices)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam false))",
+    "(fn_0 maskunrevealedship)",
+    "(lam (lam (fn_8 (fn_3 slice slice unrevealedships))))",
+    "(fn_4 bottomleftmask hiddenshiptiles)",
+    "(lam (lam (fn_1 (app unique rows) eq 1)))",
+    "(lam (lam false))",
+    "(fn_7 hasship)",
+    "(fn_0 unrevealedshipmask)",
+    "(lam (lam false))",
+    "(fn_0 unrevealedshipmask)",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_0 unrevealedshipmask)",
+    "(lam (lam false))",
+    "(fn_0 (fn_3 cols slice hiddenshipmask))",
+    "(fn_0 unrevealedships)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_9 (fn_1 (fn_3 c downr 0) eq shipid) (fn_6 (fn_3 c downr 1)))))",
+    "(fn_4 (fn_6 pr) (fn_1 tr gt 0))",
+    "(fn_7 any)",
+    "(fn_0 (fn_3 slice slice hiddenships))",
+    "(lam (lam (fn_9 hasin56 (app not hasin78))))",
+    "(lam (lam true))",
+    "(lam (lam (fn_9 upperhas (app not lowerhas))))",
+    "(lam (lam false))",
+    "(fn_7 (fn_9 hasshipe4 hasshipb4))",
+    "(fn_4 hiddentiles shiptiles)",
+    "(fn_0 unrevealedshipintop)",
+    "(lam (lam (fn_8 hiddenshipsintl)))",
+    "(lam (lam (fn_8 hiddenshipmask)))",
+    "(lam (lam (fn_8 (fn_9 (fn_1 shipsincols gt 0) hiddenmask))))",
+    "(fn_4 stillhidden shippositions)",
+    "(fn_0 (fn_3 slice slice hiddenships))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_7 unrevealedship.any)",
+    "(lam (lam (fn_8 unrevealedships)))",
+    "(fn_0 (fn_3 slice slice unrevealedships))",
+    "(lam (lam false))",
+    "(fn_7 any)",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_0 unseenships)",
+    "(lam (lam (fn_1 (fn_1 counthidden mod 2) eq 0)))",
+    "(fn_7 (fn_1 (fn_1 (fn_1 (fn_8 (fn_1 toprow gt 0)) or (fn_8 (fn_1 bottomrow gt 0))) or (fn_8 (fn_1 leftcol gt 0))) or (fn_8 (fn_1 rightcol gt 0))))",
+    "(lam (lam (fn_9 condyes condno)))",
+    "(fn_7 (fn_1 topborderhasship or leftborderhasship))",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipsonright)",
+    "(fn_7 (fn_1 shipsEH gt shipsAD))",
+    "(lam (lam (fn_1 evencount gt oddcount)))",
+    "(lam (lam (fn_5 gt rowindex colindex)))",
+    "(lam (lam false))",
+    "(lam (lam (app all (fn_1 rows lte 3))))",
+    "(fn_0 cols1to4)",
+    "(fn_7 (fn_9 anyinAD (app not anyinEH)))",
+    "(fn_4 hiddenmask shipmask)",
+    "(fn_4 hidden ships)",
+    "(fn_0 unrevealedintop)",
+    "(fn_0 regionmask)",
+    "(fn_0 unrevealedab)",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(lam (lam any))",
+    "(fn_0 mask)",
+    "(lam (lam (fn_9 foundvertical (app not foundhorizontal))))",
+    "(fn_4 oddcolumns unrevealedships)",
+    "(lam (lam false))",
+    "(lam (lam (fn_9 (fn_1 topedge or bottomedge) (app not (fn_1 leftedge or rightedge)))))",
+    "(fn_7 any)",
+    "(lam (lam false))",
+    "(lam (lam (fn_1 (fn_1 shiplength mod 2) eq 0)))",
+    "(lam (lam (fn_1 topunrevealed gt bottomunrevealed)))",
+    "(fn_7 mask.any)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (fn_1 cols lt 4))))",
+    "(lam (lam false))",
+    "(fn_0 unrevealedshipintop)",
+    "(fn_4 hiddenshipmask bordermask)",
+    "(lam (lam (app not offborder.any)))",
+    "(lam (lam (fn_8 regionhiddenships)))",
+    "(lam (lam false))",
+    "(fn_4 border hiddenshipcells)",
+    "(lam (lam (fn_1 tophidden gt bottomhidden)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_9 lefthasship (app not righthasship))))",
+    "(fn_4 shipmask hiddenmask)",
+    "(lam (lam false))",
+    "(fn_4 (fn_6 regionpartial) (fn_1 regiontrue gt 0))",
+    "(lam (lam (fn_8 (fn_9 (fn_9 bordermask hiddenmask) shipmask))))",
+    "(lam (lam (app all (fn_1 rows lt 4))))",
+    "(fn_0 (fn_3 slice slice unrevealedships))",
+    "(fn_7 any)",
+    "(fn_4 hiddenmask shipmask)",
+    "(fn_4 hiddenmask (fn_1 centertop gt 0))",
+    "(lam (lam (fn_9 hasship34 (app not hasship56))))",
+    "(fn_4 bordermask hiddenship)",
+    "(lam (lam (fn_8 unrevealedshipintop)))",
+    "(fn_4 stillhidden shiptiles)",
+    "(fn_0 unrevealedshipsinG)",
+    "(fn_0 unrevealedshipupper)",
+    "(fn_0 unrevealedmiddle)",
+    "(lam (lam (fn_9 blany (app not brany))))",
+    "(fn_0 unrevealedships)",
+    "(fn_0 unrevealedshipintop)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 mask)",
+    "(fn_0 topunrevealed)",
+    "(fn_7 isvertical)",
+    "(fn_0 hiddenshiptiles)",
+    "(lam (lam (fn_8 touchingborder)))",
+    "(lam (lam (fn_8 hiddenshiptiles)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipstop)",
+    "(fn_0 topunrevealed)",
+    "(lam (lam false))",
+    "(fn_0 evenrowmask)",
+    "(fn_0 (fn_3 5 slice col6mask))",
+    "(lam (lam (fn_5 ne rowidx colidx)))",
+    "(lam (lam (fn_5 gt rowidx colidx)))",
+    "(fn_0 hiddenshipsinF)",
+    "(fn_4 unrevealed shiptiles)",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipineven)",
+    "(lam (lam (fn_8 hiddenshipincol)))",
+    "(fn_4 hiddenmask shipmask)",
+    "(lam (lam (app not unrevealedshiphere)))",
+    "(fn_4 hiddenincol shipsincol)",
+    "(fn_7 isvertical)",
+    "(lam (lam (fn_9 (fn_6 (fn_3 col row 1)) (fn_5 ne row col))))",
+    "(lam (lam false))",
+    "(lam (lam (fn_8 (fn_3 0 slice mask))))",
+    "(fn_0 (fn_3 slice rowstocheck mask))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 (fn_3 slice rowstocheck unrevealedships))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipmask)",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_4 shiptiles hiddentiles)",
+    "(fn_0 unrevealedshipmask)",
+    "(lam (lam (fn_8 (fn_9 unrevealed shiptiles))))",
+    "(fn_4 hiddenmask shipmask)",
+    "(lam (lam true))",
+    "(lam (lam true))",
+    "(lam (lam true))",
+    "(fn_0 candidatetiles)",
+    "(lam (lam false))",
+    "(fn_4 hiddenmask shipmask)",
+    "(fn_7 (fn_5 gt rowidx colidx))",
+    "(fn_7 (fn_9 hasodd haseven))",
+    "(lam (lam (fn_8 hiddenshipsinAorB)))",
+    "(fn_0 unrevealedships)",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam false))",
+    "(lam (lam (fn_5 ne rowidx colidx)))",
+    "(fn_0 (fn_3 slice slice hiddenships))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 hiddenships)",
+    "(lam (lam false))",
+    "(fn_0 (fn_3 slice rows unrevealedship))",
+    "(fn_7 ishorizontal)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_7 touches)",
+    "(fn_0 lowerright)",
+    "(fn_0 unrevealedshipsincol1)",
+    "(lam (lam (fn_1 (app len uniqueorients) lte 1)))",
+    "(lam (lam (app all unit)))",
+    "(lam (lam (fn_8 (fn_9 hiddeninF shipinF))))",
+    "(fn_0 unrevealedships)",
+    "(lam (lam false))",
+    "(lam (lam (fn_5 gt row col)))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (app all (fn_1 shiprows eq 7))))",
+    "(lam (lam false))",
+    "(fn_0 unrevealedships)",
+    "(lam (lam false))",
+    "(lam (lam (fn_5 gt row col)))",
+    "(fn_4 hiddeninE shipsinE)",
+    "(fn_7 (fn_2 cols))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_7 (fn_2 rows))",
+    "(lam (lam (fn_1 rowspan gt colspan)))",
+    "(fn_7 unrevealedshiptiles.any)",
+    "(lam (lam (fn_1 (fn_1 start eq g1) or (fn_1 start eq g8))))",
+    "(lam (lam (fn_5 gt row col)))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_7 (fn_2 cols))",
+    "(lam (lam (fn_2 greencols)))",
+    "(lam (lam (fn_1 uniquerows eq 1)))",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_0 hiddenredinC)",
+    "(lam (lam (fn_1 (app unique redcols) eq 1)))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (fn_2 cols)))"
+  ],
+  "rewritten_dreamcoder": null,
+  "abstractions": [
+    {
+      "body": "(lam (lam (app tobool (app any #0))))",
+      "dreamcoder": "#(lambda (lambda (lambda (app tobool (app any $2)))))",
+      "arity": 1,
+      "name": "fn_0",
+      "utility": 115799,
+      "final_cost": 533663,
+      "compression_ratio": 1.2177497784182152,
+      "cumulative_compression_ratio": 1.2177497784182152,
+      "num_uses": 381,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_0 (app (app and (app (app and bordermask) shipmask)) hiddenmask)": "(lam (lam (app tobool (app any (app (app and (app (app and bordermask) shipmask)) hiddenmask)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app and edgeexcepttop) hidden)) ship)": "(lam (lam (app tobool (app any (app (app and (app (app and edgeexcepttop) hidden)) ship)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app and outermask) unrevealed)) ships)": "(lam (lam (app tobool (app any (app (app and (app (app and outermask) unrevealed)) ships)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app and regionmask) shipmask)) hiddenmask)": "(lam (lam (app tobool (app any (app (app and (app (app and regionmask) shipmask)) hiddenmask)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app and rowmask) shipmask)) unrevealedmask)": "(lam (lam (app tobool (app any (app (app and (app (app and rowmask) shipmask)) unrevealedmask)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app and rowsmask) shipmask)) hiddenmask)": "(lam (lam (app tobool (app any (app (app and (app (app and rowsmask) shipmask)) hiddenmask)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app get hiddenmask) rowindex)) (app (app get shipmask) rowindex))": "(lam (lam (app tobool (app any (app (app and (app (app get hiddenmask) rowindex)) (app (app get shipmask) rowindex))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app get unrevealed) (app (app pair 2) slice))) (app (app get ships) (app (app pair 2) slice)))": "(lam (lam (app tobool (app any (app (app and (app (app get unrevealed) (app (app pair 2) slice))) (app (app get ships) (app (app pair 2) slice)))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt (app (app get 0) (app (app pair slice) colidx))) 0)) undiscovered)": "(lam (lam (app tobool (app any (app (app and (app (app gt (app (app get 0) (app (app pair slice) colidx))) 0)) undiscovered)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt centertop) 0)) hiddenmask)": "(lam (lam (app tobool (app any (app (app and (app (app gt centertop) 0)) hiddenmask)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt regiontrue) 0)) (app (app eq regionpartial) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt regiontrue) 0)) (app (app eq regionpartial) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt subtrue) 0)) (app (app eq subpartial) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt subtrue) 0)) (app (app eq subpartial) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt tr) 0)) (app (app eq pr) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt tr) 0)) (app (app eq pr) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt truecol) 0)) (app (app eq partialcol) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt truecol) 0)) (app (app eq partialcol) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt truecols) 0)) (app (app eq partcols) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt truecols) 0)) (app (app eq partcols) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt truerow) 0)) (app (app eq partialrow) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt truerow) 0)) (app (app eq partialrow) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt ultrue) 0)) (app (app eq ulpartial) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt ultrue) 0)) (app (app eq ulpartial) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and belowtrue) belowhidden)": "(lam (lam (app tobool (app any (app (app and belowtrue) belowhidden)))))"
+        },
+        {
+          "fn_0 (app (app and bordermask) hiddenshipmask)": "(lam (lam (app tobool (app any (app (app and bordermask) hiddenshipmask)))))"
+        },
+        {
+          "fn_0 (app (app and hidden) ship)": "(lam (lam (app tobool (app any (app (app and hidden) ship)))))"
+        },
+        {
+          "fn_0 (app (app and hidden) ships)": "(lam (lam (app tobool (app any (app (app and hidden) ships)))))"
+        },
+        {
+          "fn_0 (app (app and hidden) shiptiles)": "(lam (lam (app tobool (app any (app (app and hidden) shiptiles)))))"
+        },
+        {
+          "fn_0 (app (app and hiddencells) shipcells)": "(lam (lam (app tobool (app any (app (app and hiddencells) shipcells)))))"
+        },
+        {
+          "fn_0 (app (app and hiddenincol) shipincol)": "(lam (lam (app tobool (app any (app (app and hiddenincol) shipincol)))))"
+        },
+        {
+          "fn_0 (app (app and hiddeninrow) shipinrow)": "(lam (lam (app tobool (app any (app (app and hiddeninrow) shipinrow)))))"
+        },
+        {
+          "fn_0 (app (app and hiddenmask) shipmask)": "(lam (lam (app tobool (app any (app (app and hiddenmask) shipmask)))))"
+        },
+        {
+          "fn_0 (app (app and hiddenship) after4)": "(lam (lam (app tobool (app any (app (app and hiddenship) after4)))))"
+        },
+        {
+          "fn_0 (app (app and hiddenship) bordermask)": "(lam (lam (app tobool (app any (app (app and hiddenship) bordermask)))))"
+        },
+        {
+          "fn_0 (app (app and hiddenshipcells) border)": "(lam (lam (app tobool (app any (app (app and hiddenshipcells) border)))))"
+        },
+        {
+          "fn_0 (app (app and hiddenshipmask) rightmask)": "(lam (lam (app tobool (app any (app (app and hiddenshipmask) rightmask)))))"
+        },
+        {
+          "fn_0 (app (app and hiddenships) (app (app lt colindices) 3))": "(lam (lam (app tobool (app any (app (app and hiddenships) (app (app lt colindices) 3))))))"
+        },
+        {
+          "fn_0 (app (app and hiddenships) bottomright)": "(lam (lam (app tobool (app any (app (app and hiddenships) bottomright)))))"
+        },
+        {
+          "fn_0 (app (app and hiddenshiptiles) bottomleftmask)": "(lam (lam (app tobool (app any (app (app and hiddenshiptiles) bottomleftmask)))))"
+        },
+        {
+          "fn_0 (app (app and hiddentiles) shiptiles)": "(lam (lam (app tobool (app any (app (app and hiddentiles) shiptiles)))))"
+        },
+        {
+          "fn_0 (app (app and hiddentilesincol) shiptilesincol)": "(lam (lam (app tobool (app any (app (app and hiddentilesincol) shiptilesincol)))))"
+        },
+        {
+          "fn_0 (app (app and ispurple) isunrevealed)": "(lam (lam (app tobool (app any (app (app and ispurple) isunrevealed)))))"
+        },
+        {
+          "fn_0 (app (app and isship) ishidden)": "(lam (lam (app tobool (app any (app (app and isship) ishidden)))))"
+        },
+        {
+          "fn_0 (app (app and isship) isunrevealed)": "(lam (lam (app tobool (app any (app (app and isship) isunrevealed)))))"
+        },
+        {
+          "fn_0 (app (app and maskship) maskhidden)": "(lam (lam (app tobool (app any (app (app and maskship) maskhidden)))))"
+        },
+        {
+          "fn_0 (app (app and maskunrevealed) maskship)": "(lam (lam (app tobool (app any (app (app and maskunrevealed) maskship)))))"
+        },
+        {
+          "fn_0 (app (app and regionhasship) regionishidden)": "(lam (lam (app tobool (app any (app (app and regionhasship) regionishidden)))))"
+        },
+        {
+          "fn_0 (app (app and regionmask) unrevealedship)": "(lam (lam (app tobool (app any (app (app and regionmask) unrevealedship)))))"
+        },
+        {
+          "fn_0 (app (app and regionmask) unrevealedshipmask)": "(lam (lam (app tobool (app any (app (app and regionmask) unrevealedshipmask)))))"
+        },
+        {
+          "fn_0 (app (app and shipcells) hiddencells)": "(lam (lam (app tobool (app any (app (app and shipcells) hiddencells)))))"
+        },
+        {
+          "fn_0 (app (app and shipincol) hiddenincol)": "(lam (lam (app tobool (app any (app (app and shipincol) hiddenincol)))))"
+        },
+        {
+          "fn_0 (app (app and shipmask) hiddenmask)": "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))"
+        },
+        {
+          "fn_0 (app (app and shipparts) stillhidden)": "(lam (lam (app tobool (app any (app (app and shipparts) stillhidden)))))"
+        },
+        {
+          "fn_0 (app (app and shippartsintrue) hiddeninpartial)": "(lam (lam (app tobool (app any (app (app and shippartsintrue) hiddeninpartial)))))"
+        },
+        {
+          "fn_0 (app (app and shippositions) hiddenpositions)": "(lam (lam (app tobool (app any (app (app and shippositions) hiddenpositions)))))"
+        },
+        {
+          "fn_0 (app (app and shippositions) stillhidden)": "(lam (lam (app tobool (app any (app (app and shippositions) stillhidden)))))"
+        },
+        {
+          "fn_0 (app (app and ships) hidden)": "(lam (lam (app tobool (app any (app (app and ships) hidden)))))"
+        },
+        {
+          "fn_0 (app (app and shipsinE) hiddeninE)": "(lam (lam (app tobool (app any (app (app and shipsinE) hiddeninE)))))"
+        },
+        {
+          "fn_0 (app (app and shipsincol) hiddenincol)": "(lam (lam (app tobool (app any (app (app and shipsincol) hiddenincol)))))"
+        },
+        {
+          "fn_0 (app (app and shipsinregion) unrevealedinregion)": "(lam (lam (app tobool (app any (app (app and shipsinregion) unrevealedinregion)))))"
+        },
+        {
+          "fn_0 (app (app and shipsinrow) hiddentiles)": "(lam (lam (app tobool (app any (app (app and shipsinrow) hiddentiles)))))"
+        },
+        {
+          "fn_0 (app (app and shipsinrowb) hiddeninrowb)": "(lam (lam (app tobool (app any (app (app and shipsinrowb) hiddeninrowb)))))"
+        },
+        {
+          "fn_0 (app (app and shipsintrue) hiddeninpartial)": "(lam (lam (app tobool (app any (app (app and shipsintrue) hiddeninpartial)))))"
+        },
+        {
+          "fn_0 (app (app and shipsonrow) hiddenonrow)": "(lam (lam (app tobool (app any (app (app and shipsonrow) hiddenonrow)))))"
+        },
+        {
+          "fn_0 (app (app and shiptiles) hiddentiles)": "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))"
+        },
+        {
+          "fn_0 (app (app and shiptiles) stillhidden)": "(lam (lam (app tobool (app any (app (app and shiptiles) stillhidden)))))"
+        },
+        {
+          "fn_0 (app (app and shiptiles) unrevealed)": "(lam (lam (app tobool (app any (app (app and shiptiles) unrevealed)))))"
+        },
+        {
+          "fn_0 (app (app and unrevealed) regionmask)": "(lam (lam (app tobool (app any (app (app and unrevealed) regionmask)))))"
+        },
+        {
+          "fn_0 (app (app and unrevealed) ships)": "(lam (lam (app tobool (app any (app (app and unrevealed) ships)))))"
+        },
+        {
+          "fn_0 (app (app and unrevealed) shipsthere)": "(lam (lam (app tobool (app any (app (app and unrevealed) shipsthere)))))"
+        },
+        {
+          "fn_0 (app (app and unrevealed) shiptiles)": "(lam (lam (app tobool (app any (app (app and unrevealed) shiptiles)))))"
+        },
+        {
+          "fn_0 (app (app and unrevealedships) edgemask)": "(lam (lam (app tobool (app any (app (app and unrevealedships) edgemask)))))"
+        },
+        {
+          "fn_0 (app (app and unrevealedships) oddcolumns)": "(lam (lam (app tobool (app any (app (app and unrevealedships) oddcolumns)))))"
+        },
+        {
+          "fn_0 (app (app eq (app (app get coords) (app (app pair slice) 1))) 5)": "(lam (lam (app tobool (app any (app (app eq (app (app get coords) (app (app pair slice) 1))) 5)))))"
+        },
+        {
+          "fn_0 (app (app eq (app (app get shipcellsperrow) slice)) 0)": "(lam (lam (app tobool (app any (app (app eq (app (app get shipcellsperrow) slice)) 0)))))"
+        },
+        {
+          "fn_0 (app (app get col6mask) (app (app pair slice) 5))": "(lam (lam (app tobool (app any (app (app get col6mask) (app (app pair slice) 5))))))"
+        },
+        {
+          "fn_0 (app (app get hiddenintargetrows) (app (app pair slice) slice))": "(lam (lam (app tobool (app any (app (app get hiddenintargetrows) (app (app pair slice) slice))))))"
+        },
+        {
+          "fn_0 (app (app get hiddenship) (app (app pair slice) slice))": "(lam (lam (app tobool (app any (app (app get hiddenship) (app (app pair slice) slice))))))"
+        },
+        {
+          "fn_0 (app (app get hiddenshipmask) (app (app pair slice) cols))": "(lam (lam (app tobool (app any (app (app get hiddenshipmask) (app (app pair slice) cols))))))"
+        },
+        {
+          "fn_0 (app (app get hiddenshipmask) (app (app pair targetrows) slice))": "(lam (lam (app tobool (app any (app (app get hiddenshipmask) (app (app pair targetrows) slice))))))"
+        },
+        {
+          "fn_0 (app (app get hiddenships) (app (app pair slice) slice))": "(lam (lam (app tobool (app any (app (app get hiddenships) (app (app pair slice) slice))))))"
+        },
+        {
+          "fn_0 (app (app get hiddenships) (app (app pair unit) slice))": "(lam (lam (app tobool (app any (app (app get hiddenships) (app (app pair unit) slice))))))"
+        },
+        {
+          "fn_0 (app (app get hiddenshiptiles) (app (app pair slice) 4))": "(lam (lam (app tobool (app any (app (app get hiddenshiptiles) (app (app pair slice) 4))))))"
+        },
+        {
+          "fn_0 (app (app get mask) (app (app pair rowstocheck) slice))": "(lam (lam (app tobool (app any (app (app get mask) (app (app pair rowstocheck) slice))))))"
+        },
+        {
+          "fn_0 (app (app get shipandhidden) (app (app pair slice) oddcolmask))": "(lam (lam (app tobool (app any (app (app get shipandhidden) (app (app pair slice) oddcolmask))))))"
+        },
+        {
+          "fn_0 (app (app get unrevealed) (app (app pair 2) slice))": "(lam (lam (app tobool (app any (app (app get unrevealed) (app (app pair 2) slice))))))"
+        },
+        {
+          "fn_0 (app (app get unrevealed) (app (app pair rowscd) slice))": "(lam (lam (app tobool (app any (app (app get unrevealed) (app (app pair rowscd) slice))))))"
+        },
+        {
+          "fn_0 (app (app get unrevealed) (app (app pair slice) slice))": "(lam (lam (app tobool (app any (app (app get unrevealed) (app (app pair slice) slice))))))"
+        },
+        {
+          "fn_0 (app (app get unrevealedship) (app (app pair rows) slice))": "(lam (lam (app tobool (app any (app (app get unrevealedship) (app (app pair rows) slice))))))"
+        },
+        {
+          "fn_0 (app (app get unrevealedship) (app (app pair slice) slice))": "(lam (lam (app tobool (app any (app (app get unrevealedship) (app (app pair slice) slice))))))"
+        },
+        {
+          "fn_0 (app (app get unrevealedships) (app (app pair rowstocheck) slice))": "(lam (lam (app tobool (app any (app (app get unrevealedships) (app (app pair rowstocheck) slice))))))"
+        },
+        {
+          "fn_0 (app (app get unrevealedships) (app (app pair slice) slice))": "(lam (lam (app tobool (app any (app (app get unrevealedships) (app (app pair slice) slice))))))"
+        },
+        {
+          "fn_0 (app (app gt centerblock) 0)": "(lam (lam (app tobool (app any (app (app gt centerblock) 0)))))"
+        },
+        {
+          "fn_0 (app (app gt rows) 4)": "(lam (lam (app tobool (app any (app (app gt rows) 4)))))"
+        },
+        {
+          "fn_0 (app (app gte orangecols) 4)": "(lam (lam (app tobool (app any (app (app gte orangecols) 4)))))"
+        },
+        {
+          "fn_0 (app (app lte chebdist) 1)": "(lam (lam (app tobool (app any (app (app lte chebdist) 1)))))"
+        },
+        {
+          "fn_0 (app (app or (app (app eq purplerows) 2)) (app (app eq purplerows) 6))": "(lam (lam (app tobool (app any (app (app or (app (app eq purplerows) 2)) (app (app eq purplerows) 6))))))"
+        },
+        {
+          "fn_0 candidate": "(lam (lam (app tobool (app any candidate))))"
+        },
+        {
+          "fn_0 candidatetiles": "(lam (lam (app tobool (app any candidatetiles))))"
+        },
+        {
+          "fn_0 cols1to4": "(lam (lam (app tobool (app any cols1to4))))"
+        },
+        {
+          "fn_0 concealedshiptiles": "(lam (lam (app tobool (app any concealedshiptiles))))"
+        },
+        {
+          "fn_0 evenrowmask": "(lam (lam (app tobool (app any evenrowmask))))"
+        },
+        {
+          "fn_0 hiddengreenincol8": "(lam (lam (app tobool (app any hiddengreenincol8))))"
+        },
+        {
+          "fn_0 hiddenredinC": "(lam (lam (app tobool (app any hiddenredinC))))"
+        },
+        {
+          "fn_0 hiddenship": "(lam (lam (app tobool (app any hiddenship))))"
+        },
+        {
+          "fn_0 hiddenshipcells": "(lam (lam (app tobool (app any hiddenshipcells))))"
+        },
+        {
+          "fn_0 hiddenshipinA": "(lam (lam (app tobool (app any hiddenshipinA))))"
+        },
+        {
+          "fn_0 hiddenshipincol": "(lam (lam (app tobool (app any hiddenshipincol))))"
+        },
+        {
+          "fn_0 hiddenshipincol8": "(lam (lam (app tobool (app any hiddenshipincol8))))"
+        },
+        {
+          "fn_0 hiddenshipineven": "(lam (lam (app tobool (app any hiddenshipineven))))"
+        },
+        {
+          "fn_0 hiddenshipinrow": "(lam (lam (app tobool (app any hiddenshipinrow))))"
+        },
+        {
+          "fn_0 hiddenshipmask": "(lam (lam (app tobool (app any hiddenshipmask))))"
+        },
+        {
+          "fn_0 hiddenshiponedge": "(lam (lam (app tobool (app any hiddenshiponedge))))"
+        },
+        {
+          "fn_0 hiddenshiponleft": "(lam (lam (app tobool (app any hiddenshiponleft))))"
+        },
+        {
+          "fn_0 hiddenshipparts": "(lam (lam (app tobool (app any hiddenshipparts))))"
+        },
+        {
+          "fn_0 hiddenships": "(lam (lam (app tobool (app any hiddenships))))"
+        },
+        {
+          "fn_0 hiddenshipsbelow": "(lam (lam (app tobool (app any hiddenshipsbelow))))"
+        },
+        {
+          "fn_0 hiddenshipsinB": "(lam (lam (app tobool (app any hiddenshipsinB))))"
+        },
+        {
+          "fn_0 hiddenshipsinE": "(lam (lam (app tobool (app any hiddenshipsinE))))"
+        },
+        {
+          "fn_0 hiddenshipsinF": "(lam (lam (app tobool (app any hiddenshipsinF))))"
+        },
+        {
+          "fn_0 hiddenshipsinG": "(lam (lam (app tobool (app any hiddenshipsinG))))"
+        },
+        {
+          "fn_0 hiddenshipsincol": "(lam (lam (app tobool (app any hiddenshipsincol))))"
+        },
+        {
+          "fn_0 hiddenshipsinregion": "(lam (lam (app tobool (app any hiddenshipsinregion))))"
+        },
+        {
+          "fn_0 hiddenshipsinrow": "(lam (lam (app tobool (app any hiddenshipsinrow))))"
+        },
+        {
+          "fn_0 hiddenshipsmask": "(lam (lam (app tobool (app any hiddenshipsmask))))"
+        },
+        {
+          "fn_0 hiddenshipsonright": "(lam (lam (app tobool (app any hiddenshipsonright))))"
+        },
+        {
+          "fn_0 hiddenshipstop": "(lam (lam (app tobool (app any hiddenshipstop))))"
+        },
+        {
+          "fn_0 hiddenshiptiles": "(lam (lam (app tobool (app any hiddenshiptiles))))"
+        },
+        {
+          "fn_0 hiddenshiptilesinH": "(lam (lam (app tobool (app any hiddenshiptilesinH))))"
+        },
+        {
+          "fn_0 hiddenshiptilesinregion": "(lam (lam (app tobool (app any hiddenshiptilesinregion))))"
+        },
+        {
+          "fn_0 hits": "(lam (lam (app tobool (app any hits))))"
+        },
+        {
+          "fn_0 leftofC": "(lam (lam (app tobool (app any leftofC))))"
+        },
+        {
+          "fn_0 lowerright": "(lam (lam (app tobool (app any lowerright))))"
+        },
+        {
+          "fn_0 mask": "(lam (lam (app tobool (app any mask))))"
+        },
+        {
+          "fn_0 maskships": "(lam (lam (app tobool (app any maskships))))"
+        },
+        {
+          "fn_0 maskunrevealedin58": "(lam (lam (app tobool (app any maskunrevealedin58))))"
+        },
+        {
+          "fn_0 maskunrevealedship": "(lam (lam (app tobool (app any maskunrevealedship))))"
+        },
+        {
+          "fn_0 maskunrevealedships": "(lam (lam (app tobool (app any maskunrevealedships))))"
+        },
+        {
+          "fn_0 onedge": "(lam (lam (app tobool (app any onedge))))"
+        },
+        {
+          "fn_0 orangeunrevealed": "(lam (lam (app tobool (app any orangeunrevealed))))"
+        },
+        {
+          "fn_0 redonGunrevealed": "(lam (lam (app tobool (app any redonGunrevealed))))"
+        },
+        {
+          "fn_0 region": "(lam (lam (app tobool (app any region))))"
+        },
+        {
+          "fn_0 regionmask": "(lam (lam (app tobool (app any regionmask))))"
+        },
+        {
+          "fn_0 relevanttiles": "(lam (lam (app tobool (app any relevanttiles))))"
+        },
+        {
+          "fn_0 rightunrevealed": "(lam (lam (app tobool (app any rightunrevealed))))"
+        },
+        {
+          "fn_0 rowsEandF": "(lam (lam (app tobool (app any rowsEandF))))"
+        },
+        {
+          "fn_0 rowsexceptH": "(lam (lam (app tobool (app any rowsexceptH))))"
+        },
+        {
+          "fn_0 shipsbelow": "(lam (lam (app tobool (app any shipsbelow))))"
+        },
+        {
+          "fn_0 shipshidden": "(lam (lam (app tobool (app any shipshidden))))"
+        },
+        {
+          "fn_0 shipshiddeninrange": "(lam (lam (app tobool (app any shipshiddeninrange))))"
+        },
+        {
+          "fn_0 shipsinBstillhidden": "(lam (lam (app tobool (app any shipsinBstillhidden))))"
+        },
+        {
+          "fn_0 shipsremaininginF": "(lam (lam (app tobool (app any shipsremaininginF))))"
+        },
+        {
+          "fn_0 shipsstillhidden": "(lam (lam (app tobool (app any shipsstillhidden))))"
+        },
+        {
+          "fn_0 shipsunrevealed": "(lam (lam (app tobool (app any shipsunrevealed))))"
+        },
+        {
+          "fn_0 shipunrevealed": "(lam (lam (app tobool (app any shipunrevealed))))"
+        },
+        {
+          "fn_0 stillhiddenship": "(lam (lam (app tobool (app any stillhiddenship))))"
+        },
+        {
+          "fn_0 targetmask": "(lam (lam (app tobool (app any targetmask))))"
+        },
+        {
+          "fn_0 tophalfshipshidden": "(lam (lam (app tobool (app any tophalfshipshidden))))"
+        },
+        {
+          "fn_0 topunrevealed": "(lam (lam (app tobool (app any topunrevealed))))"
+        },
+        {
+          "fn_0 topunrevealedships": "(lam (lam (app tobool (app any topunrevealedships))))"
+        },
+        {
+          "fn_0 undiscovered": "(lam (lam (app tobool (app any undiscovered))))"
+        },
+        {
+          "fn_0 undiscoveredinH": "(lam (lam (app tobool (app any undiscoveredinH))))"
+        },
+        {
+          "fn_0 undiscoveredincol": "(lam (lam (app tobool (app any undiscoveredincol))))"
+        },
+        {
+          "fn_0 undiscoveredmask": "(lam (lam (app tobool (app any undiscoveredmask))))"
+        },
+        {
+          "fn_0 undiscoveredparts": "(lam (lam (app tobool (app any undiscoveredparts))))"
+        },
+        {
+          "fn_0 unrevealed": "(lam (lam (app tobool (app any unrevealed))))"
+        },
+        {
+          "fn_0 unrevealedab": "(lam (lam (app tobool (app any unrevealedab))))"
+        },
+        {
+          "fn_0 unrevealededgeships": "(lam (lam (app tobool (app any unrevealededgeships))))"
+        },
+        {
+          "fn_0 unrevealedinA": "(lam (lam (app tobool (app any unrevealedinA))))"
+        },
+        {
+          "fn_0 unrevealedinB": "(lam (lam (app tobool (app any unrevealedinB))))"
+        },
+        {
+          "fn_0 unrevealedinrow": "(lam (lam (app tobool (app any unrevealedinrow))))"
+        },
+        {
+          "fn_0 unrevealedintop": "(lam (lam (app tobool (app any unrevealedintop))))"
+        },
+        {
+          "fn_0 unrevealedmiddle": "(lam (lam (app tobool (app any unrevealedmiddle))))"
+        },
+        {
+          "fn_0 unrevealedorange": "(lam (lam (app tobool (app any unrevealedorange))))"
+        },
+        {
+          "fn_0 unrevealedpurpleonH": "(lam (lam (app tobool (app any unrevealedpurpleonH))))"
+        },
+        {
+          "fn_0 unrevealedship": "(lam (lam (app tobool (app any unrevealedship))))"
+        },
+        {
+          "fn_0 unrevealedshipinH": "(lam (lam (app tobool (app any unrevealedshipinH))))"
+        },
+        {
+          "fn_0 unrevealedshipincol0": "(lam (lam (app tobool (app any unrevealedshipincol0))))"
+        },
+        {
+          "fn_0 unrevealedshipinrow": "(lam (lam (app tobool (app any unrevealedshipinrow))))"
+        },
+        {
+          "fn_0 unrevealedshipintop": "(lam (lam (app tobool (app any unrevealedshipintop))))"
+        },
+        {
+          "fn_0 unrevealedshipmask": "(lam (lam (app tobool (app any unrevealedshipmask))))"
+        },
+        {
+          "fn_0 unrevealedshipparts": "(lam (lam (app tobool (app any unrevealedshipparts))))"
+        },
+        {
+          "fn_0 unrevealedshippositions": "(lam (lam (app tobool (app any unrevealedshippositions))))"
+        },
+        {
+          "fn_0 unrevealedships": "(lam (lam (app tobool (app any unrevealedships))))"
+        },
+        {
+          "fn_0 unrevealedshipsinA": "(lam (lam (app tobool (app any unrevealedshipsinA))))"
+        },
+        {
+          "fn_0 unrevealedshipsinC": "(lam (lam (app tobool (app any unrevealedshipsinC))))"
+        },
+        {
+          "fn_0 unrevealedshipsinE": "(lam (lam (app tobool (app any unrevealedshipsinE))))"
+        },
+        {
+          "fn_0 unrevealedshipsinG": "(lam (lam (app tobool (app any unrevealedshipsinG))))"
+        },
+        {
+          "fn_0 unrevealedshipsincol1": "(lam (lam (app tobool (app any unrevealedshipsincol1))))"
+        },
+        {
+          "fn_0 unrevealedshipsinevens": "(lam (lam (app tobool (app any unrevealedshipsinevens))))"
+        },
+        {
+          "fn_0 unrevealedshipsinrow": "(lam (lam (app tobool (app any unrevealedshipsinrow))))"
+        },
+        {
+          "fn_0 unrevealedshiptiles": "(lam (lam (app tobool (app any unrevealedshiptiles))))"
+        },
+        {
+          "fn_0 unrevealedshipupper": "(lam (lam (app tobool (app any unrevealedshipupper))))"
+        },
+        {
+          "fn_0 unseenship": "(lam (lam (app tobool (app any unseenship))))"
+        },
+        {
+          "fn_0 unseenshipmask": "(lam (lam (app tobool (app any unseenshipmask))))"
+        },
+        {
+          "fn_0 unseenships": "(lam (lam (app tobool (app any unseenships))))"
+        },
+        {
+          "fn_0 unseenshiptiles": "(lam (lam (app tobool (app any unseenshiptiles))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(app (app #1 #0))",
+      "dreamcoder": "#(lambda (lambda (app (app $0 $1))))",
+      "arity": 2,
+      "name": "fn_1",
+      "utility": 82516,
+      "final_cost": 450944,
+      "compression_ratio": 1.1834351937269372,
+      "cumulative_compression_ratio": 1.4411279449332954,
+      "num_uses": 819,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_1 (app (app sub rows.max) rows.min) add": "(app (app add (app (app sub rows.max) rows.min)))"
+        },
+        {
+          "fn_1 (app (app and (app (app eq rows) 1)) (app (app eq (app (app get rows) 0)) 1)) and": "(app (app and (app (app and (app (app eq rows) 1)) (app (app eq (app (app get rows) 0)) 1))))"
+        },
+        {
+          "fn_1 (app (app and bordermask) hiddenmask) and": "(app (app and (app (app and bordermask) hiddenmask)))"
+        },
+        {
+          "fn_1 (app (app and bordermask) shipmask) and": "(app (app and (app (app and bordermask) shipmask)))"
+        },
+        {
+          "fn_1 (app (app and edgeexcepttop) hidden) and": "(app (app and (app (app and edgeexcepttop) hidden)))"
+        },
+        {
+          "fn_1 (app (app and edgesmask) hiddenmask) and": "(app (app and (app (app and edgesmask) hiddenmask)))"
+        },
+        {
+          "fn_1 (app (app and outermask) unrevealed) and": "(app (app and (app (app and outermask) unrevealed)))"
+        },
+        {
+          "fn_1 (app (app and regionmask) shipmask) and": "(app (app and (app (app and regionmask) shipmask)))"
+        },
+        {
+          "fn_1 (app (app and rowmask) shipmask) and": "(app (app and (app (app and rowmask) shipmask)))"
+        },
+        {
+          "fn_1 (app (app and rowsmask) shipmask) and": "(app (app and (app (app and rowsmask) shipmask)))"
+        },
+        {
+          "fn_1 (app (app eq (app (app get 0) (app (app pair downr) c))) shipid) and": "(app (app and (app (app eq (app (app get 0) (app (app pair downr) c))) shipid)))"
+        },
+        {
+          "fn_1 (app (app eq (app (app get 1) (app (app pair row) col))) (app neg 1)) and": "(app (app and (app (app eq (app (app get 1) (app (app pair row) col))) (app neg 1))))"
+        },
+        {
+          "fn_1 (app (app eq (app (app get 1) (app (app pair rowidx) colidx))) (app neg 1)) and": "(app (app and (app (app eq (app (app get 1) (app (app pair rowidx) colidx))) (app neg 1))))"
+        },
+        {
+          "fn_1 (app (app eq (app len (app set cols))) 1) and": "(app (app and (app (app eq (app len (app set cols))) 1)))"
+        },
+        {
+          "fn_1 (app (app eq (app len (app unique cols))) 1) and": "(app (app and (app (app eq (app len (app unique cols))) 1)))"
+        },
+        {
+          "fn_1 (app (app eq cols) 1) and": "(app (app and (app (app eq cols) 1)))"
+        },
+        {
+          "fn_1 (app (app eq rows) 1) and": "(app (app and (app (app eq rows) 1)))"
+        },
+        {
+          "fn_1 (app (app eq startrow) 0) and": "(app (app and (app (app eq startrow) 0)))"
+        },
+        {
+          "fn_1 (app (app eq uniquecols) 1) and": "(app (app and (app (app eq uniquecols) 1)))"
+        },
+        {
+          "fn_1 (app (app get hiddenmask) rowindex) and": "(app (app and (app (app get hiddenmask) rowindex)))"
+        },
+        {
+          "fn_1 (app (app get unrevealed) (app (app pair 2) slice)) and": "(app (app and (app (app get unrevealed) (app (app pair 2) slice))))"
+        },
+        {
+          "fn_1 (app (app gt (app (app get 0) (app (app pair rowidx) slice))) 0) and": "(app (app and (app (app gt (app (app get 0) (app (app pair rowidx) slice))) 0)))"
+        },
+        {
+          "fn_1 (app (app gt (app (app get 0) (app (app pair slice) colidx))) 0) and": "(app (app and (app (app gt (app (app get 0) (app (app pair slice) colidx))) 0)))"
+        },
+        {
+          "fn_1 (app (app gt (app (app get 0) rowidx)) 0) and": "(app (app and (app (app gt (app (app get 0) rowidx)) 0)))"
+        },
+        {
+          "fn_1 (app (app gt (app unique redrows)) 1) and": "(app (app and (app (app gt (app unique redrows)) 1)))"
+        },
+        {
+          "fn_1 (app (app gt centertop) 0) and": "(app (app and (app (app gt centertop) 0)))"
+        },
+        {
+          "fn_1 (app (app gt regiontrue) 0) and": "(app (app and (app (app gt regiontrue) 0)))"
+        },
+        {
+          "fn_1 (app (app gt shipsincols) 0) and": "(app (app and (app (app gt shipsincols) 0)))"
+        },
+        {
+          "fn_1 (app (app gt subtrue) 0) and": "(app (app and (app (app gt subtrue) 0)))"
+        },
+        {
+          "fn_1 (app (app gt tb) 0) and": "(app (app and (app (app gt tb) 0)))"
+        },
+        {
+          "fn_1 (app (app gt tr) 0) and": "(app (app and (app (app gt tr) 0)))"
+        },
+        {
+          "fn_1 (app (app gt trtrue) 0) and": "(app (app and (app (app gt trtrue) 0)))"
+        },
+        {
+          "fn_1 (app (app gt truecenter) 0) and": "(app (app and (app (app gt truecenter) 0)))"
+        },
+        {
+          "fn_1 (app (app gt truecol) 0) and": "(app (app and (app (app gt truecol) 0)))"
+        },
+        {
+          "fn_1 (app (app gt truecols) 0) and": "(app (app and (app (app gt truecols) 0)))"
+        },
+        {
+          "fn_1 (app (app gt truerow) 0) and": "(app (app and (app (app gt truerow) 0)))"
+        },
+        {
+          "fn_1 (app (app gt truesub) 0) and": "(app (app and (app (app gt truesub) 0)))"
+        },
+        {
+          "fn_1 (app (app gt ultrue) 0) and": "(app (app and (app (app gt ultrue) 0)))"
+        },
+        {
+          "fn_1 (app (app gte cols) 3) and": "(app (app and (app (app gte cols) 3)))"
+        },
+        {
+          "fn_1 (app (app lt rows) midrow) and": "(app (app and (app (app lt rows) midrow)))"
+        },
+        {
+          "fn_1 (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0) and": "(app (app and (app (app ne (app (app get 0) (app (app pair rowidx) colidx))) 0)))"
+        },
+        {
+          "fn_1 (app (app or topedge) bottomedge) and": "(app (app and (app (app or topedge) bottomedge)))"
+        },
+        {
+          "fn_1 (app all (app (app eq cols) (app (app get cols) 0))) and": "(app (app and (app all (app (app eq cols) (app (app get cols) 0)))))"
+        },
+        {
+          "fn_1 (app set purplerows) and": "(app (app and (app set purplerows)))"
+        },
+        {
+          "fn_1 anyinAD and": "(app (app and anyinAD))"
+        },
+        {
+          "fn_1 belowtrue and": "(app (app and belowtrue))"
+        },
+        {
+          "fn_1 blany and": "(app (app and blany))"
+        },
+        {
+          "fn_1 bordermask and": "(app (app and bordermask))"
+        },
+        {
+          "fn_1 closetoorange and": "(app (app and closetoorange))"
+        },
+        {
+          "fn_1 condyes and": "(app (app and condyes))"
+        },
+        {
+          "fn_1 edgeexcepttop and": "(app (app and edgeexcepttop))"
+        },
+        {
+          "fn_1 edgesmask and": "(app (app and edgesmask))"
+        },
+        {
+          "fn_1 foundvertical and": "(app (app and foundvertical))"
+        },
+        {
+          "fn_1 fslice and": "(app (app and fslice))"
+        },
+        {
+          "fn_1 gslice and": "(app (app and gslice))"
+        },
+        {
+          "fn_1 hasin56 and": "(app (app and hasin56))"
+        },
+        {
+          "fn_1 hasodd and": "(app (app and hasodd))"
+        },
+        {
+          "fn_1 hasship34 and": "(app (app and hasship34))"
+        },
+        {
+          "fn_1 hasshipe4 and": "(app (app and hasshipe4))"
+        },
+        {
+          "fn_1 hidden and": "(app (app and hidden))"
+        },
+        {
+          "fn_1 hiddencells and": "(app (app and hiddencells))"
+        },
+        {
+          "fn_1 hiddeninF and": "(app (app and hiddeninF))"
+        },
+        {
+          "fn_1 hiddenincol and": "(app (app and hiddenincol))"
+        },
+        {
+          "fn_1 hiddeninrow and": "(app (app and hiddeninrow))"
+        },
+        {
+          "fn_1 hiddenmask and": "(app (app and hiddenmask))"
+        },
+        {
+          "fn_1 hiddenship and": "(app (app and hiddenship))"
+        },
+        {
+          "fn_1 hiddenshipcells and": "(app (app and hiddenshipcells))"
+        },
+        {
+          "fn_1 hiddenshipmask and": "(app (app and hiddenshipmask))"
+        },
+        {
+          "fn_1 hiddenships and": "(app (app and hiddenships))"
+        },
+        {
+          "fn_1 hiddenshiptiles and": "(app (app and hiddenshiptiles))"
+        },
+        {
+          "fn_1 hiddentiles and": "(app (app and hiddentiles))"
+        },
+        {
+          "fn_1 hiddentilesincol and": "(app (app and hiddentilesincol))"
+        },
+        {
+          "fn_1 ishidden and": "(app (app and ishidden))"
+        },
+        {
+          "fn_1 ishorizontal and": "(app (app and ishorizontal))"
+        },
+        {
+          "fn_1 ispurple and": "(app (app and ispurple))"
+        },
+        {
+          "fn_1 isship and": "(app (app and isship))"
+        },
+        {
+          "fn_1 lefthasship and": "(app (app and lefthasship))"
+        },
+        {
+          "fn_1 maskship and": "(app (app and maskship))"
+        },
+        {
+          "fn_1 maskunrevealed and": "(app (app and maskunrevealed))"
+        },
+        {
+          "fn_1 outermask and": "(app (app and outermask))"
+        },
+        {
+          "fn_1 regionhasship and": "(app (app and regionhasship))"
+        },
+        {
+          "fn_1 regionmask and": "(app (app and regionmask))"
+        },
+        {
+          "fn_1 rowmask and": "(app (app and rowmask))"
+        },
+        {
+          "fn_1 rowsmask and": "(app (app and rowsmask))"
+        },
+        {
+          "fn_1 shipcells and": "(app (app and shipcells))"
+        },
+        {
+          "fn_1 shipincol and": "(app (app and shipincol))"
+        },
+        {
+          "fn_1 shipmask and": "(app (app and shipmask))"
+        },
+        {
+          "fn_1 shipparts and": "(app (app and shipparts))"
+        },
+        {
+          "fn_1 shippartsintrue and": "(app (app and shippartsintrue))"
+        },
+        {
+          "fn_1 shippositions and": "(app (app and shippositions))"
+        },
+        {
+          "fn_1 ships and": "(app (app and ships))"
+        },
+        {
+          "fn_1 shipsinE and": "(app (app and shipsinE))"
+        },
+        {
+          "fn_1 shipsincol and": "(app (app and shipsincol))"
+        },
+        {
+          "fn_1 shipsinregion and": "(app (app and shipsinregion))"
+        },
+        {
+          "fn_1 shipsinrow and": "(app (app and shipsinrow))"
+        },
+        {
+          "fn_1 shipsinrowb and": "(app (app and shipsinrowb))"
+        },
+        {
+          "fn_1 shipsintrue and": "(app (app and shipsintrue))"
+        },
+        {
+          "fn_1 shipsonrow and": "(app (app and shipsonrow))"
+        },
+        {
+          "fn_1 shiptiles and": "(app (app and shiptiles))"
+        },
+        {
+          "fn_1 unrevealed and": "(app (app and unrevealed))"
+        },
+        {
+          "fn_1 unrevealedships and": "(app (app and unrevealedships))"
+        },
+        {
+          "fn_1 upperhas and": "(app (app and upperhas))"
+        },
+        {
+          "fn_1 (app (app add (app (app sub rows.max) rows.min)) 1) eq": "(app (app eq (app (app add (app (app sub rows.max) rows.min)) 1)))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair 4) slice)) eq": "(app (app eq (app (app get 0) (app (app pair 4) slice))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair downr) c)) eq": "(app (app eq (app (app get 0) (app (app pair downr) c))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair row) (app (app sub col) 1))) eq": "(app (app eq (app (app get 0) (app (app pair row) (app (app sub col) 1)))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair row) col)) eq": "(app (app eq (app (app get 0) (app (app pair row) col))))"
+        },
+        {
+          "fn_1 (app (app get 1) (app (app pair downr) c)) eq": "(app (app eq (app (app get 1) (app (app pair downr) c))))"
+        },
+        {
+          "fn_1 (app (app get 1) (app (app pair row) col)) eq": "(app (app eq (app (app get 1) (app (app pair row) col))))"
+        },
+        {
+          "fn_1 (app (app get 1) (app (app pair rowidx) colidx)) eq": "(app (app eq (app (app get 1) (app (app pair rowidx) colidx))))"
+        },
+        {
+          "fn_1 (app (app get 1) (app (app pair rowidx) slice)) eq": "(app (app eq (app (app get 1) (app (app pair rowidx) slice))))"
+        },
+        {
+          "fn_1 (app (app get 1) greenmask) eq": "(app (app eq (app (app get 1) greenmask)))"
+        },
+        {
+          "fn_1 (app (app get 1) rowidx) eq": "(app (app eq (app (app get 1) rowidx)))"
+        },
+        {
+          "fn_1 (app (app get cols) 0) eq": "(app (app eq (app (app get cols) 0)))"
+        },
+        {
+          "fn_1 (app (app get coords) (app (app pair slice) 0)) eq": "(app (app eq (app (app get coords) (app (app pair slice) 0))))"
+        },
+        {
+          "fn_1 (app (app get coords) (app (app pair slice) 1)) eq": "(app (app eq (app (app get coords) (app (app pair slice) 1))))"
+        },
+        {
+          "fn_1 (app (app get orangecells) (app (app pair slice) 1)) eq": "(app (app eq (app (app get orangecells) (app (app pair slice) 1))))"
+        },
+        {
+          "fn_1 (app (app get positions) (app (app pair slice) 1)) eq": "(app (app eq (app (app get positions) (app (app pair slice) 1))))"
+        },
+        {
+          "fn_1 (app (app get redcoords) (app (app pair slice) 1)) eq": "(app (app eq (app (app get redcoords) (app (app pair slice) 1))))"
+        },
+        {
+          "fn_1 (app (app get rows) 0) eq": "(app (app eq (app (app get rows) 0)))"
+        },
+        {
+          "fn_1 (app (app get shipcellsperrow) slice) eq": "(app (app eq (app (app get shipcellsperrow) slice)))"
+        },
+        {
+          "fn_1 (app (app get shippositions) (app (app pair slice) 0)) eq": "(app (app eq (app (app get shippositions) (app (app pair slice) 0))))"
+        },
+        {
+          "fn_1 (app (app mod counthidden) 2) eq": "(app (app eq (app (app mod counthidden) 2)))"
+        },
+        {
+          "fn_1 (app (app mod shiplength) 2) eq": "(app (app eq (app (app mod shiplength) 2)))"
+        },
+        {
+          "fn_1 (app (app sub cols.max) cols.min) eq": "(app (app eq (app (app sub cols.max) cols.min)))"
+        },
+        {
+          "fn_1 (app len (app set cols)) eq": "(app (app eq (app len (app set cols))))"
+        },
+        {
+          "fn_1 (app len (app unique cols)) eq": "(app (app eq (app len (app unique cols))))"
+        },
+        {
+          "fn_1 (app len uniquecols) eq": "(app (app eq (app len uniquecols)))"
+        },
+        {
+          "fn_1 (app len uniquerows) eq": "(app (app eq (app len uniquerows)))"
+        },
+        {
+          "fn_1 (app unique (app (app get coords) (app (app pair slice) 1))) eq": "(app (app eq (app unique (app (app get coords) (app (app pair slice) 1)))))"
+        },
+        {
+          "fn_1 (app unique cols) eq": "(app (app eq (app unique cols)))"
+        },
+        {
+          "fn_1 (app unique redcols) eq": "(app (app eq (app unique redcols)))"
+        },
+        {
+          "fn_1 (app unique rows) eq": "(app (app eq (app unique rows)))"
+        },
+        {
+          "fn_1 allrows eq": "(app (app eq allrows))"
+        },
+        {
+          "fn_1 bottomrowindex eq": "(app (app eq bottomrowindex))"
+        },
+        {
+          "fn_1 cols eq": "(app (app eq cols))"
+        },
+        {
+          "fn_1 greencols eq": "(app (app eq greencols))"
+        },
+        {
+          "fn_1 greenlength eq": "(app (app eq greenlength))"
+        },
+        {
+          "fn_1 orangetilecount eq": "(app (app eq orangetilecount))"
+        },
+        {
+          "fn_1 partcols eq": "(app (app eq partcols))"
+        },
+        {
+          "fn_1 partialcenter eq": "(app (app eq partialcenter))"
+        },
+        {
+          "fn_1 partialcol eq": "(app (app eq partialcol))"
+        },
+        {
+          "fn_1 partialrow eq": "(app (app eq partialrow))"
+        },
+        {
+          "fn_1 partialsub eq": "(app (app eq partialsub))"
+        },
+        {
+          "fn_1 pb eq": "(app (app eq pb))"
+        },
+        {
+          "fn_1 pr eq": "(app (app eq pr))"
+        },
+        {
+          "fn_1 purplerows eq": "(app (app eq purplerows))"
+        },
+        {
+          "fn_1 purpletilecount eq": "(app (app eq purpletilecount))"
+        },
+        {
+          "fn_1 regionpartial eq": "(app (app eq regionpartial))"
+        },
+        {
+          "fn_1 rowindices eq": "(app (app eq rowindices))"
+        },
+        {
+          "fn_1 rows eq": "(app (app eq rows))"
+        },
+        {
+          "fn_1 rtarget eq": "(app (app eq rtarget))"
+        },
+        {
+          "fn_1 shiprows eq": "(app (app eq shiprows))"
+        },
+        {
+          "fn_1 start eq": "(app (app eq start))"
+        },
+        {
+          "fn_1 startcol eq": "(app (app eq startcol))"
+        },
+        {
+          "fn_1 startrow eq": "(app (app eq startrow))"
+        },
+        {
+          "fn_1 subpartial eq": "(app (app eq subpartial))"
+        },
+        {
+          "fn_1 toprow eq": "(app (app eq toprow))"
+        },
+        {
+          "fn_1 trpartial eq": "(app (app eq trpartial))"
+        },
+        {
+          "fn_1 ulpartial eq": "(app (app eq ulpartial))"
+        },
+        {
+          "fn_1 uniquecols eq": "(app (app eq uniquecols))"
+        },
+        {
+          "fn_1 uniquerows eq": "(app (app eq uniquerows))"
+        },
+        {
+          "fn_1 0 get": "(app (app get 0))"
+        },
+        {
+          "fn_1 1 get": "(app (app get 1))"
+        },
+        {
+          "fn_1 allrows get": "(app (app get allrows))"
+        },
+        {
+          "fn_1 col6mask get": "(app (app get col6mask))"
+        },
+        {
+          "fn_1 cols get": "(app (app get cols))"
+        },
+        {
+          "fn_1 coords get": "(app (app get coords))"
+        },
+        {
+          "fn_1 greencols get": "(app (app get greencols))"
+        },
+        {
+          "fn_1 greenpositions get": "(app (app get greenpositions))"
+        },
+        {
+          "fn_1 hiddengreen get": "(app (app get hiddengreen))"
+        },
+        {
+          "fn_1 hiddenintargetrows get": "(app (app get hiddenintargetrows))"
+        },
+        {
+          "fn_1 hiddenmask get": "(app (app get hiddenmask))"
+        },
+        {
+          "fn_1 hiddenship get": "(app (app get hiddenship))"
+        },
+        {
+          "fn_1 hiddenshipmask get": "(app (app get hiddenshipmask))"
+        },
+        {
+          "fn_1 hiddenships get": "(app (app get hiddenships))"
+        },
+        {
+          "fn_1 hiddenshiptiles get": "(app (app get hiddenshiptiles))"
+        },
+        {
+          "fn_1 mask get": "(app (app get mask))"
+        },
+        {
+          "fn_1 orangecells get": "(app (app get orangecells))"
+        },
+        {
+          "fn_1 othercoords get": "(app (app get othercoords))"
+        },
+        {
+          "fn_1 positions get": "(app (app get positions))"
+        },
+        {
+          "fn_1 purpleunrevealed get": "(app (app get purpleunrevealed))"
+        },
+        {
+          "fn_1 redcoords get": "(app (app get redcoords))"
+        },
+        {
+          "fn_1 remainingship get": "(app (app get remainingship))"
+        },
+        {
+          "fn_1 remainingships get": "(app (app get remainingships))"
+        },
+        {
+          "fn_1 rowindices get": "(app (app get rowindices))"
+        },
+        {
+          "fn_1 rows get": "(app (app get rows))"
+        },
+        {
+          "fn_1 shipandhidden get": "(app (app get shipandhidden))"
+        },
+        {
+          "fn_1 shipcellsperrow get": "(app (app get shipcellsperrow))"
+        },
+        {
+          "fn_1 shipmask get": "(app (app get shipmask))"
+        },
+        {
+          "fn_1 shippositions get": "(app (app get shippositions))"
+        },
+        {
+          "fn_1 shiprows get": "(app (app get shiprows))"
+        },
+        {
+          "fn_1 ships get": "(app (app get ships))"
+        },
+        {
+          "fn_1 unrevealed get": "(app (app get unrevealed))"
+        },
+        {
+          "fn_1 unrevealedship get": "(app (app get unrevealedship))"
+        },
+        {
+          "fn_1 unrevealedships get": "(app (app get unrevealedships))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair (app (app sub r) 1)) c)) gt": "(app (app gt (app (app get 0) (app (app pair (app (app sub r) 1)) c))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair (app neg 1)) (app neg 1))) gt": "(app (app gt (app (app get 0) (app (app pair (app neg 1)) (app neg 1)))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair 0) 0)) gt": "(app (app gt (app (app get 0) (app (app pair 0) 0))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair 0) 3)) gt": "(app (app gt (app (app get 0) (app (app pair 0) 3))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair belowrow) colidx)) gt": "(app (app gt (app (app get 0) (app (app pair belowrow) colidx))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair row) col)) gt": "(app (app gt (app (app get 0) (app (app pair row) col))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair rowidx) colidx)) gt": "(app (app gt (app (app get 0) (app (app pair rowidx) colidx))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair rowidx) slice)) gt": "(app (app gt (app (app get 0) (app (app pair rowidx) slice))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair rowindex) colindex)) gt": "(app (app gt (app (app get 0) (app (app pair rowindex) colindex))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair slice) colidx)) gt": "(app (app gt (app (app get 0) (app (app pair slice) colidx))))"
+        },
+        {
+          "fn_1 (app (app get 0) rowidx) gt": "(app (app gt (app (app get 0) rowidx)))"
+        },
+        {
+          "fn_1 (app (app get remainingship) (app (app pair slice) 0)) gt": "(app (app gt (app (app get remainingship) (app (app pair slice) 0))))"
+        },
+        {
+          "fn_1 (app (app mul shipsleft) hiddenright) gt": "(app (app gt (app (app mul shipsleft) hiddenright)))"
+        },
+        {
+          "fn_1 (app len (app set rows)) gt": "(app (app gt (app len (app set rows))))"
+        },
+        {
+          "fn_1 (app len (app unique rows)) gt": "(app (app gt (app len (app unique rows))))"
+        },
+        {
+          "fn_1 (app len shipids) gt": "(app (app gt (app len shipids)))"
+        },
+        {
+          "fn_1 (app len touching) gt": "(app (app gt (app len touching)))"
+        },
+        {
+          "fn_1 (app len touchingships) gt": "(app (app gt (app len touchingships)))"
+        },
+        {
+          "fn_1 (app unique redrows) gt": "(app (app gt (app unique redrows)))"
+        },
+        {
+          "fn_1 bottomrow gt": "(app (app gt bottomrow))"
+        },
+        {
+          "fn_1 centerblock gt": "(app (app gt centerblock))"
+        },
+        {
+          "fn_1 centertop gt": "(app (app gt centertop))"
+        },
+        {
+          "fn_1 countAD gt": "(app (app gt countAD))"
+        },
+        {
+          "fn_1 evencount gt": "(app (app gt evencount))"
+        },
+        {
+          "fn_1 greenlength gt": "(app (app gt greenlength))"
+        },
+        {
+          "fn_1 hiddenships gt": "(app (app gt hiddenships))"
+        },
+        {
+          "fn_1 lastcenter gt": "(app (app gt lastcenter))"
+        },
+        {
+          "fn_1 leftcol gt": "(app (app gt leftcol))"
+        },
+        {
+          "fn_1 leftcount gt": "(app (app gt leftcount))"
+        },
+        {
+          "fn_1 orangeclosest gt": "(app (app gt orangeclosest))"
+        },
+        {
+          "fn_1 purplecount gt": "(app (app gt purplecount))"
+        },
+        {
+          "fn_1 redcols.min gt": "(app (app gt redcols.min))"
+        },
+        {
+          "fn_1 regiontrue gt": "(app (app gt regiontrue))"
+        },
+        {
+          "fn_1 rightcol gt": "(app (app gt rightcol))"
+        },
+        {
+          "fn_1 rows gt": "(app (app gt rows))"
+        },
+        {
+          "fn_1 rowspan gt": "(app (app gt rowspan))"
+        },
+        {
+          "fn_1 shipids gt": "(app (app gt shipids))"
+        },
+        {
+          "fn_1 shipsEH gt": "(app (app gt shipsEH))"
+        },
+        {
+          "fn_1 shipsincols gt": "(app (app gt shipsincols))"
+        },
+        {
+          "fn_1 shipsintop gt": "(app (app gt shipsintop))"
+        },
+        {
+          "fn_1 subtrue gt": "(app (app gt subtrue))"
+        },
+        {
+          "fn_1 tb gt": "(app (app gt tb))"
+        },
+        {
+          "fn_1 topcount gt": "(app (app gt topcount))"
+        },
+        {
+          "fn_1 tophidden gt": "(app (app gt tophidden))"
+        },
+        {
+          "fn_1 topright gt": "(app (app gt topright))"
+        },
+        {
+          "fn_1 toprow gt": "(app (app gt toprow))"
+        },
+        {
+          "fn_1 topunrevealed gt": "(app (app gt topunrevealed))"
+        },
+        {
+          "fn_1 tr gt": "(app (app gt tr))"
+        },
+        {
+          "fn_1 trtrue gt": "(app (app gt trtrue))"
+        },
+        {
+          "fn_1 truecenter gt": "(app (app gt truecenter))"
+        },
+        {
+          "fn_1 truecol gt": "(app (app gt truecol))"
+        },
+        {
+          "fn_1 truecols gt": "(app (app gt truecols))"
+        },
+        {
+          "fn_1 truerow gt": "(app (app gt truerow))"
+        },
+        {
+          "fn_1 truesub gt": "(app (app gt truesub))"
+        },
+        {
+          "fn_1 ultrue gt": "(app (app gt ultrue))"
+        },
+        {
+          "fn_1 uniquerows gt": "(app (app gt uniquerows))"
+        },
+        {
+          "fn_1 (app (app get othercoords) (app (app pair slice) 0)) gte": "(app (app gte (app (app get othercoords) (app (app pair slice) 0))))"
+        },
+        {
+          "fn_1 (app len shipsinbl) gte": "(app (app gte (app len shipsinbl)))"
+        },
+        {
+          "fn_1 colidx gte": "(app (app gte colidx))"
+        },
+        {
+          "fn_1 cols gte": "(app (app gte cols))"
+        },
+        {
+          "fn_1 countrow6 gte": "(app (app gte countrow6))"
+        },
+        {
+          "fn_1 orangecols gte": "(app (app gte orangecols))"
+        },
+        {
+          "fn_1 rows gte": "(app (app gte rows))"
+        },
+        {
+          "fn_1 shipsintophalf gte": "(app (app gte shipsintophalf))"
+        },
+        {
+          "fn_1 sunkcount gte": "(app (app gte sunkcount))"
+        },
+        {
+          "fn_1 (app (app get coords) (app (app pair slice) 1)) lt": "(app (app lt (app (app get coords) (app (app pair slice) 1))))"
+        },
+        {
+          "fn_1 (app (app get greenpositions) (app (app pair slice) 0)) lt": "(app (app lt (app (app get greenpositions) (app (app pair slice) 0))))"
+        },
+        {
+          "fn_1 colindices lt": "(app (app lt colindices))"
+        },
+        {
+          "fn_1 cols lt": "(app (app lt cols))"
+        },
+        {
+          "fn_1 greencols lt": "(app (app lt greencols))"
+        },
+        {
+          "fn_1 rows lt": "(app (app lt rows))"
+        },
+        {
+          "fn_1 shipcols lt": "(app (app lt shipcols))"
+        },
+        {
+          "fn_1 shiprows lt": "(app (app lt shiprows))"
+        },
+        {
+          "fn_1 (app (app get shippositions) (app (app pair slice) 0)) lte": "(app (app lte (app (app get shippositions) (app (app pair slice) 0))))"
+        },
+        {
+          "fn_1 (app len uniqueorients) lte": "(app (app lte (app len uniqueorients)))"
+        },
+        {
+          "fn_1 chebdist lte": "(app (app lte chebdist))"
+        },
+        {
+          "fn_1 cols lte": "(app (app lte cols))"
+        },
+        {
+          "fn_1 mindist lte": "(app (app lte mindist))"
+        },
+        {
+          "fn_1 rows lte": "(app (app lte rows))"
+        },
+        {
+          "fn_1 toprow lte": "(app (app lte toprow))"
+        },
+        {
+          "fn_1 counthidden mod": "(app (app mod counthidden))"
+        },
+        {
+          "fn_1 shiplength mod": "(app (app mod shiplength))"
+        },
+        {
+          "fn_1 shipsleft mul": "(app (app mul shipsleft))"
+        },
+        {
+          "fn_1 shipsright mul": "(app (app mul shipsright))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair 0) 1)) ne": "(app (app ne (app (app get 0) (app (app pair 0) 1))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair 7) 0)) ne": "(app (app ne (app (app get 0) (app (app pair 7) 0))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair 7) 7)) ne": "(app (app ne (app (app get 0) (app (app pair 7) 7))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair r) c)) ne": "(app (app ne (app (app get 0) (app (app pair r) c))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair row) col)) ne": "(app (app ne (app (app get 0) (app (app pair row) col))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair rowidx) colidx)) ne": "(app (app ne (app (app get 0) (app (app pair rowidx) colidx))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair rowindex) colindex)) ne": "(app (app ne (app (app get 0) (app (app pair rowindex) colindex))))"
+        },
+        {
+          "fn_1 greenrows np.isin": "(app (app np.isin greenrows))"
+        },
+        {
+          "fn_1 orangerows np.isin": "(app (app np.isin orangerows))"
+        },
+        {
+          "fn_1 (app (app eq purplerows) 2) or": "(app (app or (app (app eq purplerows) 2)))"
+        },
+        {
+          "fn_1 (app (app eq start) g1) or": "(app (app or (app (app eq start) g1)))"
+        },
+        {
+          "fn_1 (app (app or (app (app or (app any (app (app gt toprow) 0))) (app any (app (app gt bottomrow) 0)))) (app any (app (app gt leftcol) 0))) or": "(app (app or (app (app or (app (app or (app any (app (app gt toprow) 0))) (app any (app (app gt bottomrow) 0)))) (app any (app (app gt leftcol) 0)))))"
+        },
+        {
+          "fn_1 (app (app or (app (app or (app any topborder)) (app any bottomborder))) (app any leftborder)) or": "(app (app or (app (app or (app (app or (app any topborder)) (app any bottomborder))) (app any leftborder))))"
+        },
+        {
+          "fn_1 (app (app or (app (app or ontopedge) onbottomedge)) onleftedge) or": "(app (app or (app (app or (app (app or ontopedge) onbottomedge)) onleftedge)))"
+        },
+        {
+          "fn_1 (app (app or (app any (app (app gt toprow) 0))) (app any (app (app gt bottomrow) 0))) or": "(app (app or (app (app or (app any (app (app gt toprow) 0))) (app any (app (app gt bottomrow) 0)))))"
+        },
+        {
+          "fn_1 (app (app or (app any topborder)) (app any bottomborder)) or": "(app (app or (app (app or (app any topborder)) (app any bottomborder))))"
+        },
+        {
+          "fn_1 (app (app or ontopedge) onbottomedge) or": "(app (app or (app (app or ontopedge) onbottomedge)))"
+        },
+        {
+          "fn_1 (app any (app (app and fslice) funrevealed)) or": "(app (app or (app any (app (app and fslice) funrevealed))))"
+        },
+        {
+          "fn_1 (app any (app (app get unrevealedship) 2)) or": "(app (app or (app any (app (app get unrevealedship) 2))))"
+        },
+        {
+          "fn_1 (app any (app (app gt toprow) 0)) or": "(app (app or (app any (app (app gt toprow) 0))))"
+        },
+        {
+          "fn_1 (app any bottomrowhiddenship) or": "(app (app or (app any bottomrowhiddenship)))"
+        },
+        {
+          "fn_1 (app any topborder) or": "(app (app or (app any topborder)))"
+        },
+        {
+          "fn_1 any or": "(app (app or any))"
+        },
+        {
+          "fn_1 leftedge or": "(app (app or leftedge))"
+        },
+        {
+          "fn_1 ontopedge or": "(app (app or ontopedge))"
+        },
+        {
+          "fn_1 q1hashiddenship or": "(app (app or q1hashiddenship))"
+        },
+        {
+          "fn_1 topborderhasship or": "(app (app or topborderhasship))"
+        },
+        {
+          "fn_1 topedge or": "(app (app or topedge))"
+        },
+        {
+          "fn_1 (app (app sub r) 1) pair": "(app (app pair (app (app sub r) 1)))"
+        },
+        {
+          "fn_1 (app neg 1) pair": "(app (app pair (app neg 1)))"
+        },
+        {
+          "fn_1 0 pair": "(app (app pair 0))"
+        },
+        {
+          "fn_1 2 pair": "(app (app pair 2))"
+        },
+        {
+          "fn_1 4 pair": "(app (app pair 4))"
+        },
+        {
+          "fn_1 7 pair": "(app (app pair 7))"
+        },
+        {
+          "fn_1 belowrow pair": "(app (app pair belowrow))"
+        },
+        {
+          "fn_1 downr pair": "(app (app pair downr))"
+        },
+        {
+          "fn_1 r pair": "(app (app pair r))"
+        },
+        {
+          "fn_1 row pair": "(app (app pair row))"
+        },
+        {
+          "fn_1 rowidx pair": "(app (app pair rowidx))"
+        },
+        {
+          "fn_1 rowindex pair": "(app (app pair rowindex))"
+        },
+        {
+          "fn_1 rows pair": "(app (app pair rows))"
+        },
+        {
+          "fn_1 rowscd pair": "(app (app pair rowscd))"
+        },
+        {
+          "fn_1 rowstocheck pair": "(app (app pair rowstocheck))"
+        },
+        {
+          "fn_1 slice pair": "(app (app pair slice))"
+        },
+        {
+          "fn_1 targetrows pair": "(app (app pair targetrows))"
+        },
+        {
+          "fn_1 unit pair": "(app (app pair unit))"
+        },
+        {
+          "fn_1 col sub": "(app (app sub col))"
+        },
+        {
+          "fn_1 cols sub": "(app (app sub cols))"
+        },
+        {
+          "fn_1 cols.max sub": "(app (app sub cols.max))"
+        },
+        {
+          "fn_1 r sub": "(app (app sub r))"
+        },
+        {
+          "fn_1 rows.max sub": "(app (app sub rows.max))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(app all (fn_1 #0 eq (fn_1 #0 get 0)))",
+      "dreamcoder": "#(lambda (app all (#(lambda (lambda (app (app $0 $1)))) $0 eq (#(lambda (lambda (app (app $0 $1)))) $0 get 0))))",
+      "arity": 1,
+      "name": "fn_2",
+      "utility": 51610,
+      "final_cost": 398626,
+      "compression_ratio": 1.1312458294240717,
+      "cumulative_compression_ratio": 1.6302699773722737,
+      "num_uses": 74,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_2 allrows": "(app all (fn_1 allrows eq (fn_1 allrows get 0)))"
+        },
+        {
+          "fn_2 cols": "(app all (fn_1 cols eq (fn_1 cols get 0)))"
+        },
+        {
+          "fn_2 greencols": "(app all (fn_1 greencols eq (fn_1 greencols get 0)))"
+        },
+        {
+          "fn_2 rowindices": "(app all (fn_1 rowindices eq (fn_1 rowindices get 0)))"
+        },
+        {
+          "fn_2 rows": "(app all (fn_1 rows eq (fn_1 rows get 0)))"
+        },
+        {
+          "fn_2 shiprows": "(app all (fn_1 shiprows eq (fn_1 shiprows get 0)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_1 #2 get (fn_1 #1 pair #0))",
+      "dreamcoder": "#(lambda (lambda (lambda (#(lambda (lambda (app (app $0 $1)))) $0 get (#(lambda (lambda (app (app $0 $1)))) $1 pair $2)))))",
+      "arity": 3,
+      "name": "fn_3",
+      "utility": 34742,
+      "final_cost": 363478,
+      "compression_ratio": 1.096699112463478,
+      "cumulative_compression_ratio": 1.7879156372600267,
+      "num_uses": 116,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_3 (app neg 1) (app neg 1) 0": "(fn_1 0 get (fn_1 (app neg 1) pair (app neg 1)))"
+        },
+        {
+          "fn_3 c (fn_1 r sub 1) 0": "(fn_1 0 get (fn_1 (fn_1 r sub 1) pair c))"
+        },
+        {
+          "fn_3 0 0 0": "(fn_1 0 get (fn_1 0 pair 0))"
+        },
+        {
+          "fn_3 1 0 0": "(fn_1 0 get (fn_1 0 pair 1))"
+        },
+        {
+          "fn_3 3 0 0": "(fn_1 0 get (fn_1 0 pair 3))"
+        },
+        {
+          "fn_3 slice 4 0": "(fn_1 0 get (fn_1 4 pair slice))"
+        },
+        {
+          "fn_3 0 7 0": "(fn_1 0 get (fn_1 7 pair 0))"
+        },
+        {
+          "fn_3 7 7 0": "(fn_1 0 get (fn_1 7 pair 7))"
+        },
+        {
+          "fn_3 colidx belowrow 0": "(fn_1 0 get (fn_1 belowrow pair colidx))"
+        },
+        {
+          "fn_3 c downr 0": "(fn_1 0 get (fn_1 downr pair c))"
+        },
+        {
+          "fn_3 c r 0": "(fn_1 0 get (fn_1 r pair c))"
+        },
+        {
+          "fn_3 (fn_1 col sub 1) row 0": "(fn_1 0 get (fn_1 row pair (fn_1 col sub 1)))"
+        },
+        {
+          "fn_3 col row 0": "(fn_1 0 get (fn_1 row pair col))"
+        },
+        {
+          "fn_3 colidx rowidx 0": "(fn_1 0 get (fn_1 rowidx pair colidx))"
+        },
+        {
+          "fn_3 slice rowidx 0": "(fn_1 0 get (fn_1 rowidx pair slice))"
+        },
+        {
+          "fn_3 colindex rowindex 0": "(fn_1 0 get (fn_1 rowindex pair colindex))"
+        },
+        {
+          "fn_3 colidx slice 0": "(fn_1 0 get (fn_1 slice pair colidx))"
+        },
+        {
+          "fn_3 c downr 1": "(fn_1 1 get (fn_1 downr pair c))"
+        },
+        {
+          "fn_3 col row 1": "(fn_1 1 get (fn_1 row pair col))"
+        },
+        {
+          "fn_3 colidx rowidx 1": "(fn_1 1 get (fn_1 rowidx pair colidx))"
+        },
+        {
+          "fn_3 slice rowidx 1": "(fn_1 1 get (fn_1 rowidx pair slice))"
+        },
+        {
+          "fn_3 5 slice col6mask": "(fn_1 col6mask get (fn_1 slice pair 5))"
+        },
+        {
+          "fn_3 0 0 coords": "(fn_1 coords get (fn_1 0 pair 0))"
+        },
+        {
+          "fn_3 0 slice coords": "(fn_1 coords get (fn_1 slice pair 0))"
+        },
+        {
+          "fn_3 1 slice coords": "(fn_1 coords get (fn_1 slice pair 1))"
+        },
+        {
+          "fn_3 0 slice greenpositions": "(fn_1 greenpositions get (fn_1 slice pair 0))"
+        },
+        {
+          "fn_3 3 0 hiddengreen": "(fn_1 hiddengreen get (fn_1 0 pair 3))"
+        },
+        {
+          "fn_3 slice slice hiddenintargetrows": "(fn_1 hiddenintargetrows get (fn_1 slice pair slice))"
+        },
+        {
+          "fn_3 slice slice hiddenship": "(fn_1 hiddenship get (fn_1 slice pair slice))"
+        },
+        {
+          "fn_3 cols slice hiddenshipmask": "(fn_1 hiddenshipmask get (fn_1 slice pair cols))"
+        },
+        {
+          "fn_3 slice targetrows hiddenshipmask": "(fn_1 hiddenshipmask get (fn_1 targetrows pair slice))"
+        },
+        {
+          "fn_3 slice slice hiddenships": "(fn_1 hiddenships get (fn_1 slice pair slice))"
+        },
+        {
+          "fn_3 slice unit hiddenships": "(fn_1 hiddenships get (fn_1 unit pair slice))"
+        },
+        {
+          "fn_3 4 slice hiddenshiptiles": "(fn_1 hiddenshiptiles get (fn_1 slice pair 4))"
+        },
+        {
+          "fn_3 slice rowstocheck mask": "(fn_1 mask get (fn_1 rowstocheck pair slice))"
+        },
+        {
+          "fn_3 0 slice mask": "(fn_1 mask get (fn_1 slice pair 0))"
+        },
+        {
+          "fn_3 1 slice orangecells": "(fn_1 orangecells get (fn_1 slice pair 1))"
+        },
+        {
+          "fn_3 0 slice othercoords": "(fn_1 othercoords get (fn_1 slice pair 0))"
+        },
+        {
+          "fn_3 1 slice positions": "(fn_1 positions get (fn_1 slice pair 1))"
+        },
+        {
+          "fn_3 slice rowstocheck purpleunrevealed": "(fn_1 purpleunrevealed get (fn_1 rowstocheck pair slice))"
+        },
+        {
+          "fn_3 1 0 redcoords": "(fn_1 redcoords get (fn_1 0 pair 1))"
+        },
+        {
+          "fn_3 1 slice redcoords": "(fn_1 redcoords get (fn_1 slice pair 1))"
+        },
+        {
+          "fn_3 0 slice remainingship": "(fn_1 remainingship get (fn_1 slice pair 0))"
+        },
+        {
+          "fn_3 slice 7 remainingships": "(fn_1 remainingships get (fn_1 7 pair slice))"
+        },
+        {
+          "fn_3 oddcolmask slice shipandhidden": "(fn_1 shipandhidden get (fn_1 slice pair oddcolmask))"
+        },
+        {
+          "fn_3 0 0 shippositions": "(fn_1 shippositions get (fn_1 0 pair 0))"
+        },
+        {
+          "fn_3 0 slice shippositions": "(fn_1 shippositions get (fn_1 slice pair 0))"
+        },
+        {
+          "fn_3 slice 2 ships": "(fn_1 ships get (fn_1 2 pair slice))"
+        },
+        {
+          "fn_3 slice 2 unrevealed": "(fn_1 unrevealed get (fn_1 2 pair slice))"
+        },
+        {
+          "fn_3 slice rowscd unrevealed": "(fn_1 unrevealed get (fn_1 rowscd pair slice))"
+        },
+        {
+          "fn_3 slice slice unrevealed": "(fn_1 unrevealed get (fn_1 slice pair slice))"
+        },
+        {
+          "fn_3 slice rows unrevealedship": "(fn_1 unrevealedship get (fn_1 rows pair slice))"
+        },
+        {
+          "fn_3 slice slice unrevealedship": "(fn_1 unrevealedship get (fn_1 slice pair slice))"
+        },
+        {
+          "fn_3 slice targetrows unrevealedship": "(fn_1 unrevealedship get (fn_1 targetrows pair slice))"
+        },
+        {
+          "fn_3 slice unit unrevealedship": "(fn_1 unrevealedship get (fn_1 unit pair slice))"
+        },
+        {
+          "fn_3 slice rowstocheck unrevealedships": "(fn_1 unrevealedships get (fn_1 rowstocheck pair slice))"
+        },
+        {
+          "fn_3 slice slice unrevealedships": "(fn_1 unrevealedships get (fn_1 slice pair slice))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_0 (fn_1 #1 and #0))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (lambda (lambda (app tobool (app any $2))))) (#(lambda (lambda (app (app $0 $1)))) $0 and $1))))",
+      "arity": 2,
+      "name": "fn_4",
+      "utility": 22118,
+      "final_cost": 341056,
+      "compression_ratio": 1.06574286920623,
+      "cumulative_compression_ratio": 1.9054583411521862,
+      "num_uses": 111,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_4 undiscovered (fn_1 (fn_3 colidx slice 0) gt 0)": "(fn_0 (fn_1 (fn_1 (fn_3 colidx slice 0) gt 0) and undiscovered))"
+        },
+        {
+          "fn_4 hiddenmask (fn_1 bordermask and shipmask)": "(fn_0 (fn_1 (fn_1 bordermask and shipmask) and hiddenmask))"
+        },
+        {
+          "fn_4 hiddenmask (fn_1 centertop gt 0)": "(fn_0 (fn_1 (fn_1 centertop gt 0) and hiddenmask))"
+        },
+        {
+          "fn_4 ship (fn_1 edgeexcepttop and hidden)": "(fn_0 (fn_1 (fn_1 edgeexcepttop and hidden) and ship))"
+        },
+        {
+          "fn_4 (fn_1 shipmask get rowindex) (fn_1 hiddenmask get rowindex)": "(fn_0 (fn_1 (fn_1 hiddenmask get rowindex) and (fn_1 shipmask get rowindex)))"
+        },
+        {
+          "fn_4 ships (fn_1 outermask and unrevealed)": "(fn_0 (fn_1 (fn_1 outermask and unrevealed) and ships))"
+        },
+        {
+          "fn_4 hiddenmask (fn_1 regionmask and shipmask)": "(fn_0 (fn_1 (fn_1 regionmask and shipmask) and hiddenmask))"
+        },
+        {
+          "fn_4 (fn_1 regionpartial eq (app neg 1)) (fn_1 regiontrue gt 0)": "(fn_0 (fn_1 (fn_1 regiontrue gt 0) and (fn_1 regionpartial eq (app neg 1))))"
+        },
+        {
+          "fn_4 unrevealedmask (fn_1 rowmask and shipmask)": "(fn_0 (fn_1 (fn_1 rowmask and shipmask) and unrevealedmask))"
+        },
+        {
+          "fn_4 hiddenmask (fn_1 rowsmask and shipmask)": "(fn_0 (fn_1 (fn_1 rowsmask and shipmask) and hiddenmask))"
+        },
+        {
+          "fn_4 (fn_1 subpartial eq (app neg 1)) (fn_1 subtrue gt 0)": "(fn_0 (fn_1 (fn_1 subtrue gt 0) and (fn_1 subpartial eq (app neg 1))))"
+        },
+        {
+          "fn_4 (fn_1 pr eq (app neg 1)) (fn_1 tr gt 0)": "(fn_0 (fn_1 (fn_1 tr gt 0) and (fn_1 pr eq (app neg 1))))"
+        },
+        {
+          "fn_4 (fn_1 partialcol eq (app neg 1)) (fn_1 truecol gt 0)": "(fn_0 (fn_1 (fn_1 truecol gt 0) and (fn_1 partialcol eq (app neg 1))))"
+        },
+        {
+          "fn_4 (fn_1 partcols eq (app neg 1)) (fn_1 truecols gt 0)": "(fn_0 (fn_1 (fn_1 truecols gt 0) and (fn_1 partcols eq (app neg 1))))"
+        },
+        {
+          "fn_4 (fn_1 partialrow eq (app neg 1)) (fn_1 truerow gt 0)": "(fn_0 (fn_1 (fn_1 truerow gt 0) and (fn_1 partialrow eq (app neg 1))))"
+        },
+        {
+          "fn_4 (fn_1 ulpartial eq (app neg 1)) (fn_1 ultrue gt 0)": "(fn_0 (fn_1 (fn_1 ultrue gt 0) and (fn_1 ulpartial eq (app neg 1))))"
+        },
+        {
+          "fn_4 (fn_3 slice 2 ships) (fn_3 slice 2 unrevealed)": "(fn_0 (fn_1 (fn_3 slice 2 unrevealed) and (fn_3 slice 2 ships)))"
+        },
+        {
+          "fn_4 belowhidden belowtrue": "(fn_0 (fn_1 belowtrue and belowhidden))"
+        },
+        {
+          "fn_4 hiddenshipmask bordermask": "(fn_0 (fn_1 bordermask and hiddenshipmask))"
+        },
+        {
+          "fn_4 ship hidden": "(fn_0 (fn_1 hidden and ship))"
+        },
+        {
+          "fn_4 ships hidden": "(fn_0 (fn_1 hidden and ships))"
+        },
+        {
+          "fn_4 shiptiles hidden": "(fn_0 (fn_1 hidden and shiptiles))"
+        },
+        {
+          "fn_4 shipcells hiddencells": "(fn_0 (fn_1 hiddencells and shipcells))"
+        },
+        {
+          "fn_4 shipincol hiddenincol": "(fn_0 (fn_1 hiddenincol and shipincol))"
+        },
+        {
+          "fn_4 shipinrow hiddeninrow": "(fn_0 (fn_1 hiddeninrow and shipinrow))"
+        },
+        {
+          "fn_4 shipmask hiddenmask": "(fn_0 (fn_1 hiddenmask and shipmask))"
+        },
+        {
+          "fn_4 after4 hiddenship": "(fn_0 (fn_1 hiddenship and after4))"
+        },
+        {
+          "fn_4 bordermask hiddenship": "(fn_0 (fn_1 hiddenship and bordermask))"
+        },
+        {
+          "fn_4 border hiddenshipcells": "(fn_0 (fn_1 hiddenshipcells and border))"
+        },
+        {
+          "fn_4 rightmask hiddenshipmask": "(fn_0 (fn_1 hiddenshipmask and rightmask))"
+        },
+        {
+          "fn_4 (fn_1 colindices lt 3) hiddenships": "(fn_0 (fn_1 hiddenships and (fn_1 colindices lt 3)))"
+        },
+        {
+          "fn_4 bottomright hiddenships": "(fn_0 (fn_1 hiddenships and bottomright))"
+        },
+        {
+          "fn_4 bottomleftmask hiddenshiptiles": "(fn_0 (fn_1 hiddenshiptiles and bottomleftmask))"
+        },
+        {
+          "fn_4 shiptiles hiddentiles": "(fn_0 (fn_1 hiddentiles and shiptiles))"
+        },
+        {
+          "fn_4 shiptilesincol hiddentilesincol": "(fn_0 (fn_1 hiddentilesincol and shiptilesincol))"
+        },
+        {
+          "fn_4 isunrevealed ispurple": "(fn_0 (fn_1 ispurple and isunrevealed))"
+        },
+        {
+          "fn_4 ishidden isship": "(fn_0 (fn_1 isship and ishidden))"
+        },
+        {
+          "fn_4 isunrevealed isship": "(fn_0 (fn_1 isship and isunrevealed))"
+        },
+        {
+          "fn_4 maskhidden maskship": "(fn_0 (fn_1 maskship and maskhidden))"
+        },
+        {
+          "fn_4 maskship maskunrevealed": "(fn_0 (fn_1 maskunrevealed and maskship))"
+        },
+        {
+          "fn_4 regionishidden regionhasship": "(fn_0 (fn_1 regionhasship and regionishidden))"
+        },
+        {
+          "fn_4 unrevealedship regionmask": "(fn_0 (fn_1 regionmask and unrevealedship))"
+        },
+        {
+          "fn_4 unrevealedshipmask regionmask": "(fn_0 (fn_1 regionmask and unrevealedshipmask))"
+        },
+        {
+          "fn_4 hiddencells shipcells": "(fn_0 (fn_1 shipcells and hiddencells))"
+        },
+        {
+          "fn_4 hiddenincol shipincol": "(fn_0 (fn_1 shipincol and hiddenincol))"
+        },
+        {
+          "fn_4 hiddenmask shipmask": "(fn_0 (fn_1 shipmask and hiddenmask))"
+        },
+        {
+          "fn_4 stillhidden shipparts": "(fn_0 (fn_1 shipparts and stillhidden))"
+        },
+        {
+          "fn_4 hiddeninpartial shippartsintrue": "(fn_0 (fn_1 shippartsintrue and hiddeninpartial))"
+        },
+        {
+          "fn_4 hiddenpositions shippositions": "(fn_0 (fn_1 shippositions and hiddenpositions))"
+        },
+        {
+          "fn_4 stillhidden shippositions": "(fn_0 (fn_1 shippositions and stillhidden))"
+        },
+        {
+          "fn_4 hidden ships": "(fn_0 (fn_1 ships and hidden))"
+        },
+        {
+          "fn_4 hiddeninE shipsinE": "(fn_0 (fn_1 shipsinE and hiddeninE))"
+        },
+        {
+          "fn_4 hiddenincol shipsincol": "(fn_0 (fn_1 shipsincol and hiddenincol))"
+        },
+        {
+          "fn_4 unrevealedinregion shipsinregion": "(fn_0 (fn_1 shipsinregion and unrevealedinregion))"
+        },
+        {
+          "fn_4 hiddentiles shipsinrow": "(fn_0 (fn_1 shipsinrow and hiddentiles))"
+        },
+        {
+          "fn_4 hiddeninrowb shipsinrowb": "(fn_0 (fn_1 shipsinrowb and hiddeninrowb))"
+        },
+        {
+          "fn_4 hiddeninpartial shipsintrue": "(fn_0 (fn_1 shipsintrue and hiddeninpartial))"
+        },
+        {
+          "fn_4 hiddenonrow shipsonrow": "(fn_0 (fn_1 shipsonrow and hiddenonrow))"
+        },
+        {
+          "fn_4 hiddentiles shiptiles": "(fn_0 (fn_1 shiptiles and hiddentiles))"
+        },
+        {
+          "fn_4 stillhidden shiptiles": "(fn_0 (fn_1 shiptiles and stillhidden))"
+        },
+        {
+          "fn_4 unrevealed shiptiles": "(fn_0 (fn_1 shiptiles and unrevealed))"
+        },
+        {
+          "fn_4 regionmask unrevealed": "(fn_0 (fn_1 unrevealed and regionmask))"
+        },
+        {
+          "fn_4 ships unrevealed": "(fn_0 (fn_1 unrevealed and ships))"
+        },
+        {
+          "fn_4 shipsthere unrevealed": "(fn_0 (fn_1 unrevealed and shipsthere))"
+        },
+        {
+          "fn_4 shiptiles unrevealed": "(fn_0 (fn_1 unrevealed and shiptiles))"
+        },
+        {
+          "fn_4 edgemask unrevealedships": "(fn_0 (fn_1 unrevealedships and edgemask))"
+        },
+        {
+          "fn_4 oddcolumns unrevealedships": "(fn_0 (fn_1 unrevealedships and oddcolumns))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_1 (fn_3 #2 #1 0) #0 0)",
+      "dreamcoder": "#(lambda (lambda (lambda (#(lambda (lambda (app (app $0 $1)))) (#(lambda (lambda (lambda (#(lambda (lambda (app (app $0 $1)))) $0 get (#(lambda (lambda (app (app $0 $1)))) $1 pair $2))))) $0 $1 0) $2 0))))",
+      "arity": 3,
+      "name": "fn_5",
+      "utility": 16259,
+      "final_cost": 324391,
+      "compression_ratio": 1.0513731885286584,
+      "cumulative_compression_ratio": 2.003347811745702,
+      "num_uses": 55,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_5 gt (app neg 1) (app neg 1)": "(fn_1 (fn_3 (app neg 1) (app neg 1) 0) gt 0)"
+        },
+        {
+          "fn_5 gt 0 0": "(fn_1 (fn_3 0 0 0) gt 0)"
+        },
+        {
+          "fn_5 ne 7 0": "(fn_1 (fn_3 0 7 0) ne 0)"
+        },
+        {
+          "fn_5 ne 0 1": "(fn_1 (fn_3 1 0 0) ne 0)"
+        },
+        {
+          "fn_5 gt 0 3": "(fn_1 (fn_3 3 0 0) gt 0)"
+        },
+        {
+          "fn_5 ne 7 7": "(fn_1 (fn_3 7 7 0) ne 0)"
+        },
+        {
+          "fn_5 gt (fn_1 r sub 1) c": "(fn_1 (fn_3 c (fn_1 r sub 1) 0) gt 0)"
+        },
+        {
+          "fn_5 ne r c": "(fn_1 (fn_3 c r 0) ne 0)"
+        },
+        {
+          "fn_5 gt row col": "(fn_1 (fn_3 col row 0) gt 0)"
+        },
+        {
+          "fn_5 ne row col": "(fn_1 (fn_3 col row 0) ne 0)"
+        },
+        {
+          "fn_5 gt belowrow colidx": "(fn_1 (fn_3 colidx belowrow 0) gt 0)"
+        },
+        {
+          "fn_5 gt rowidx colidx": "(fn_1 (fn_3 colidx rowidx 0) gt 0)"
+        },
+        {
+          "fn_5 ne rowidx colidx": "(fn_1 (fn_3 colidx rowidx 0) ne 0)"
+        },
+        {
+          "fn_5 gt slice colidx": "(fn_1 (fn_3 colidx slice 0) gt 0)"
+        },
+        {
+          "fn_5 gt rowindex colindex": "(fn_1 (fn_3 colindex rowindex 0) gt 0)"
+        },
+        {
+          "fn_5 ne rowindex colindex": "(fn_1 (fn_3 colindex rowindex 0) ne 0)"
+        },
+        {
+          "fn_5 gt rowidx slice": "(fn_1 (fn_3 slice rowidx 0) gt 0)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_1 #0 eq (app neg 1))",
+      "dreamcoder": "#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 eq (app neg 1)))",
+      "arity": 1,
+      "name": "fn_6",
+      "utility": 9595,
+      "final_cost": 314291,
+      "compression_ratio": 1.0321358231702467,
+      "cumulative_compression_ratio": 2.0677270427724626,
+      "num_uses": 25,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_6 (fn_1 1 get rowidx)": "(fn_1 (fn_1 1 get rowidx) eq (app neg 1))"
+        },
+        {
+          "fn_6 (fn_3 c downr 1)": "(fn_1 (fn_3 c downr 1) eq (app neg 1))"
+        },
+        {
+          "fn_6 (fn_3 col row 1)": "(fn_1 (fn_3 col row 1) eq (app neg 1))"
+        },
+        {
+          "fn_6 (fn_3 colidx rowidx 1)": "(fn_1 (fn_3 colidx rowidx 1) eq (app neg 1))"
+        },
+        {
+          "fn_6 (fn_3 slice rowidx 1)": "(fn_1 (fn_3 slice rowidx 1) eq (app neg 1))"
+        },
+        {
+          "fn_6 partcols": "(fn_1 partcols eq (app neg 1))"
+        },
+        {
+          "fn_6 partialcenter": "(fn_1 partialcenter eq (app neg 1))"
+        },
+        {
+          "fn_6 partialcol": "(fn_1 partialcol eq (app neg 1))"
+        },
+        {
+          "fn_6 partialrow": "(fn_1 partialrow eq (app neg 1))"
+        },
+        {
+          "fn_6 partialsub": "(fn_1 partialsub eq (app neg 1))"
+        },
+        {
+          "fn_6 pb": "(fn_1 pb eq (app neg 1))"
+        },
+        {
+          "fn_6 pr": "(fn_1 pr eq (app neg 1))"
+        },
+        {
+          "fn_6 regionpartial": "(fn_1 regionpartial eq (app neg 1))"
+        },
+        {
+          "fn_6 subpartial": "(fn_1 subpartial eq (app neg 1))"
+        },
+        {
+          "fn_6 trpartial": "(fn_1 trpartial eq (app neg 1))"
+        },
+        {
+          "fn_6 ulpartial": "(fn_1 ulpartial eq (app neg 1))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (lam (app tobool #0)))",
+      "dreamcoder": "#(lambda (lambda (lambda (app tobool $2))))",
+      "arity": 1,
+      "name": "fn_7",
+      "utility": 9169,
+      "final_cost": 304918,
+      "compression_ratio": 1.0307394119074635,
+      "cumulative_compression_ratio": 2.131287756052447,
+      "num_uses": 91,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_7 (app all (fn_1 greencols lt mid))": "(lam (lam (app tobool (app all (fn_1 greencols lt mid)))))"
+        },
+        {
+          "fn_7 (app all (fn_1 rows gte half))": "(lam (lam (app tobool (app all (fn_1 rows gte half)))))"
+        },
+        {
+          "fn_7 (app all (fn_1 shiprows lt halfway))": "(lam (lam (app tobool (app all (fn_1 shiprows lt halfway)))))"
+        },
+        {
+          "fn_7 (app all colshaveship)": "(lam (lam (app tobool (app all colshaveship))))"
+        },
+        {
+          "fn_7 (app all rowswithhiddenships)": "(lam (lam (app tobool (app all rowswithhiddenships))))"
+        },
+        {
+          "fn_7 (fn_1 (app any (fn_1 fslice and funrevealed)) or (app any (fn_1 gslice and gunrevealed)))": "(lam (lam (app tobool (fn_1 (app any (fn_1 fslice and funrevealed)) or (app any (fn_1 gslice and gunrevealed))))))"
+        },
+        {
+          "fn_7 (fn_1 (app any (fn_1 unrevealedship get 2)) or (app any (fn_1 unrevealedship get 4)))": "(lam (lam (app tobool (fn_1 (app any (fn_1 unrevealedship get 2)) or (app any (fn_1 unrevealedship get 4))))))"
+        },
+        {
+          "fn_7 (fn_1 (app any bottomrowhiddenship) or (app any rightcolhiddenship))": "(lam (lam (app tobool (fn_1 (app any bottomrowhiddenship) or (app any rightcolhiddenship)))))"
+        },
+        {
+          "fn_7 (fn_1 (app set purplerows) and targetrows)": "(lam (lam (app tobool (fn_1 (app set purplerows) and targetrows))))"
+        },
+        {
+          "fn_7 (fn_1 (fn_1 (fn_1 (app any (fn_1 toprow gt 0)) or (app any (fn_1 bottomrow gt 0))) or (app any (fn_1 leftcol gt 0))) or (app any (fn_1 rightcol gt 0)))": "(lam (lam (app tobool (fn_1 (fn_1 (fn_1 (app any (fn_1 toprow gt 0)) or (app any (fn_1 bottomrow gt 0))) or (app any (fn_1 leftcol gt 0))) or (app any (fn_1 rightcol gt 0))))))"
+        },
+        {
+          "fn_7 (fn_1 (fn_1 (fn_1 (app any topborder) or (app any bottomborder)) or (app any leftborder)) or (app any rightborder))": "(lam (lam (app tobool (fn_1 (fn_1 (fn_1 (app any topborder) or (app any bottomborder)) or (app any leftborder)) or (app any rightborder)))))"
+        },
+        {
+          "fn_7 (fn_1 (fn_1 (fn_1 ontopedge or onbottomedge) or onleftedge) or onrightedge)": "(lam (lam (app tobool (fn_1 (fn_1 (fn_1 ontopedge or onbottomedge) or onleftedge) or onrightedge))))"
+        },
+        {
+          "fn_7 (fn_1 (fn_3 (fn_1 col sub 1) row 0) eq 3)": "(lam (lam (app tobool (fn_1 (fn_3 (fn_1 col sub 1) row 0) eq 3))))"
+        },
+        {
+          "fn_7 (fn_1 any or any)": "(lam (lam (app tobool (fn_1 any or any))))"
+        },
+        {
+          "fn_7 (fn_1 anyinAD and (app not anyinEH))": "(lam (lam (app tobool (fn_1 anyinAD and (app not anyinEH)))))"
+        },
+        {
+          "fn_7 (fn_1 hasodd and haseven)": "(lam (lam (app tobool (fn_1 hasodd and haseven))))"
+        },
+        {
+          "fn_7 (fn_1 hasshipe4 and hasshipb4)": "(lam (lam (app tobool (fn_1 hasshipe4 and hasshipb4))))"
+        },
+        {
+          "fn_7 (fn_1 ishorizontal and isonright)": "(lam (lam (app tobool (fn_1 ishorizontal and isonright))))"
+        },
+        {
+          "fn_7 (fn_1 isship and ishidden)": "(lam (lam (app tobool (fn_1 isship and ishidden))))"
+        },
+        {
+          "fn_7 (fn_1 leftcount gt rightcount)": "(lam (lam (app tobool (fn_1 leftcount gt rightcount))))"
+        },
+        {
+          "fn_7 (fn_1 mindist lte 2)": "(lam (lam (app tobool (fn_1 mindist lte 2))))"
+        },
+        {
+          "fn_7 (fn_1 q1hashiddenship or q2hashiddenship)": "(lam (lam (app tobool (fn_1 q1hashiddenship or q2hashiddenship))))"
+        },
+        {
+          "fn_7 (fn_1 shipsEH gt shipsAD)": "(lam (lam (app tobool (fn_1 shipsEH gt shipsAD))))"
+        },
+        {
+          "fn_7 (fn_1 topborderhasship or leftborderhasship)": "(lam (lam (app tobool (fn_1 topborderhasship or leftborderhasship))))"
+        },
+        {
+          "fn_7 (fn_2 cols)": "(lam (lam (app tobool (fn_2 cols))))"
+        },
+        {
+          "fn_7 (fn_2 rowindices)": "(lam (lam (app tobool (fn_2 rowindices))))"
+        },
+        {
+          "fn_7 (fn_2 rows)": "(lam (lam (app tobool (fn_2 rows))))"
+        },
+        {
+          "fn_7 (fn_3 3 0 hiddengreen)": "(lam (lam (app tobool (fn_3 3 0 hiddengreen))))"
+        },
+        {
+          "fn_7 (fn_5 gt (app neg 1) (app neg 1))": "(lam (lam (app tobool (fn_5 gt (app neg 1) (app neg 1)))))"
+        },
+        {
+          "fn_7 (fn_5 gt 0 0)": "(lam (lam (app tobool (fn_5 gt 0 0))))"
+        },
+        {
+          "fn_7 (fn_5 gt belowrow colidx)": "(lam (lam (app tobool (fn_5 gt belowrow colidx))))"
+        },
+        {
+          "fn_7 (fn_5 gt row col)": "(lam (lam (app tobool (fn_5 gt row col))))"
+        },
+        {
+          "fn_7 (fn_5 gt rowidx colidx)": "(lam (lam (app tobool (fn_5 gt rowidx colidx))))"
+        },
+        {
+          "fn_7 allcolsequal": "(lam (lam (app tobool allcolsequal)))"
+        },
+        {
+          "fn_7 any": "(lam (lam (app tobool any)))"
+        },
+        {
+          "fn_7 hasship": "(lam (lam (app tobool hasship)))"
+        },
+        {
+          "fn_7 hasunrevealedship": "(lam (lam (app tobool hasunrevealedship)))"
+        },
+        {
+          "fn_7 hasunseenship": "(lam (lam (app tobool hasunseenship)))"
+        },
+        {
+          "fn_7 hiddenshipincol.any": "(lam (lam (app tobool hiddenshipincol.any)))"
+        },
+        {
+          "fn_7 hiddenshipmask.any": "(lam (lam (app tobool hiddenshipmask.any)))"
+        },
+        {
+          "fn_7 hiddenshipsabove.any": "(lam (lam (app tobool hiddenshipsabove.any)))"
+        },
+        {
+          "fn_7 ishorizontal": "(lam (lam (app tobool ishorizontal)))"
+        },
+        {
+          "fn_7 isvertical": "(lam (lam (app tobool isvertical)))"
+        },
+        {
+          "fn_7 mask.any": "(lam (lam (app tobool mask.any)))"
+        },
+        {
+          "fn_7 regionhashiddenship": "(lam (lam (app tobool regionhashiddenship)))"
+        },
+        {
+          "fn_7 touches": "(lam (lam (app tobool touches)))"
+        },
+        {
+          "fn_7 unrevealed.any": "(lam (lam (app tobool unrevealed.any)))"
+        },
+        {
+          "fn_7 unrevealedinF.any": "(lam (lam (app tobool unrevealedinF.any)))"
+        },
+        {
+          "fn_7 unrevealedship.any": "(lam (lam (app tobool unrevealedship.any)))"
+        },
+        {
+          "fn_7 unrevealedshipinq1": "(lam (lam (app tobool unrevealedshipinq1)))"
+        },
+        {
+          "fn_7 unrevealedshipinrowe": "(lam (lam (app tobool unrevealedshipinrowe)))"
+        },
+        {
+          "fn_7 unrevealedshipmask.any": "(lam (lam (app tobool unrevealedshipmask.any)))"
+        },
+        {
+          "fn_7 unrevealedships.any": "(lam (lam (app tobool unrevealedships.any)))"
+        },
+        {
+          "fn_7 unrevealedshiptiles.any": "(lam (lam (app tobool unrevealedshiptiles.any)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(app any)",
+      "dreamcoder": "#(app any)",
+      "arity": 0,
+      "name": "fn_8",
+      "utility": 7980,
+      "final_cost": 296737,
+      "compression_ratio": 1.027569868267186,
+      "cumulative_compression_ratio": 2.1900470787262796,
+      "num_uses": 81,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_8 ": "(app any)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": []
+    },
+    {
+      "body": "(fn_1 #0 and)",
+      "dreamcoder": "#(lambda (#(lambda (lambda (app (app $0 $1)))) $0 and))",
+      "arity": 1,
+      "name": "fn_9",
+      "utility": 5858,
+      "final_cost": 290677,
+      "compression_ratio": 1.0208478827014178,
+      "cumulative_compression_ratio": 2.2357049233341475,
+      "num_uses": 60,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_9 (app set purplerows)": "(fn_1 (app set purplerows) and)"
+        },
+        {
+          "fn_9 (fn_1 (app len (app set cols)) eq 1)": "(fn_1 (fn_1 (app len (app set cols)) eq 1) and)"
+        },
+        {
+          "fn_9 (fn_1 (app len (app unique cols)) eq 1)": "(fn_1 (fn_1 (app len (app unique cols)) eq 1) and)"
+        },
+        {
+          "fn_9 (fn_1 (app unique redrows) gt 1)": "(fn_1 (fn_1 (app unique redrows) gt 1) and)"
+        },
+        {
+          "fn_9 (fn_1 (fn_1 0 get rowidx) gt 0)": "(fn_1 (fn_1 (fn_1 0 get rowidx) gt 0) and)"
+        },
+        {
+          "fn_9 (fn_1 (fn_1 rows eq 1) and (fn_1 (fn_1 rows get 0) eq 1))": "(fn_1 (fn_1 (fn_1 rows eq 1) and (fn_1 (fn_1 rows get 0) eq 1)) and)"
+        },
+        {
+          "fn_9 (fn_1 (fn_3 c downr 0) eq shipid)": "(fn_1 (fn_1 (fn_3 c downr 0) eq shipid) and)"
+        },
+        {
+          "fn_9 (fn_1 bordermask and hiddenmask)": "(fn_1 (fn_1 bordermask and hiddenmask) and)"
+        },
+        {
+          "fn_9 (fn_1 cols eq 1)": "(fn_1 (fn_1 cols eq 1) and)"
+        },
+        {
+          "fn_9 (fn_1 cols gte 3)": "(fn_1 (fn_1 cols gte 3) and)"
+        },
+        {
+          "fn_9 (fn_1 edgesmask and hiddenmask)": "(fn_1 (fn_1 edgesmask and hiddenmask) and)"
+        },
+        {
+          "fn_9 (fn_1 rows eq 1)": "(fn_1 (fn_1 rows eq 1) and)"
+        },
+        {
+          "fn_9 (fn_1 rows lt midrow)": "(fn_1 (fn_1 rows lt midrow) and)"
+        },
+        {
+          "fn_9 (fn_1 shipsincols gt 0)": "(fn_1 (fn_1 shipsincols gt 0) and)"
+        },
+        {
+          "fn_9 (fn_1 startrow eq 0)": "(fn_1 (fn_1 startrow eq 0) and)"
+        },
+        {
+          "fn_9 (fn_1 subtrue gt 0)": "(fn_1 (fn_1 subtrue gt 0) and)"
+        },
+        {
+          "fn_9 (fn_1 tb gt 0)": "(fn_1 (fn_1 tb gt 0) and)"
+        },
+        {
+          "fn_9 (fn_1 topedge or bottomedge)": "(fn_1 (fn_1 topedge or bottomedge) and)"
+        },
+        {
+          "fn_9 (fn_1 trtrue gt 0)": "(fn_1 (fn_1 trtrue gt 0) and)"
+        },
+        {
+          "fn_9 (fn_1 truecenter gt 0)": "(fn_1 (fn_1 truecenter gt 0) and)"
+        },
+        {
+          "fn_9 (fn_1 truesub gt 0)": "(fn_1 (fn_1 truesub gt 0) and)"
+        },
+        {
+          "fn_9 (fn_1 uniquecols eq 1)": "(fn_1 (fn_1 uniquecols eq 1) and)"
+        },
+        {
+          "fn_9 (fn_2 cols)": "(fn_1 (fn_2 cols) and)"
+        },
+        {
+          "fn_9 (fn_5 gt rowidx slice)": "(fn_1 (fn_5 gt rowidx slice) and)"
+        },
+        {
+          "fn_9 (fn_5 ne rowidx colidx)": "(fn_1 (fn_5 ne rowidx colidx) and)"
+        },
+        {
+          "fn_9 (fn_6 (fn_3 col row 1))": "(fn_1 (fn_6 (fn_3 col row 1)) and)"
+        },
+        {
+          "fn_9 (fn_6 (fn_3 colidx rowidx 1))": "(fn_1 (fn_6 (fn_3 colidx rowidx 1)) and)"
+        },
+        {
+          "fn_9 anyinAD": "(fn_1 anyinAD and)"
+        },
+        {
+          "fn_9 blany": "(fn_1 blany and)"
+        },
+        {
+          "fn_9 bordermask": "(fn_1 bordermask and)"
+        },
+        {
+          "fn_9 closetoorange": "(fn_1 closetoorange and)"
+        },
+        {
+          "fn_9 condyes": "(fn_1 condyes and)"
+        },
+        {
+          "fn_9 edgeexcepttop": "(fn_1 edgeexcepttop and)"
+        },
+        {
+          "fn_9 edgesmask": "(fn_1 edgesmask and)"
+        },
+        {
+          "fn_9 foundvertical": "(fn_1 foundvertical and)"
+        },
+        {
+          "fn_9 fslice": "(fn_1 fslice and)"
+        },
+        {
+          "fn_9 gslice": "(fn_1 gslice and)"
+        },
+        {
+          "fn_9 hasin56": "(fn_1 hasin56 and)"
+        },
+        {
+          "fn_9 hasodd": "(fn_1 hasodd and)"
+        },
+        {
+          "fn_9 hasship34": "(fn_1 hasship34 and)"
+        },
+        {
+          "fn_9 hasshipe4": "(fn_1 hasshipe4 and)"
+        },
+        {
+          "fn_9 hidden": "(fn_1 hidden and)"
+        },
+        {
+          "fn_9 hiddeninF": "(fn_1 hiddeninF and)"
+        },
+        {
+          "fn_9 hiddenmask": "(fn_1 hiddenmask and)"
+        },
+        {
+          "fn_9 ishidden": "(fn_1 ishidden and)"
+        },
+        {
+          "fn_9 ishorizontal": "(fn_1 ishorizontal and)"
+        },
+        {
+          "fn_9 isship": "(fn_1 isship and)"
+        },
+        {
+          "fn_9 lefthasship": "(fn_1 lefthasship and)"
+        },
+        {
+          "fn_9 outermask": "(fn_1 outermask and)"
+        },
+        {
+          "fn_9 regionmask": "(fn_1 regionmask and)"
+        },
+        {
+          "fn_9 rowmask": "(fn_1 rowmask and)"
+        },
+        {
+          "fn_9 rowsmask": "(fn_1 rowsmask and)"
+        },
+        {
+          "fn_9 unrevealed": "(fn_1 unrevealed and)"
+        },
+        {
+          "fn_9 upperhas": "(fn_1 upperhas and)"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    }
+  ]
+}

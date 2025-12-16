@@ -1,0 +1,212 @@
+{
+  "cmd": "python3 run_stitch_python.py simple_test.json 2 3",
+  "args": {
+    "iterations": 3,
+    "abstraction_prefix": "fn_",
+    "previous_abstractions": 0,
+    "shuffle": false,
+    "truncate": null,
+    "no_opt": false,
+    "silent": true,
+    "verbose_rewrite": false,
+    "step": {
+      "max_arity": 2,
+      "threads": 4,
+      "no_stats": false,
+      "batch": 1,
+      "dynamic_batch": false,
+      "eta_long": false,
+      "no_curried_metavars": false,
+      "no_curried_bodies": false,
+      "inv_candidates": 1,
+      "hole_choice": "DepthFirst",
+      "cost": {
+        "cost_lam": 1,
+        "cost_app": 1,
+        "cost_var": 100,
+        "cost_ivar": 100,
+        "cost_prim_default": 100,
+        "cost_prim": "{}"
+      },
+      "no_mismatch_check": false,
+      "follow": null,
+      "follow_types": null,
+      "follow_prune": false,
+      "verbose_worklist": false,
+      "verbose_best": false,
+      "print_stats": 0,
+      "show_rewritten": false,
+      "rewritten_dreamcoder": false,
+      "rewritten_intermediates": false,
+      "inv_arg_cap": false,
+      "allow_single_task": false,
+      "no_opt_single_use": false,
+      "no_opt_upper_bound": false,
+      "no_opt_force_multiuse": false,
+      "no_opt_useless_abstract": false,
+      "no_opt_arity_zero": false,
+      "no_other_util": false,
+      "structure_penalty": 1.0,
+      "rewrite_check": false,
+      "utility_by_rewrite": false,
+      "dreamcoder_comparison": false,
+      "quiet": true,
+      "fused_lambda_tags": {
+        "tags": null
+      },
+      "tdfa": {
+        "tdfa_json_path": null,
+        "tdfa_root": null,
+        "valid_metavars": null,
+        "valid_roots": null,
+        "tdfa_non_eta_long_states": null,
+        "tdfa_split": null
+      },
+      "symvar": {
+        "symvar_prefix": null
+      }
+    }
+  },
+  "original_cost": 10916,
+  "final_cost": 6265,
+  "compression_ratio": 1.7423782920989626,
+  "num_abstractions": 3,
+  "original": [
+    "(lam 0)",
+    "(lam (lam 1))",
+    "(lam (lam (app 1 (app 1 0))))",
+    "(lam (lam (lam (app 2 (app 1 0)))))",
+    "(lam (app (app add 0) 1))",
+    "(lam (app (app add 0) 2))",
+    "(lam (app (app add 0) 3))",
+    "(lam (app (app mul 0) 2))",
+    "(lam (app (app mul 0) 2))",
+    "(lam (app (app mul 0) 3))",
+    "(lam (lam (app (app add 1) 0)))",
+    "(lam (lam (app (app add (app (app add 1) 0)) 1)))",
+    "(lam (lam (app (app add (app (app add 1) 0)) 2)))",
+    "(lam (app (app gt 0) 0))",
+    "(lam (app (app gt 0) 1))",
+    "(lam (app (app gt 0) 2))",
+    "(lam (app (app eq 0) 0))",
+    "(lam (app (app eq 0) 1))",
+    "(lam (app (app eq 0) 2))",
+    "(lam (lam (app (app and (app (app gt 1) 0)) (app (app eq 0) 0))))"
+  ],
+  "rewritten": [
+    "(lam 0)",
+    "(lam (lam 1))",
+    "(lam (lam (app 1 (app 1 0))))",
+    "(lam (lam (lam (app 2 (app 1 0)))))",
+    "(lam (fn_0 add 1))",
+    "(fn_2 add)",
+    "(lam (fn_0 add 3))",
+    "(fn_2 mul)",
+    "(fn_2 mul)",
+    "(lam (fn_0 mul 3))",
+    "(lam (lam (app (app add 1) 0)))",
+    "(lam (lam (fn_1 add add 1)))",
+    "(lam (lam (fn_1 add add 2)))",
+    "(lam (fn_0 gt 0))",
+    "(lam (fn_0 gt 1))",
+    "(fn_2 gt)",
+    "(lam (fn_0 eq 0))",
+    "(lam (fn_0 eq 1))",
+    "(fn_2 eq)",
+    "(lam (lam (fn_1 gt and (fn_0 eq 0))))"
+  ],
+  "rewritten_dreamcoder": null,
+  "abstractions": [
+    {
+      "body": "(app (app #0 0))",
+      "dreamcoder": "#(lambda (app (app $0 0)))",
+      "arity": 1,
+      "name": "fn_0",
+      "utility": 2323,
+      "final_cost": 8290,
+      "compression_ratio": 1.316767189384801,
+      "cumulative_compression_ratio": 1.316767189384801,
+      "num_uses": 13,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_0 add": "(app (app add 0))"
+        },
+        {
+          "fn_0 eq": "(app (app eq 0))"
+        },
+        {
+          "fn_0 gt": "(app (app gt 0))"
+        },
+        {
+          "fn_0 mul": "(app (app mul 0))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(app (app #1 (app (app #0 1) 0)))",
+      "dreamcoder": "#(lambda (lambda (app (app $0 (app (app $1 1) 0)))))",
+      "arity": 2,
+      "name": "fn_1",
+      "utility": 908,
+      "final_cost": 6775,
+      "compression_ratio": 1.2236162361623617,
+      "cumulative_compression_ratio": 1.6112177121771218,
+      "num_uses": 3,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_1 add add": "(app (app add (app (app add 1) 0)))"
+        },
+        {
+          "fn_1 gt and": "(app (app and (app (app gt 1) 0)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(lam (fn_0 #0 2))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (app (app $0 0))) $1 2)))",
+      "arity": 1,
+      "name": "fn_2",
+      "utility": 307,
+      "final_cost": 6265,
+      "compression_ratio": 1.0814046288906625,
+      "cumulative_compression_ratio": 1.7423782920989626,
+      "num_uses": 5,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_2 add": "(lam (fn_0 add 2))"
+        },
+        {
+          "fn_2 eq": "(lam (fn_0 eq 2))"
+        },
+        {
+          "fn_2 gt": "(lam (fn_0 gt 2))"
+        },
+        {
+          "fn_2 mul": "(lam (fn_0 mul 2))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    }
+  ]
+}

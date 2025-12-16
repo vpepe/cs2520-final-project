@@ -1,0 +1,12 @@
+[
+  "(lam (lam (app #0 #1)))",
+  "(lam (lam (app #0 (app #0 #1))))",
+  "(lam (lam (app #1 (app #0 #1))))",
+  "(lam (lam (app #0 (app #1 #0))))",
+  "(lam (lam (lam (app #0 (app #1 #2)))))",
+  "(lam (lam (lam (app #1 (app #0 #2)))))",
+  "(lam (lam (lam (app #2 (app #0 #1)))))",
+  "(lam (lam (app (app #0 #1) #0)))",
+  "(lam (lam (app (app #1 #0) #1)))",
+  "(lam (lam (app #0 (app #0 (app #0 #1)))))"
+]

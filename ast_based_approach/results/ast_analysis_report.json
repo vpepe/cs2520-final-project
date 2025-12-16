@@ -1,0 +1,397 @@
+{
+  "total_programs": 948,
+  "ast_patterns_found": 463,
+  "expression_patterns_found": 342,
+  "clone_groups_found": 46,
+  "top_patterns": [
+    {
+      "frequency": 948,
+      "size": 11,
+      "score": 10428,
+      "expression": "true_board: np.ndarray, partial_board: np.ndarray",
+      "variables": []
+    },
+    {
+      "frequency": 1896,
+      "size": 4,
+      "score": 7584,
+      "expression": "np.ndarray",
+      "variables": []
+    },
+    {
+      "frequency": 948,
+      "size": 5,
+      "score": 4740,
+      "expression": "true_board: np.ndarray",
+      "variables": []
+    },
+    {
+      "frequency": 948,
+      "size": 5,
+      "score": 4740,
+      "expression": "partial_board: np.ndarray",
+      "variables": []
+    },
+    {
+      "frequency": 181,
+      "size": 17,
+      "score": 3077,
+      "expression": "_VAR_3 = (_VAR_1 > 0) & (_VAR_1 == -1)",
+      "variables": [
+        "true_board",
+        "_VAR_0",
+        "partial_board",
+        "_VAR_2",
+        "_VAR_1",
+        "unrevealed"
+      ]
+    },
+    {
+      "frequency": 216,
+      "size": 14,
+      "score": 3024,
+      "expression": "(_VAR_1 > 0) & (_VAR_1 == -1)",
+      "variables": [
+        "_VAR_0",
+        "_VAR_4",
+        "_VAR_5",
+        "_VAR_1"
+      ]
+    },
+    {
+      "frequency": 283,
+      "size": 10,
+      "score": 2830,
+      "expression": "_VAR_3[_VAR_2, _VAR_3]",
+      "variables": [
+        "_VAR_7",
+        "_VAR_6",
+        "_VAR_0",
+        "_VAR_2",
+        "_VAR_5",
+        "_VAR_1"
+      ]
+    },
+    {
+      "frequency": 241,
+      "size": 11,
+      "score": 2651,
+      "expression": "return _VAR_2(np.any(_VAR_1))",
+      "variables": [
+        "_VAR_0",
+        "concealed_ship_tiles",
+        "bool",
+        "_VAR_1"
+      ]
+    },
+    {
+      "frequency": 241,
+      "size": 10,
+      "score": 2410,
+      "expression": "_VAR_2(np.any(_VAR_1))",
+      "variables": [
+        "_VAR_0",
+        "_VAR_3",
+        "_VAR_2",
+        "_VAR_1"
+      ]
+    },
+    {
+      "frequency": 395,
+      "size": 6,
+      "score": 2370,
+      "expression": "(_VAR_2, _VAR_3)",
+      "variables": [
+        "_VAR_0",
+        "r",
+        "c",
+        "_VAR_1"
+      ]
+    },
+    {
+      "frequency": 329,
+      "size": 7,
+      "score": 2303,
+      "expression": "_VAR_1 == -1",
+      "variables": [
+        "_VAR_0",
+        "_VAR_3"
+      ]
+    },
+    {
+      "frequency": 567,
+      "size": 4,
+      "score": 2268,
+      "expression": "np.any",
+      "variables": []
+    },
+    {
+      "frequency": 440,
+      "size": 5,
+      "score": 2200,
+      "expression": "_VAR_1 > 0",
+      "variables": [
+        "ship_id",
+        "_VAR_0"
+      ]
+    },
+    {
+      "frequency": 300,
+      "size": 7,
+      "score": 2100,
+      "expression": "np.any(_VAR_1)",
+      "variables": [
+        "_VAR_0",
+        "_VAR_1"
+      ]
+    },
+    {
+      "frequency": 212,
+      "size": 9,
+      "score": 1908,
+      "expression": "_VAR_2[_VAR_1, :]",
+      "variables": [
+        "_VAR_0",
+        "_VAR_4",
+        "_VAR_5",
+        "_VAR_1"
+      ]
+    },
+    {
+      "frequency": 305,
+      "size": 6,
+      "score": 1830,
+      "expression": "(_VAR_2, _VAR_3)",
+      "variables": [
+        "_VAR_0",
+        "_VAR_4",
+        "_VAR_5",
+        "_VAR_1"
+      ]
+    },
+    {
+      "frequency": 279,
+      "size": 6,
+      "score": 1674,
+      "expression": "_VAR_2[_VAR_3]",
+      "variables": [
+        "_VAR_0",
+        "_VAR_4",
+        "_VAR_3",
+        "_VAR_1"
+      ]
+    },
+    {
+      "frequency": 117,
+      "size": 14,
+      "score": 1638,
+      "expression": "np.all(_VAR_1 == _VAR_1[0])",
+      "variables": [
+        "_VAR_0",
+        "_VAR_3"
+      ]
+    },
+    {
+      "frequency": 111,
+      "size": 14,
+      "score": 1554,
+      "expression": "_VAR_3 = np.argwhere(_VAR_2 == _VAR_3)",
+      "variables": [
+        "true_board",
+        "s",
+        "_VAR_0",
+        "positions",
+        "_VAR_2",
+        "_VAR_1"
+      ]
+    },
+    {
+      "frequency": 254,
+      "size": 6,
+      "score": 1524,
+      "expression": "_VAR_2 == _VAR_3",
+      "variables": [
+        "_VAR_0",
+        "_VAR_3",
+        "_VAR_2",
+        "_VAR_1"
+      ]
+    }
+  ],
+  "top_expressions": [
+    [
+      "partial_board == -1",
+      171
+    ],
+    [
+      "true_board > 0",
+      161
+    ],
+    [
+      "true_board == ship_id",
+      85
+    ],
+    [
+      "(true_board > 0) & (partial_board == -1)",
+      80
+    ],
+    [
+      "np.all(rows == rows[0])",
+      58
+    ],
+    [
+      "rows == rows[0]",
+      58
+    ],
+    [
+      "np.unique(true_board)",
+      56
+    ],
+    [
+      "np.argwhere(true_board == ship_id)",
+      55
+    ],
+    [
+      "partial_board[row_idx] == -1",
+      53
+    ],
+    [
+      "np.all(cols == cols[0])",
+      51
+    ],
+    [
+      "cols == cols[0]",
+      51
+    ],
+    [
+      "true_board[row_idx] > 0",
+      49
+    ],
+    [
+      "true_board == 2",
+      48
+    ],
+    [
+      "true_board == 4",
+      42
+    ],
+    [
+      "partial_board[row_idx, :] == -1",
+      41
+    ],
+    [
+      "n_rows // 2",
+      40
+    ],
+    [
+      "partial_board > 0",
+      40
+    ],
+    [
+      "ord('G') - ord('A')",
+      39
+    ],
+    [
+      "true_board[row_idx, :] > 0",
+      39
+    ],
+    [
+      "np.argwhere(true_board == 4)",
+      37
+    ]
+  ],
+  "largest_clones": [
+    {
+      "size": 7,
+      "program_indices": [
+        240,
+        301,
+        348,
+        391,
+        456
+      ],
+      "example": "Is there a ship in row A"
+    },
+    {
+      "size": 3,
+      "program_indices": [
+        30,
+        243,
+        838
+      ],
+      "example": "Is there one is c"
+    },
+    {
+      "size": 3,
+      "program_indices": [
+        74,
+        314,
+        619
+      ],
+      "example": "Are there any parts of a ship in row H"
+    },
+    {
+      "size": 3,
+      "program_indices": [
+        96,
+        433,
+        863
+      ],
+      "example": "are there any parts of a boat in column 1?"
+    },
+    {
+      "size": 3,
+      "program_indices": [
+        97,
+        253,
+        862
+      ],
+      "example": "is there any part of a boat in row F?"
+    },
+    {
+      "size": 3,
+      "program_indices": [
+        105,
+        524,
+        698
+      ],
+      "example": "Are there any ship parts in Row D?"
+    },
+    {
+      "size": 3,
+      "program_indices": [
+        114,
+        305,
+        365
+      ],
+      "example": "are there ship parts in column 8?"
+    },
+    {
+      "size": 3,
+      "program_indices": [
+        124,
+        338,
+        585
+      ],
+      "example": "Any parts in row E?"
+    },
+    {
+      "size": 3,
+      "program_indices": [
+        197,
+        255,
+        590
+      ],
+      "example": "Any ships in columns 1?"
+    },
+    {
+      "size": 3,
+      "program_indices": [
+        235,
+        621,
+        737
+      ],
+      "example": "is the green ship horizonta?"
+    }
+  ]
+}

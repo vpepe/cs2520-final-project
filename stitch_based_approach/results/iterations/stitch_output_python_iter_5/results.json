@@ -1,0 +1,826 @@
+{
+  "cmd": "python3 run_stitch_python.py sample_battleship_100.json 3 5",
+  "args": {
+    "iterations": 5,
+    "abstraction_prefix": "fn_",
+    "previous_abstractions": 0,
+    "shuffle": false,
+    "truncate": null,
+    "no_opt": false,
+    "silent": true,
+    "verbose_rewrite": false,
+    "step": {
+      "max_arity": 3,
+      "threads": 4,
+      "no_stats": false,
+      "batch": 1,
+      "dynamic_batch": false,
+      "eta_long": false,
+      "no_curried_metavars": false,
+      "no_curried_bodies": false,
+      "inv_candidates": 1,
+      "hole_choice": "DepthFirst",
+      "cost": {
+        "cost_lam": 1,
+        "cost_app": 1,
+        "cost_var": 100,
+        "cost_ivar": 100,
+        "cost_prim_default": 100,
+        "cost_prim": "{}"
+      },
+      "no_mismatch_check": false,
+      "follow": null,
+      "follow_types": null,
+      "follow_prune": false,
+      "verbose_worklist": false,
+      "verbose_best": false,
+      "print_stats": 0,
+      "show_rewritten": false,
+      "rewritten_dreamcoder": false,
+      "rewritten_intermediates": false,
+      "inv_arg_cap": false,
+      "allow_single_task": false,
+      "no_opt_single_use": false,
+      "no_opt_upper_bound": false,
+      "no_opt_force_multiuse": false,
+      "no_opt_useless_abstract": false,
+      "no_opt_arity_zero": false,
+      "no_other_util": false,
+      "structure_penalty": 1.0,
+      "rewrite_check": false,
+      "utility_by_rewrite": false,
+      "dreamcoder_comparison": false,
+      "quiet": true,
+      "fused_lambda_tags": {
+        "tags": null
+      },
+      "tdfa": {
+        "tdfa_json_path": null,
+        "tdfa_root": null,
+        "valid_metavars": null,
+        "valid_roots": null,
+        "tdfa_non_eta_long_states": null,
+        "tdfa_split": null
+      },
+      "symvar": {
+        "symvar_prefix": null
+      }
+    }
+  },
+  "original_cost": 76658,
+  "final_cost": 37059,
+  "compression_ratio": 2.068539356161796,
+  "num_abstractions": 5,
+  "original": [
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app any (app (app gt (app (app get remainingship) (app (app pair slice) 0))) rowGindex))))",
+    "(lam (lam (app any (app (app lt rows) 2))))",
+    "(lam (lam (app all (app (app eq (app (app get 1) greenmask)) 2))))",
+    "(lam (lam (app (app gte sunkcount) 2)))",
+    "(lam (lam (app tobool (app any (app (app gt rows) 4)))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app gt (app (app get 0) (app (app pair belowrow) colidx))) 0))))",
+    "(lam (lam (app tobool (app any (app (app and regionmask) unrevealedshipmask)))))",
+    "(lam (lam (app tobool (app any concealedshiptiles))))",
+    "(lam (lam (app tobool (app any (app (app and unrevealed) shiptiles)))))",
+    "(lam (lam (app tobool (app any hiddenshipinrow))))",
+    "(lam (lam (app tobool (app any (app (app and regionmask) unrevealedship)))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any targetmask))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app (app or q1hashiddenship) q2hashiddenship))))",
+    "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))",
+    "(lam (lam (app tobool unrevealedshipinq1)))",
+    "(lam (lam (app tobool (app any (app (app and maskunrevealed) maskship)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app get unrevealed) (app (app pair 2) slice))))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt subtrue) 0)) (app (app eq subpartial) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app any (app (app and hiddenship) after4)))))",
+    "(lam (lam (app tobool (app any (app (app and maskship) maskhidden)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipsinregion))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam true))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and regionmask) shipmask)) hiddenmask)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and rowmask) shipmask)) unrevealedmask)))))",
+    "(lam (lam (app tobool (app any hiddenshipmask))))",
+    "(lam (lam (app tobool (app any hiddenshiptilesinregion))))",
+    "(lam (lam (app tobool (app any (app (app and unrevealed) regionmask)))))",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (app (app or (app any (app (app get unrevealedship) 2))) (app any (app (app get unrevealedship) 4))))))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app (app or (app any (app (app and fslice) funrevealed))) (app any (app (app and gslice) gunrevealed))))))",
+    "(lam (lam (app any (app (app and (app (app gt (app (app get 0) rowidx)) 0)) (app (app eq (app (app get 1) rowidx)) (app neg 1))))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app and rowsmask) shipmask)) hiddenmask)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshipsinE))))",
+    "(lam (lam (app tobool (app any unrevealedshipsinevens))))",
+    "(lam (lam (app tobool (app any hiddenshipsinG))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app all (app (app eq cols) (app (app get cols) 0)))))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any (app (app eq (app (app get coords) (app (app pair slice) 1))) 5)))))",
+    "(lam (lam (app any (app (app eq (app (app get positions) (app (app pair slice) 1))) 4))))",
+    "(lam (lam (app tobool (app any unrevealedshipinH))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any hiddenshiptiles))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any unrevealedshipmask))))",
+    "(lam (lam (app tobool (app any unrevealedorange))))",
+    "(lam (lam (app tobool (app any (app (app and ispurple) isunrevealed)))))",
+    "(lam (lam (app (app gt (app len shipids)) 1)))",
+    "(lam (lam (app tobool (app any unrevealedinrow))))",
+    "(lam (lam (app tobool (app any unrevealedships))))",
+    "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any unrevealedshiptiles))))",
+    "(lam (lam (app tobool (app any unrevealedship))))",
+    "(lam (lam (app any hiddenshipparts)))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app all (app (app eq rows) (app (app get rows) 0))))))",
+    "(lam (lam (app (app gt (app (app get 0) (app (app pair row) col))) 0)))",
+    "(lam (lam (app tobool (app any hiddenshipparts))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt regiontrue) 0)) (app (app eq regionpartial) (app neg 1)))))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool unrevealedships.any)))",
+    "(lam (lam (app all (app (app eq allrows) (app (app get allrows) 0)))))",
+    "(lam (lam (app tobool (app any unrevealedinrow))))",
+    "(lam (lam (app tobool (app any hiddenshipcells))))",
+    "(lam (lam (app all (app (app eq shiprows) (app (app get shiprows) 0)))))",
+    "(lam (lam (app tobool (app any (app (app and (app (app gt truecol) 0)) (app (app eq partialcol) (app neg 1)))))))",
+    "(lam (lam (app tobool (app any (app (app and hiddenmask) shipmask)))))",
+    "(lam (lam (app all (app (app eq rows) (app (app get rows) 0)))))",
+    "(lam (lam (app tobool (app any unrevealedinrow))))",
+    "(lam (lam (app tobool (app any (app (app and shippartsintrue) hiddeninpartial)))))",
+    "(lam (lam (app (app eq (app (app sub cols.max) cols.min)) (app (app sub cols) 1))))",
+    "(lam (lam (app tobool (app any (app (app and hiddencells) shipcells)))))",
+    "(lam (lam (app all (app (app eq (app (app get coords) (app (app pair slice) 0))) (app (app get coords) (app (app pair 0) 0))))))",
+    "(lam (lam (app tobool (app any (app (app and shipcells) hiddencells)))))",
+    "(lam (lam (app tobool (app any unrevealedshipparts))))",
+    "(lam (lam (app tobool (app any undiscovered))))",
+    "(lam (lam (app tobool (app any (app (app and shipsincol) hiddenincol)))))"
+  ],
+  "rewritten": [
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app any (fn_1 (fn_4 0 slice remainingship) gt rowGindex))))",
+    "(lam (lam (app any (fn_1 rows lt 2))))",
+    "(lam (lam (app all (fn_1 (fn_1 1 get greenmask) eq 2))))",
+    "(lam (lam (fn_1 sunkcount gte 2)))",
+    "(fn_0 (fn_1 rows gt 4))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (fn_1 (fn_4 colidx belowrow 0) gt 0))))",
+    "(fn_3 unrevealedshipmask regionmask)",
+    "(fn_0 concealedshiptiles)",
+    "(fn_3 shiptiles unrevealed)",
+    "(fn_0 hiddenshipinrow)",
+    "(fn_3 unrevealedship regionmask)",
+    "(fn_0 hiddenshipmask)",
+    "(fn_0 hiddenshipmask)",
+    "(fn_0 targetmask)",
+    "(lam (lam false))",
+    "(lam (lam (app tobool (fn_1 q1hashiddenship or q2hashiddenship))))",
+    "(fn_3 hiddenmask shipmask)",
+    "(lam (lam (app tobool unrevealedshipinq1)))",
+    "(fn_3 maskship maskunrevealed)",
+    "(lam (lam false))",
+    "(fn_0 (fn_4 slice 2 unrevealed))",
+    "(fn_3 (fn_1 subpartial eq (app neg 1)) (fn_1 subtrue gt 0))",
+    "(fn_0 hiddenshipmask)",
+    "(lam (lam (app tobool any)))",
+    "(fn_3 after4 hiddenship)",
+    "(fn_3 maskhidden maskship)",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipsinregion)",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam true))",
+    "(fn_3 hiddenmask (fn_1 regionmask and shipmask))",
+    "(fn_3 unrevealedmask (fn_1 rowmask and shipmask))",
+    "(fn_0 hiddenshipmask)",
+    "(fn_0 hiddenshiptilesinregion)",
+    "(fn_3 regionmask unrevealed)",
+    "(lam (lam (app tobool any)))",
+    "(lam (lam (app tobool (fn_1 (app any (fn_1 unrevealedship get 2)) or (app any (fn_1 unrevealedship get 4))))))",
+    "(lam (lam (fn_2 cols)))",
+    "(fn_0 hiddenshiptiles)",
+    "(lam (lam (app tobool (fn_1 (app any (fn_1 fslice and funrevealed)) or (app any (fn_1 gslice and gunrevealed))))))",
+    "(lam (lam (app any (fn_1 (fn_1 (fn_1 0 get rowidx) gt 0) and (fn_1 (fn_1 1 get rowidx) eq (app neg 1))))))",
+    "(fn_3 hiddenmask (fn_1 rowsmask and shipmask))",
+    "(lam (lam false))",
+    "(fn_0 hiddenshipsinE)",
+    "(fn_0 unrevealedshipsinevens)",
+    "(fn_0 hiddenshipsinG)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam (fn_2 cols)))",
+    "(lam (lam false))",
+    "(fn_0 (fn_1 (fn_4 1 slice coords) eq 5))",
+    "(lam (lam (app any (fn_1 (fn_4 1 slice positions) eq 4))))",
+    "(fn_0 unrevealedshipinH)",
+    "(fn_0 unrevealedshiptiles)",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(lam (lam false))",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 hiddenshiptiles)",
+    "(fn_0 unrevealedships)",
+    "(fn_0 unrevealedshipmask)",
+    "(fn_0 unrevealedorange)",
+    "(fn_3 isunrevealed ispurple)",
+    "(lam (lam (fn_1 (app len shipids) gt 1)))",
+    "(fn_0 unrevealedinrow)",
+    "(fn_0 unrevealedships)",
+    "(fn_3 hiddentiles shiptiles)",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_0 unrevealedshiptiles)",
+    "(fn_0 unrevealedship)",
+    "(lam (lam (app any hiddenshipparts)))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (app tobool (fn_2 rows))))",
+    "(lam (lam (fn_1 (fn_4 col row 0) gt 0)))",
+    "(fn_0 hiddenshipparts)",
+    "(fn_3 (fn_1 regionpartial eq (app neg 1)) (fn_1 regiontrue gt 0))",
+    "(lam (lam (fn_2 rows)))",
+    "(lam (lam (app tobool unrevealedships.any)))",
+    "(lam (lam (fn_2 allrows)))",
+    "(fn_0 unrevealedinrow)",
+    "(fn_0 hiddenshipcells)",
+    "(lam (lam (fn_2 shiprows)))",
+    "(fn_3 (fn_1 partialcol eq (app neg 1)) (fn_1 truecol gt 0))",
+    "(fn_3 shipmask hiddenmask)",
+    "(lam (lam (fn_2 rows)))",
+    "(fn_0 unrevealedinrow)",
+    "(fn_3 hiddeninpartial shippartsintrue)",
+    "(lam (lam (fn_1 (fn_1 cols.max sub cols.min) eq (fn_1 cols sub 1))))",
+    "(fn_3 shipcells hiddencells)",
+    "(lam (lam (app all (fn_1 (fn_4 0 slice coords) eq (fn_4 0 0 coords)))))",
+    "(fn_3 hiddencells shipcells)",
+    "(fn_0 unrevealedshipparts)",
+    "(fn_0 undiscovered)",
+    "(fn_3 hiddenincol shipsincol)"
+  ],
+  "rewritten_dreamcoder": null,
+  "abstractions": [
+    {
+      "body": "(lam (lam (app tobool (app any #0))))",
+      "dreamcoder": "#(lambda (lambda (lambda (app tobool (app any $2)))))",
+      "arity": 1,
+      "name": "fn_0",
+      "utility": 16064,
+      "final_cost": 60188,
+      "compression_ratio": 1.2736425865621055,
+      "cumulative_compression_ratio": 1.2736425865621055,
+      "num_uses": 54,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_0 (app (app and (app (app and regionmask) shipmask)) hiddenmask)": "(lam (lam (app tobool (app any (app (app and (app (app and regionmask) shipmask)) hiddenmask)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app and rowmask) shipmask)) unrevealedmask)": "(lam (lam (app tobool (app any (app (app and (app (app and rowmask) shipmask)) unrevealedmask)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app and rowsmask) shipmask)) hiddenmask)": "(lam (lam (app tobool (app any (app (app and (app (app and rowsmask) shipmask)) hiddenmask)))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt regiontrue) 0)) (app (app eq regionpartial) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt regiontrue) 0)) (app (app eq regionpartial) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt subtrue) 0)) (app (app eq subpartial) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt subtrue) 0)) (app (app eq subpartial) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and (app (app gt truecol) 0)) (app (app eq partialcol) (app neg 1)))": "(lam (lam (app tobool (app any (app (app and (app (app gt truecol) 0)) (app (app eq partialcol) (app neg 1)))))))"
+        },
+        {
+          "fn_0 (app (app and hiddencells) shipcells)": "(lam (lam (app tobool (app any (app (app and hiddencells) shipcells)))))"
+        },
+        {
+          "fn_0 (app (app and hiddenmask) shipmask)": "(lam (lam (app tobool (app any (app (app and hiddenmask) shipmask)))))"
+        },
+        {
+          "fn_0 (app (app and hiddenship) after4)": "(lam (lam (app tobool (app any (app (app and hiddenship) after4)))))"
+        },
+        {
+          "fn_0 (app (app and ispurple) isunrevealed)": "(lam (lam (app tobool (app any (app (app and ispurple) isunrevealed)))))"
+        },
+        {
+          "fn_0 (app (app and maskship) maskhidden)": "(lam (lam (app tobool (app any (app (app and maskship) maskhidden)))))"
+        },
+        {
+          "fn_0 (app (app and maskunrevealed) maskship)": "(lam (lam (app tobool (app any (app (app and maskunrevealed) maskship)))))"
+        },
+        {
+          "fn_0 (app (app and regionmask) unrevealedship)": "(lam (lam (app tobool (app any (app (app and regionmask) unrevealedship)))))"
+        },
+        {
+          "fn_0 (app (app and regionmask) unrevealedshipmask)": "(lam (lam (app tobool (app any (app (app and regionmask) unrevealedshipmask)))))"
+        },
+        {
+          "fn_0 (app (app and shipcells) hiddencells)": "(lam (lam (app tobool (app any (app (app and shipcells) hiddencells)))))"
+        },
+        {
+          "fn_0 (app (app and shipmask) hiddenmask)": "(lam (lam (app tobool (app any (app (app and shipmask) hiddenmask)))))"
+        },
+        {
+          "fn_0 (app (app and shippartsintrue) hiddeninpartial)": "(lam (lam (app tobool (app any (app (app and shippartsintrue) hiddeninpartial)))))"
+        },
+        {
+          "fn_0 (app (app and shipsincol) hiddenincol)": "(lam (lam (app tobool (app any (app (app and shipsincol) hiddenincol)))))"
+        },
+        {
+          "fn_0 (app (app and shiptiles) hiddentiles)": "(lam (lam (app tobool (app any (app (app and shiptiles) hiddentiles)))))"
+        },
+        {
+          "fn_0 (app (app and unrevealed) regionmask)": "(lam (lam (app tobool (app any (app (app and unrevealed) regionmask)))))"
+        },
+        {
+          "fn_0 (app (app and unrevealed) shiptiles)": "(lam (lam (app tobool (app any (app (app and unrevealed) shiptiles)))))"
+        },
+        {
+          "fn_0 (app (app eq (app (app get coords) (app (app pair slice) 1))) 5)": "(lam (lam (app tobool (app any (app (app eq (app (app get coords) (app (app pair slice) 1))) 5)))))"
+        },
+        {
+          "fn_0 (app (app get unrevealed) (app (app pair 2) slice))": "(lam (lam (app tobool (app any (app (app get unrevealed) (app (app pair 2) slice))))))"
+        },
+        {
+          "fn_0 (app (app gt rows) 4)": "(lam (lam (app tobool (app any (app (app gt rows) 4)))))"
+        },
+        {
+          "fn_0 concealedshiptiles": "(lam (lam (app tobool (app any concealedshiptiles))))"
+        },
+        {
+          "fn_0 hiddenshipcells": "(lam (lam (app tobool (app any hiddenshipcells))))"
+        },
+        {
+          "fn_0 hiddenshipinrow": "(lam (lam (app tobool (app any hiddenshipinrow))))"
+        },
+        {
+          "fn_0 hiddenshipmask": "(lam (lam (app tobool (app any hiddenshipmask))))"
+        },
+        {
+          "fn_0 hiddenshipparts": "(lam (lam (app tobool (app any hiddenshipparts))))"
+        },
+        {
+          "fn_0 hiddenshipsinE": "(lam (lam (app tobool (app any hiddenshipsinE))))"
+        },
+        {
+          "fn_0 hiddenshipsinG": "(lam (lam (app tobool (app any hiddenshipsinG))))"
+        },
+        {
+          "fn_0 hiddenshipsinregion": "(lam (lam (app tobool (app any hiddenshipsinregion))))"
+        },
+        {
+          "fn_0 hiddenshiptiles": "(lam (lam (app tobool (app any hiddenshiptiles))))"
+        },
+        {
+          "fn_0 hiddenshiptilesinregion": "(lam (lam (app tobool (app any hiddenshiptilesinregion))))"
+        },
+        {
+          "fn_0 targetmask": "(lam (lam (app tobool (app any targetmask))))"
+        },
+        {
+          "fn_0 undiscovered": "(lam (lam (app tobool (app any undiscovered))))"
+        },
+        {
+          "fn_0 unrevealedinrow": "(lam (lam (app tobool (app any unrevealedinrow))))"
+        },
+        {
+          "fn_0 unrevealedorange": "(lam (lam (app tobool (app any unrevealedorange))))"
+        },
+        {
+          "fn_0 unrevealedship": "(lam (lam (app tobool (app any unrevealedship))))"
+        },
+        {
+          "fn_0 unrevealedshipinH": "(lam (lam (app tobool (app any unrevealedshipinH))))"
+        },
+        {
+          "fn_0 unrevealedshipmask": "(lam (lam (app tobool (app any unrevealedshipmask))))"
+        },
+        {
+          "fn_0 unrevealedshipparts": "(lam (lam (app tobool (app any unrevealedshipparts))))"
+        },
+        {
+          "fn_0 unrevealedships": "(lam (lam (app tobool (app any unrevealedships))))"
+        },
+        {
+          "fn_0 unrevealedshipsinevens": "(lam (lam (app tobool (app any unrevealedshipsinevens))))"
+        },
+        {
+          "fn_0 unrevealedshiptiles": "(lam (lam (app tobool (app any unrevealedshiptiles))))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(app (app #1 #0))",
+      "dreamcoder": "#(lambda (lambda (app (app $0 $1))))",
+      "arity": 2,
+      "name": "fn_1",
+      "utility": 9190,
+      "final_cost": 50795,
+      "compression_ratio": 1.1849197755684615,
+      "cumulative_compression_ratio": 1.5091642878236047,
+      "num_uses": 93,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_1 (app (app and regionmask) shipmask) and": "(app (app and (app (app and regionmask) shipmask)))"
+        },
+        {
+          "fn_1 (app (app and rowmask) shipmask) and": "(app (app and (app (app and rowmask) shipmask)))"
+        },
+        {
+          "fn_1 (app (app and rowsmask) shipmask) and": "(app (app and (app (app and rowsmask) shipmask)))"
+        },
+        {
+          "fn_1 (app (app gt (app (app get 0) rowidx)) 0) and": "(app (app and (app (app gt (app (app get 0) rowidx)) 0)))"
+        },
+        {
+          "fn_1 (app (app gt regiontrue) 0) and": "(app (app and (app (app gt regiontrue) 0)))"
+        },
+        {
+          "fn_1 (app (app gt subtrue) 0) and": "(app (app and (app (app gt subtrue) 0)))"
+        },
+        {
+          "fn_1 (app (app gt truecol) 0) and": "(app (app and (app (app gt truecol) 0)))"
+        },
+        {
+          "fn_1 fslice and": "(app (app and fslice))"
+        },
+        {
+          "fn_1 gslice and": "(app (app and gslice))"
+        },
+        {
+          "fn_1 hiddencells and": "(app (app and hiddencells))"
+        },
+        {
+          "fn_1 hiddenmask and": "(app (app and hiddenmask))"
+        },
+        {
+          "fn_1 hiddenship and": "(app (app and hiddenship))"
+        },
+        {
+          "fn_1 ispurple and": "(app (app and ispurple))"
+        },
+        {
+          "fn_1 maskship and": "(app (app and maskship))"
+        },
+        {
+          "fn_1 maskunrevealed and": "(app (app and maskunrevealed))"
+        },
+        {
+          "fn_1 regionmask and": "(app (app and regionmask))"
+        },
+        {
+          "fn_1 rowmask and": "(app (app and rowmask))"
+        },
+        {
+          "fn_1 rowsmask and": "(app (app and rowsmask))"
+        },
+        {
+          "fn_1 shipcells and": "(app (app and shipcells))"
+        },
+        {
+          "fn_1 shipmask and": "(app (app and shipmask))"
+        },
+        {
+          "fn_1 shippartsintrue and": "(app (app and shippartsintrue))"
+        },
+        {
+          "fn_1 shipsincol and": "(app (app and shipsincol))"
+        },
+        {
+          "fn_1 shiptiles and": "(app (app and shiptiles))"
+        },
+        {
+          "fn_1 unrevealed and": "(app (app and unrevealed))"
+        },
+        {
+          "fn_1 (app (app get 1) greenmask) eq": "(app (app eq (app (app get 1) greenmask)))"
+        },
+        {
+          "fn_1 (app (app get 1) rowidx) eq": "(app (app eq (app (app get 1) rowidx)))"
+        },
+        {
+          "fn_1 (app (app get coords) (app (app pair slice) 0)) eq": "(app (app eq (app (app get coords) (app (app pair slice) 0))))"
+        },
+        {
+          "fn_1 (app (app get coords) (app (app pair slice) 1)) eq": "(app (app eq (app (app get coords) (app (app pair slice) 1))))"
+        },
+        {
+          "fn_1 (app (app get positions) (app (app pair slice) 1)) eq": "(app (app eq (app (app get positions) (app (app pair slice) 1))))"
+        },
+        {
+          "fn_1 (app (app sub cols.max) cols.min) eq": "(app (app eq (app (app sub cols.max) cols.min)))"
+        },
+        {
+          "fn_1 allrows eq": "(app (app eq allrows))"
+        },
+        {
+          "fn_1 cols eq": "(app (app eq cols))"
+        },
+        {
+          "fn_1 partialcol eq": "(app (app eq partialcol))"
+        },
+        {
+          "fn_1 regionpartial eq": "(app (app eq regionpartial))"
+        },
+        {
+          "fn_1 rows eq": "(app (app eq rows))"
+        },
+        {
+          "fn_1 shiprows eq": "(app (app eq shiprows))"
+        },
+        {
+          "fn_1 subpartial eq": "(app (app eq subpartial))"
+        },
+        {
+          "fn_1 0 get": "(app (app get 0))"
+        },
+        {
+          "fn_1 1 get": "(app (app get 1))"
+        },
+        {
+          "fn_1 allrows get": "(app (app get allrows))"
+        },
+        {
+          "fn_1 cols get": "(app (app get cols))"
+        },
+        {
+          "fn_1 coords get": "(app (app get coords))"
+        },
+        {
+          "fn_1 positions get": "(app (app get positions))"
+        },
+        {
+          "fn_1 remainingship get": "(app (app get remainingship))"
+        },
+        {
+          "fn_1 rows get": "(app (app get rows))"
+        },
+        {
+          "fn_1 shiprows get": "(app (app get shiprows))"
+        },
+        {
+          "fn_1 unrevealed get": "(app (app get unrevealed))"
+        },
+        {
+          "fn_1 unrevealedship get": "(app (app get unrevealedship))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair belowrow) colidx)) gt": "(app (app gt (app (app get 0) (app (app pair belowrow) colidx))))"
+        },
+        {
+          "fn_1 (app (app get 0) (app (app pair row) col)) gt": "(app (app gt (app (app get 0) (app (app pair row) col))))"
+        },
+        {
+          "fn_1 (app (app get 0) rowidx) gt": "(app (app gt (app (app get 0) rowidx)))"
+        },
+        {
+          "fn_1 (app (app get remainingship) (app (app pair slice) 0)) gt": "(app (app gt (app (app get remainingship) (app (app pair slice) 0))))"
+        },
+        {
+          "fn_1 (app len shipids) gt": "(app (app gt (app len shipids)))"
+        },
+        {
+          "fn_1 regiontrue gt": "(app (app gt regiontrue))"
+        },
+        {
+          "fn_1 rows gt": "(app (app gt rows))"
+        },
+        {
+          "fn_1 subtrue gt": "(app (app gt subtrue))"
+        },
+        {
+          "fn_1 truecol gt": "(app (app gt truecol))"
+        },
+        {
+          "fn_1 sunkcount gte": "(app (app gte sunkcount))"
+        },
+        {
+          "fn_1 rows lt": "(app (app lt rows))"
+        },
+        {
+          "fn_1 (app any (app (app and fslice) funrevealed)) or": "(app (app or (app any (app (app and fslice) funrevealed))))"
+        },
+        {
+          "fn_1 (app any (app (app get unrevealedship) 2)) or": "(app (app or (app any (app (app get unrevealedship) 2))))"
+        },
+        {
+          "fn_1 q1hashiddenship or": "(app (app or q1hashiddenship))"
+        },
+        {
+          "fn_1 0 pair": "(app (app pair 0))"
+        },
+        {
+          "fn_1 2 pair": "(app (app pair 2))"
+        },
+        {
+          "fn_1 belowrow pair": "(app (app pair belowrow))"
+        },
+        {
+          "fn_1 row pair": "(app (app pair row))"
+        },
+        {
+          "fn_1 slice pair": "(app (app pair slice))"
+        },
+        {
+          "fn_1 cols sub": "(app (app sub cols))"
+        },
+        {
+          "fn_1 cols.max sub": "(app (app sub cols.max))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(app all (fn_1 #0 eq (fn_1 #0 get 0)))",
+      "dreamcoder": "#(lambda (app all (#(lambda (lambda (app (app $0 $1)))) $0 eq (#(lambda (lambda (app (app $0 $1)))) $0 get 0))))",
+      "arity": 1,
+      "name": "fn_2",
+      "utility": 6362,
+      "final_cost": 43725,
+      "compression_ratio": 1.1616923956546599,
+      "cumulative_compression_ratio": 1.753184676958262,
+      "num_uses": 10,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_2 allrows": "(app all (fn_1 allrows eq (fn_1 allrows get 0)))"
+        },
+        {
+          "fn_2 cols": "(app all (fn_1 cols eq (fn_1 cols get 0)))"
+        },
+        {
+          "fn_2 rows": "(app all (fn_1 rows eq (fn_1 rows get 0)))"
+        },
+        {
+          "fn_2 shiprows": "(app all (fn_1 shiprows eq (fn_1 shiprows get 0)))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_0 (fn_1 #1 and #0))",
+      "dreamcoder": "#(lambda (lambda (#(lambda (lambda (lambda (app tobool (app any $2))))) (#(lambda (lambda (app (app $0 $1)))) $0 and $1))))",
+      "arity": 2,
+      "name": "fn_3",
+      "utility": 3938,
+      "final_cost": 39483,
+      "compression_ratio": 1.1074386444799027,
+      "cumulative_compression_ratio": 1.9415444621735938,
+      "num_uses": 21,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_3 hiddenmask (fn_1 regionmask and shipmask)": "(fn_0 (fn_1 (fn_1 regionmask and shipmask) and hiddenmask))"
+        },
+        {
+          "fn_3 (fn_1 regionpartial eq (app neg 1)) (fn_1 regiontrue gt 0)": "(fn_0 (fn_1 (fn_1 regiontrue gt 0) and (fn_1 regionpartial eq (app neg 1))))"
+        },
+        {
+          "fn_3 unrevealedmask (fn_1 rowmask and shipmask)": "(fn_0 (fn_1 (fn_1 rowmask and shipmask) and unrevealedmask))"
+        },
+        {
+          "fn_3 hiddenmask (fn_1 rowsmask and shipmask)": "(fn_0 (fn_1 (fn_1 rowsmask and shipmask) and hiddenmask))"
+        },
+        {
+          "fn_3 (fn_1 subpartial eq (app neg 1)) (fn_1 subtrue gt 0)": "(fn_0 (fn_1 (fn_1 subtrue gt 0) and (fn_1 subpartial eq (app neg 1))))"
+        },
+        {
+          "fn_3 (fn_1 partialcol eq (app neg 1)) (fn_1 truecol gt 0)": "(fn_0 (fn_1 (fn_1 truecol gt 0) and (fn_1 partialcol eq (app neg 1))))"
+        },
+        {
+          "fn_3 shipcells hiddencells": "(fn_0 (fn_1 hiddencells and shipcells))"
+        },
+        {
+          "fn_3 shipmask hiddenmask": "(fn_0 (fn_1 hiddenmask and shipmask))"
+        },
+        {
+          "fn_3 after4 hiddenship": "(fn_0 (fn_1 hiddenship and after4))"
+        },
+        {
+          "fn_3 isunrevealed ispurple": "(fn_0 (fn_1 ispurple and isunrevealed))"
+        },
+        {
+          "fn_3 maskhidden maskship": "(fn_0 (fn_1 maskship and maskhidden))"
+        },
+        {
+          "fn_3 maskship maskunrevealed": "(fn_0 (fn_1 maskunrevealed and maskship))"
+        },
+        {
+          "fn_3 unrevealedship regionmask": "(fn_0 (fn_1 regionmask and unrevealedship))"
+        },
+        {
+          "fn_3 unrevealedshipmask regionmask": "(fn_0 (fn_1 regionmask and unrevealedshipmask))"
+        },
+        {
+          "fn_3 hiddencells shipcells": "(fn_0 (fn_1 shipcells and hiddencells))"
+        },
+        {
+          "fn_3 hiddenmask shipmask": "(fn_0 (fn_1 shipmask and hiddenmask))"
+        },
+        {
+          "fn_3 hiddeninpartial shippartsintrue": "(fn_0 (fn_1 shippartsintrue and hiddeninpartial))"
+        },
+        {
+          "fn_3 hiddenincol shipsincol": "(fn_0 (fn_1 shipsincol and hiddenincol))"
+        },
+        {
+          "fn_3 hiddentiles shiptiles": "(fn_0 (fn_1 shiptiles and hiddentiles))"
+        },
+        {
+          "fn_3 regionmask unrevealed": "(fn_0 (fn_1 unrevealed and regionmask))"
+        },
+        {
+          "fn_3 shiptiles unrevealed": "(fn_0 (fn_1 unrevealed and shiptiles))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "body": "(fn_1 #2 get (fn_1 #1 pair #0))",
+      "dreamcoder": "#(lambda (lambda (lambda (#(lambda (lambda (app (app $0 $1)))) $0 get (#(lambda (lambda (app (app $0 $1)))) $1 pair $2)))))",
+      "arity": 3,
+      "name": "fn_4",
+      "utility": 2018,
+      "final_cost": 37059,
+      "compression_ratio": 1.0654092123370842,
+      "cumulative_compression_ratio": 2.068539356161796,
+      "num_uses": 8,
+      "rewritten": null,
+      "rewritten_dreamcoder": null,
+      "uses": [
+        {
+          "fn_4 colidx belowrow 0": "(fn_1 0 get (fn_1 belowrow pair colidx))"
+        },
+        {
+          "fn_4 col row 0": "(fn_1 0 get (fn_1 row pair col))"
+        },
+        {
+          "fn_4 0 0 coords": "(fn_1 coords get (fn_1 0 pair 0))"
+        },
+        {
+          "fn_4 0 slice coords": "(fn_1 coords get (fn_1 slice pair 0))"
+        },
+        {
+          "fn_4 1 slice coords": "(fn_1 coords get (fn_1 slice pair 1))"
+        },
+        {
+          "fn_4 1 slice positions": "(fn_1 positions get (fn_1 slice pair 1))"
+        },
+        {
+          "fn_4 0 slice remainingship": "(fn_1 remainingship get (fn_1 slice pair 0))"
+        },
+        {
+          "fn_4 slice 2 unrevealed": "(fn_1 unrevealed get (fn_1 2 pair slice))"
+        }
+      ],
+      "dc_comparison_millis": null,
+      "tdfa_annotation": null,
+      "variable_types": [
+        "M",
+        "M",
+        "M"
+      ]
+    }
+  ]
+}
