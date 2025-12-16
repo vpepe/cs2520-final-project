@@ -62,5 +62,5 @@ The general workflow is:
 ## Requirements
 
 - Python 3.x
-- Rust/Cargo (for Stitch-based approach)
+- https://github.com/gabegrand/battleship repo cloned, with captains.py replaced by the same file in this repo
 - NumPy (for program execution)
